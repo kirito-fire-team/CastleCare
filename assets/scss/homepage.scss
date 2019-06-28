@@ -139,6 +139,78 @@ header {
 }
 
 
+/*******************************************
+WELCOME SECTION
+********************************************/
+.welcome-section {
+  padding: 30px 0 0;
+  text-align: center;
+  color: $dark-text;
+  @include desktop {
+    padding: 80px 0 0;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 15px;
+    @include tablet {
+      font-size: 16px;
+    }
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 20px;
+    @include tablet {
+      font-size: 24px;
+    }
+    @include desktop {
+      padding-bottom: 35px;
+      font-size: 32px;
+    }
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.7;
+    padding-bottom: 20px;
+    @include tablet {
+      margin: 0 auto;
+      width: 80%;
+      font-size: 14px;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+  a {
+    color: $blue;
+    font-weight: 600;
+    font-size: 12px;
+    @include desktop {
+      font-size: 14px;
+    }
+    .icon {
+      padding-left: 8px;
+    }
+  }
+  .doctors {
+    margin-top: 30px;
+    @include desktop {
+      margin-top: 80px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
 
 /*******************************************
 FOOTER
