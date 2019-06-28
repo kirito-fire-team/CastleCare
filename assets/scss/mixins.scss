@@ -20,3 +20,31 @@
   }
 }
 
+
+// MainPage Titles Mixins
+@mixin h3title {
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 15px;
+  color: $light-text;
+  @include tablet {
+    font-size: 16px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+@mixin h2title {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 20px;
+  @include tablet {
+    font-size: 24px;
+  }
+  @include desktop {
+    padding-bottom: 35px;
+    font-size: 32px;
+  }
+}
+
