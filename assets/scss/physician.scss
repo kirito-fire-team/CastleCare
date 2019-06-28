@@ -1,0 +1,22 @@
+.physician-header {
+  height: 70vh;
+  position: static;
+
+  .hero-box {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    p {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 2rem;
+    }
+  }
+
+  nav {}
+}
