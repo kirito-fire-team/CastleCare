@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
 @import "global";
 @import "variables";
 @import "mixins";
@@ -10,7 +11,7 @@ header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
         url(/img/doc.jpg) center center no-repeat;
     background-size: cover;
-    height: 100vh;
+    // height: 100vh;
     position: relative;
 
     // Navigation
@@ -88,6 +89,216 @@ header {
         }
     }
 }
+
+
+
+/*******************************************
+BANNER
+********************************************/
+
+@keyframes fade-in-left {
+    0% {
+        left: -80px;
+        opacity: 0;
+    }
+
+
+
+    100% {
+        left: 6%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        top: 30px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.banner-container {
+    width: 100%;
+    transition: all 2s ease-in-out;
+    margin: 0 auto;
+
+    h1 {
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 35%;
+        left: -200px;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        animation-name: fade-in-left;
+        opacity: 0;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+
+
+        span {
+            display: inline-block;
+            width: 19px;
+            border-bottom: 1px solid #fff;
+        }
+
+
+    }
+
+    p {
+        margin-top: 8px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: -80px;
+        text-transform: capitalize;
+        animation-name: fade-in-left;
+        opacity: 0;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        font-size: 8px;
+        color: #fff;
+        z-index: 1;
+        letter-spacing: 1px;
+
+
+    }
+
+    a {
+        color: #111;
+        font-weight: 500;
+    }
+}
+
+
+.office-img-container {
+    position: relative;
+    width: 100%;
+
+
+    .office-img {
+        background: url("/public/img/med_office.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 250px;
+        z-index: 0;
+        animation-name: fade-in-bottom;
+    }
+
+    .overlay:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+/*******************************************
+ABOUT
+********************************************/
+
+.about-container {
+    width: 100%;
+    padding: 20px;
+
+    .about-text {
+
+
+        h3 {
+            color: #444;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin: 40px 0 15px 0;
+
+            span {
+                display: inline-block;
+                width: 19px;
+                border-bottom: 1px solid #1B75BC;
+            }
+        }
+
+        p {
+            line-height: 26px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+/*******************************************
+DOCTORS
+********************************************/
+
+.doctors-container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    // transition: all .5s ease-in-out;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+
+
+    .doc-box {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+
+    h3 {
+        text-transform: capitalize;
+        color: #444;
+        font-size: 24px;
+        font-weight: 400;
+        animation: fade-in-bottom;
+        animation-duration: 1.5s;
+        position: absolute;
+        top: 0;
+        // width: 50%;
+        // margin-left: 25%;
+
+    }
+
+    .doc-img-container {
+        padding: 20px;
+        width: 100%;
+        height: 300px;
+        // margin: 0 auto;
+        // display: flex;
+        // justify-content: center;
+
+
+
+        .doc-img {
+            width: 76%;
+            // margin-left: 15%;
+            height: 200px;
+            background: url("/public/img/doc-1.jpg");
+            background-repeat: no-repeat;
+            text-align: center;
+            // margin-top: 60px;
+            animation: fade-in-bottom;
+            animation-duration: 1.5s;
+            position: absolute;
+            top: 0;
+        }
+    }
+}
+
+
+
 
 /*******************************************
 FOOTER
