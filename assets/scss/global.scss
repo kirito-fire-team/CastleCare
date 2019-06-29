@@ -4,16 +4,21 @@
   box-sizing: border-box;
 }
 
-html, body {
+body,
+html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
   background: #ffffff;
 }
-
 /* Container */
 .container {
   width: 90%;
+  margin: 0 auto;
+}
+
+.body-container {
+  width: 70%;
   margin: 0 auto;
 }
 
