@@ -128,10 +128,10 @@ BANNER
     margin: 0 auto;
 
     h1 {
-        color: red;
+        color: #fff;
         position: absolute;
         z-index: 1;
-        top: 35%;
+        top: 27%;
         left: -200px;
         font-size: 22px;
         font-weight: 300;
@@ -141,12 +141,15 @@ BANNER
         opacity: 0;
         animation-duration: 2s;
         animation-fill-mode: forwards;
+        backface-visibility: hidden;
 
 
         span {
             display: inline-block;
             width: 19px;
             border-bottom: 1px solid #fff;
+            backface-visibility: hidden;
+
         }
 
 
@@ -156,7 +159,7 @@ BANNER
         margin-top: 8px;
         display: inline-block;
         position: absolute;
-        top: 50%;
+        top: 37%;
         left: -80px;
         text-transform: capitalize;
         animation-name: fade-in-left;
@@ -167,6 +170,8 @@ BANNER
         color: #fff;
         z-index: 1;
         letter-spacing: 1px;
+        backface-visibility: hidden;
+
 
 
     }
@@ -188,7 +193,7 @@ BANNER
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: 250px;
+        height: 300px;
         z-index: 0;
         animation-name: fade-in-bottom;
     }
@@ -220,6 +225,7 @@ ABOUT
             text-transform: capitalize;
             font-weight: 600;
             margin: 40px 0 15px 0;
+            letter-spacing: 1px;
 
             span {
                 display: inline-block;
@@ -231,6 +237,7 @@ ABOUT
         p {
             line-height: 26px;
             letter-spacing: 1px;
+            font-size: 17px;
         }
     }
 }
@@ -240,63 +247,97 @@ ABOUT
 DOCTORS
 ********************************************/
 
-.doctors-container {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    // transition: all .5s ease-in-out;
-    height: 300px;
-    display: flex;
-    justify-content: center;
 
+
+
+.doctors h2 {
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 28px;
+    padding-bottom: 40px;
+}
+
+.doctors .doc-container {
+    width: 100%;
 
     .doc-box {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        text-align: center;
+        padding-bottom: 55px;
 
-    }
-
-
-    h3 {
-        text-transform: capitalize;
-        color: #444;
-        font-size: 24px;
-        font-weight: 400;
-        animation: fade-in-bottom;
-        animation-duration: 1.5s;
-        position: absolute;
-        top: 0;
-        // width: 50%;
-        // margin-left: 25%;
-
-    }
-
-    .doc-img-container {
-        padding: 20px;
-        width: 100%;
-        height: 300px;
-        // margin: 0 auto;
-        // display: flex;
-        // justify-content: center;
-
-
-
-        .doc-img {
-            width: 76%;
-            // margin-left: 15%;
-            height: 200px;
+        .doc-img-1 {
             background: url("/public/img/doc-1.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
             background-repeat: no-repeat;
-            text-align: center;
-            // margin-top: 60px;
-            animation: fade-in-bottom;
-            animation-duration: 1.5s;
-            position: absolute;
-            top: 0;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-2 {
+            background: url("/public/img/doc-2.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-3 {
+            background: url("/public/img/doc-3.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-4 {
+            background: url("/public/img/doc-4.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        h3 {
+            font-weight: 500;
+            padding: 30px 0 10px 0;
+            letter-spacing: 1px;
+            font-size: 20px;
+            color: #444;
+        }
+
+        span {
+            font-size: 18px;
+            padding-bottom: 17px;
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: left;
+            line-height: 26px;
         }
     }
 }
-
 
 
 
