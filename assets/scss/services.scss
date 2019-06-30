@@ -1,0 +1,11 @@
+@import "reset";
+@import "styles";
+@import "global";
+@import "variables";
+@import "mixins"; // Header Styles
+
+#charSelect{
+    background: red;
+    display: inline-block;
+    list-style: none;
+}
