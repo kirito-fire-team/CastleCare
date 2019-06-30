@@ -196,7 +196,7 @@ SERVICES SECTION
 ********************************************/
 
 .services-section {
-  padding: 30px 0 0;
+  padding: 30px 0 30px;
   text-align: center;
   color: $dark-text;
   background: #fafafa;
@@ -206,106 +206,135 @@ SERVICES SECTION
   h2 {
     @include h2title;
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-row-gap: 20px;
-    @include desktop {
-      grid-template-columns: 15% 50% 25%;
-      grid-column-gap: 50px;
-      height: 500px;
-    } 
-    .service-box {
+  .main-services-box {
+    padding: 30px 0;
+    .grid-container {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 100%;
       grid-template-rows: auto;
-      grid-gap: 1px;
-      @include tablet {
-        grid-template-columns: repeat(4, 25%);
-      }
+      grid-row-gap: 20px;
       @include desktop {
-        grid-template-columns: 95%;
-        grid-template-rows: repeat(4, 20%);
-      }
-      .box {
-        padding: 30px;
-        border-radius: 5px;
-        background: $blue;
-        @include desktop {
-          padding: 15px;
-        }
-        .icon {
-          color: $white;
-          font-size: 30px;
-        }
-        p {
-          padding-top: 10px;
-          color: $white;
-        }
-      }
-      .tab {
-        grid-column: 1 / span 2;
-        background: $darkblue;
-        padding: 10px;
-        border-radius: 0 0 5px 5px ;
-        @include tablet {
-          grid-column: 1 / span 4;
-        }
-        @include desktop {
-          grid-column: 1 / 2;
-          height: 40%;
-        }
-        a {
-          color: $white;
-        }
-      }
-    }
-    .passion-box {
-      @include desktop {
-        text-align: left;
-      }
-      h3 {
-        font-size: 16px;
-        padding-top: 20px;
-        @include desktop {
-          font-size: 24px;
-        }
-      }
-      .major-points {
+        grid-template-columns: 15% 50% 25%;
+        grid-column-gap: 50px;
+      } 
+      .options-box {
         display: grid;
-        grid-template-columns: 100%;
-        justify-items: start;
-        @include desktop {
-          grid-template-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-gap: 1px;
+        @include tablet {
+          grid-template-columns: repeat(4, 25%);
         }
-        p {
-          padding: 8px 0;
-          span {
-            padding-right: 10px;
-            i {
-              color: #63c3ff;
-              font-size: 20px;
+        @include desktop {
+          grid-template-columns: 95%;
+          grid-template-rows: repeat(4, 20%);
+        }
+        .box {
+          padding: 30px;
+          border-radius: 5px;
+          background: $blue;
+          @include desktop {
+            padding: 15px;
+          }
+          .icon {
+            color: $white;
+            font-size: 30px;
+          }
+          p {
+            padding-top: 10px;
+            color: $white;
+          }
+        }
+        .tab {
+          grid-column: 1 / span 2;
+          background: $darkblue;
+          padding: 10px;
+          border-radius: 0 0 5px 5px ;
+          @include tablet {
+            grid-column: 1 / span 4;
+          }
+          @include desktop {
+            grid-column: 1 / 2;
+            height: 40%;
+          }
+          a {
+            color: $white;
+          }
+        }
+      }
+      .passion-box {
+        @include tablet {
+          display: grid;
+          grid-template-columns: 35% 65%;
+        }
+        @include desktop {
+          text-align: left;
+          grid-template-columns: 100%;
+          grid-template-rows: 10%;
+          grid-row-gap: 10px;
+        }
+        h3 {
+          font-size: 16px;
+          padding-top: 20px;
+          @include tablet {
+            font-size: 22px;
+            padding: 10px 0;
+            grid-column: 1 / span 2;
+          }
+          @include desktop {
+            font-size: 24px;
+            grid-column: 1 / 2;
+          }
+        }
+        .major-points {
+          display: grid;
+          grid-template-columns: 100%;
+          justify-items: start;
+          @include desktop {
+            grid-template-columns: 50% 50%;
+          }
+          p {
+            padding: 8px 0;
+            span {
+              padding-right: 10px;
+              i {
+                color: #63c3ff;
+                font-size: 20px;
+              }
             }
           }
         }
       }
-    }
-    .history {
-      padding-top: 30px;
-      p {
-        line-height: 1.5;
-        padding-bottom: 20px;
+      .history {
+        padding-top: 30px;
+        @include tablet {
+          padding-top: 4px;
+        }
+        p {
+          line-height: 1.5;
+          padding-bottom: 20px;
+        }
       }
-    }
-    .doc-patient-box {
-      width: 100%;
-      img {
-        padding-bottom: 20px;
+      .doc-patient-box {
         width: 100%;
+        @include tablet {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          grid-column-gap: 10px;
+        }
+        @include desktop {
+          grid-template-columns: 100%;
+        }
+        img {
+          padding-bottom: 20px;
+          width: 100%;
+        }
       }
     }
   }
+
+ 
+
 }
 
 
