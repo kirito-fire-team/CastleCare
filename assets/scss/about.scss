@@ -215,7 +215,7 @@ ABOUT
 
 .about-container {
     width: 100%;
-    // padding: 20px;
+
 
     .about-text {
 
@@ -231,7 +231,7 @@ ABOUT
             span {
                 display: inline-block;
                 width: 19px;
-                border-bottom: 1px solid #1B75BC;
+                border-bottom: 1px solid $blue;
             }
         }
 
