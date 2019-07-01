@@ -10,6 +10,27 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- *******COPY BELOW THIS LINE*********  -->
+
+  <!-- SLIDER MENU FOR MOBILE -->
+  <div id="myNav" class="overlay">
+
+      <!-- Button to close the nav overlay -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+      <!-- Nav overlay content -->
+      <div class="overlay-content">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="physician.html">Physicians</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+    </div>
+
   <header>
     <div class="container">
       <nav class="main-nav">
@@ -20,7 +41,8 @@
           </div>
         </a>
         <div class="mobile-menu">
-          <i class="fas fa-bars"></i>
+          <!-- Opens the Slider Menu -->
+          <span onclick="openNav()"><i class="bars fas fa-bars"></i></span>
         </div>
         <div class="menu-bar">
           <ul>
@@ -40,7 +62,7 @@
       </div>
     </div>
   </header>
-
+<!-- **********COPY ABOVE THIS LINE********** -->
   <section class="welcome-section">
     <div class="container">
       <h3>Welcome to Castle Care</h3>
@@ -59,28 +81,54 @@
         <h3>Care you can put your trust in</h3>
         <h2>Our Services</h2>
       </div>
-      <div class="service-box">
-        <div class="col-1 box">
-          <i class="fas icon fa-stethoscope"></i>
-          <p>Free Checkup</p>
-        </div>
-        <div class="col-2 box">
-          <i class="fas icon fa-heartbeat"></i>
-          <p>Cardiogram</p>
-        </div>
-        <div class="col-3 box">
-          <i class="fas icon fa-procedures"></i>
-          <p>Surgeries</p>
-        </div>
-        <div class="col-4 box">
-          <i class="fas icon fa-prescription"></i>
-          <p>Medication</p>
+      <div class="main-services-box"> 
+        <div class="grid-container">
+          <div class="options-box">
+            <div class="col-1 box">
+              <i class="fas icon fa-stethoscope"></i>
+              <p>Free Checkup</p>
+            </div>
+            <div class="col-2 box">
+              <i class="fas icon fa-heartbeat"></i>
+              <p>Cardiogram</p>
+            </div>
+            <div class="col-3 box">
+              <i class="fas icon fa-procedures"></i>
+              <p>Surgeries</p>
+            </div>
+            <div class="col-4 box">
+              <i class="fas icon fa-prescription"></i>
+              <p>Medication</p>
+            </div>
+            <div class="col-5 tab">
+              <a href="services.html">View All</a>
+            </div>
+          </div>
+          <div class="passion-box">
+            <h3>A passion for putting patients first</h3>
+            <div class="major-points">
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> Passion for Healing</p>
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> All our best</p>
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> Legacy of Excellence</p>
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> 5-Star Care</p>
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> Believe in We</p>
+              <p><span><i class="fas fa-chevron-circle-right"></i></span> Always Caring</p>
+            </div>
+            <div class="history">
+              <p>Medicine has been around for thousands of years, during most of which it was an art (an area of skill and knowledge) frequently having connections to the religious and philosophical beliefs of local culture. For example, a medicine man would apply herbs and say prayers for healing, or an ancient philosopher</p>
+              <p>In modern clinical practice, physicians personally assess patients in order to diagnose, prognose, treat, and prevent disease using clinical judgment. The doctor-patient relationship typically begins an interaction with an examination of the patient's medical history and medical record, followed by a medical interview</p>
+            </div>
+          </div>
+          <div class="doc-patient-box">
+            <img src="/img/doctorpatient17.jpg" alt="">
+            <img src="/img/doctorpatient16.jpg" alt="">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-
+<!-- *******COPY BELOW THIS LINE********** -->
   <footer>
     <div class="container">
       <div class="grid-container">
@@ -108,4 +156,7 @@
       </div>
     </div>
   </footer>
+  <script src="/js/app.js"></script>
+  <!-- ************COPY ABOVE THIS LINE********* -->
 </body>
+</html>
