@@ -215,7 +215,7 @@ ABOUT
 
 .about-container {
     width: 100%;
-    padding: 20px;
+    // padding: 20px;
 
     .about-text {
 
@@ -226,6 +226,7 @@ ABOUT
             font-weight: 600;
             margin: 40px 0 15px 0;
             letter-spacing: 1px;
+            padding-left: 10px;
 
             span {
                 display: inline-block;
@@ -238,6 +239,7 @@ ABOUT
             line-height: 26px;
             letter-spacing: 1px;
             font-size: 17px;
+            padding: 10px;
         }
     }
 }
