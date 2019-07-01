@@ -172,6 +172,10 @@ WELCOME SECTION
     color: $blue;
     font-weight: 600;
     font-size: 12px;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: $purple;
+    }
     @include desktop {
       font-size: 14px;
     }
