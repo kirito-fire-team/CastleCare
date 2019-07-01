@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+@import "global";
+@import "variables";
+@import "mixins";
+
+/*******************************************
+HEADER
+********************************************/
+header {
+    background: #ccc;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
+        url(/img/doc.jpg) center center no-repeat;
+    background-size: cover;
+    // height: 100vh;
+    position: relative;
+
+    // Navigation
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        padding: 20px 0;
+
+        // Logo
+        .logo-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 45px;
+
+                @include tablet {
+                    width: 90px;
+                }
+
+                @include desktop {
+                    width: 65px;
+                }
+            }
+
+            p {
+                font-size: 21px;
+                text-transform: uppercase;
+                font-weight: 400;
+                padding-left: 10px;
+                letter-spacing: 4px;
+
+                @include tablet {
+                    font-size: 40px;
+                }
+
+                @include desktop {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        // Mobile Menu
+        .mobile-menu {
+            display: inline-block;
+            font-size: 23px;
+
+            @include tablet {
+                font-size: 40px;
+            }
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        // Menu Bar
+        .menu-bar {
+            display: none;
+
+            @include desktop {
+                display: inline-block;
+
+                ul>li {
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    font-size: 17px;
+                    font-weight: 400;
+                    padding: 5px 4px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*******************************************
+BANNER
+********************************************/
+
+@keyframes fade-in-left {
+    0% {
+        left: -80px;
+        opacity: 0;
+    }
+
+
+
+    100% {
+        left: 6%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        top: 30px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.banner-container {
+    width: 100%;
+    transition: all 2s ease-in-out;
+    margin: 0 auto;
+
+    h1 {
+        color: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 27%;
+        left: -200px;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        animation-name: fade-in-left;
+        opacity: 0;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        backface-visibility: hidden;
+
+
+        span {
+            display: inline-block;
+            width: 19px;
+            border-bottom: 1px solid #fff;
+            backface-visibility: hidden;
+
+        }
+
+
+    }
+
+    p {
+        margin-top: 8px;
+        display: inline-block;
+        position: absolute;
+        top: 37%;
+        left: -80px;
+        text-transform: capitalize;
+        animation-name: fade-in-left;
+        opacity: 0;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        font-size: 8px;
+        color: #fff;
+        z-index: 1;
+        letter-spacing: 1px;
+        backface-visibility: hidden;
+
+
+
+    }
+
+    a {
+        color: #111;
+        font-weight: 500;
+    }
+}
+
+
+.office-img-container {
+    position: relative;
+    width: 100%;
+
+
+    .office-img {
+        background: url("/public/img/med_office.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 300px;
+        z-index: 0;
+        animation-name: fade-in-bottom;
+    }
+
+    .overlay:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+/*******************************************
+ABOUT
+********************************************/
+
+.about-container {
+    width: 100%;
+    padding: 20px;
+
+    .about-text {
+
+
+        h3 {
+            color: #444;
+            text-transform: capitalize;
+            font-weight: 600;
+            margin: 40px 0 15px 0;
+            letter-spacing: 1px;
+
+            span {
+                display: inline-block;
+                width: 19px;
+                border-bottom: 1px solid #1B75BC;
+            }
+        }
+
+        p {
+            line-height: 26px;
+            letter-spacing: 1px;
+            font-size: 17px;
+        }
+    }
+}
+
+
+/*******************************************
+DOCTORS
+********************************************/
+
+
+
+
+.doctors h2 {
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 28px;
+    padding-bottom: 40px;
+}
+
+.doctors .doc-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .doc-box {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 55px;
+
+        .doc-img-1 {
+            background: url("/public/img/doc-1.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-2 {
+            background: url("/public/img/doc-2.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-3 {
+            background: url("/public/img/doc-3.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        .doc-img-4 {
+            background: url("/public/img/doc-4.jpg");
+            width: 100%;
+            background-size: cover;
+            height: 300px;
+            background-repeat: no-repeat;
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+
+        }
+
+        h3 {
+            font-weight: 500;
+            padding: 30px 0 10px 0;
+            letter-spacing: 1px;
+            font-size: 20px;
+            color: #444;
+        }
+
+        span {
+            font-size: 18px;
+            padding-bottom: 17px;
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: left;
+            line-height: 26px;
+        }
+    }
+}
+
+
+
+/*******************************************
+FOOTER
+********************************************/
+
+footer {
+    background: $purple;
+    padding: 20px 0;
+    color: $white;
+    text-align: center;
+
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 15px;
+        text-align: center;
+
+        @include tablet {
+            grid-template-columns: 25% 40% 30%;
+            grid-template-rows: auto;
+            grid-column-gap: 15px;
+        }
+
+        .address-col {
+            h5 {
+                font-size: 20px;
+                font-weight: 500;
+
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.5;
+
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .social-col {
+            .icon {
+                font-size: 20px;
+                padding: 0 20px;
+
+                @include desktop {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .menu-col {
+            ul>li {
+                padding: 5px;
+                display: inline-block;
+
+                @include desktop {
+                    font-size: 20px;
+                }
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
