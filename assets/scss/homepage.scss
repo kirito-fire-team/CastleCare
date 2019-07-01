@@ -192,10 +192,39 @@ WELCOME SECTION
 
 
 /*******************************************
-WELCOME SECTION
+SERVICES SECTION
 ********************************************/
 
-
+.services-section {
+  padding: 30px 0 0;
+  text-align: center;
+  color: $dark-text;
+  h3 {
+    @include h3title;
+  }
+  h2 {
+    @include h2title;
+  }
+  .service-box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 3px;
+    .box {
+      padding: 30px;
+      border-radius: 5px;
+      background: $blue;
+      .icon {
+        color: $white;
+        font-size: 30px;
+      }
+      p {
+        padding-top: 10px;
+        color: $white;
+      }
+    }
+  }
+}
 
 
 
