@@ -3,6 +3,7 @@
 @import "global";
 @import "variables";
 @import "mixins"; // Header Styles
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Cardo:400,700&display=swap');
 
 
@@ -140,3 +141,11 @@
         max-height: 275px;
     }
 }
+=======
+
+#charSelect{
+    background: red;
+    display: inline-block;
+    list-style: none;
+}
+>>>>>>> master
