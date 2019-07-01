@@ -1,0 +1,142 @@
+@import "reset";
+@import "styles";
+@import "global";
+@import "variables";
+@import "mixins"; // Header Styles
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700&display=swap');
+
+
+#chooseService{
+    margin-top: 100px;
+    #charSelect{
+        width: 80%;
+        float: left;
+        padding: 15px;
+        text-align: center;
+        h1{
+            line-height: 1.5;
+            font-size: 55px;
+            font-family: 'Cardo', serif;
+            font-weight: 700;
+            color: #00A4D6;
+            border-bottom: 1px solid #00A4D6;
+            margin: 35px;
+        }
+        #letters{
+            li{
+                display: inline-block;
+                list-style: none;
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+                background: rgb(206,219,233); /* Old browsers */
+                background: -moz-linear-gradient(-45deg, rgba(206,219,233,1) 0%, rgba(145,150,165,1) 36%, rgba(97,153,199,1) 49%, rgba(106,121,166,1) 65%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg, rgba(206,219,233,1) 0%,rgba(145,150,165,1) 36%,rgba(97,153,199,1) 49%,rgba(106,121,166,1) 65%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg, rgba(206,219,233,1) 0%,rgba(145,150,165,1) 36%,rgba(97,153,199,1) 49%,rgba(106,121,166,1) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                a{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 25px;
+                    position: relative;
+                    top: 25%;
+                }
+            }
+            li:hover{
+                transform: scale(1.5);
+            }
+        }
+    }
+    #serviceCards{
+        width: 80%;
+        float: left;
+        padding: 15px;
+        text-align: center;
+        #cards{
+            width: 69%;
+            margin: 0 auto;
+            font-size: 20px;
+            text-align: start;
+            .letterCard{
+                -webkit-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+                -moz-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+                box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+                display: none;
+                font-size: 45px;
+                font-weight: bold;
+                border: 1px solid gray;
+                border-radius: 5px;
+                background: $purple;
+                width: 100%;
+                color: white;
+                h1{
+                    margin-left: 20px;
+                }
+                ul{
+                    background: rgb(235, 233, 231);
+                    font-size: 30px;
+                    font-weight: 500;
+                    width: 100%;
+                    padding: 20px;
+                    line-height: 2;
+                    color: black;
+                    li{
+                        border-bottom: 1px solid black;
+                    }
+                    li:last-child{
+                        border: none;
+                    }
+                }
+                &.default{
+                    display: inline-block;
+                }
+                li:hover{
+                    transform: scale(1.03);
+                }
+            }
+            .letterCard:target{
+                display: inline-block;
+                &.default{
+                    display: none;
+                }
+            }
+        }
+    }
+    #helpColumn{
+        width: 20%;
+        float: left;
+        position: relative;
+        top: -175px;
+        h1{
+            font-size: 30px;
+            padding: 15px 0;
+            line-height: 1.25;
+            color: $purple;
+            font-weight: 500;
+        }
+        ul{
+            background: rgb(223, 223, 223);
+            li{
+                font-size: 20px;
+                line-height: 1.25;
+                border-bottom: 1px solid #1B75BC;
+                padding: 15px;
+            }
+            li:last-child{
+                border: none;
+            }
+        }
+    }
+}
+#chooseService{
+    content: "";
+    display: table;
+    clear: both;
+}
+#awards{
+    min-height: 150px;
+    text-align: center;
+    margin-bottom: 75px;
+    img{
+        max-height: 275px;
+    }
+}
