@@ -1,0 +1,43 @@
+@import "global";
+@import "variables";
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  background-color: rgba(0,0,0, .9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: $blue;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: $blue;
+      display: block;
+      transition: 0.3s; 
+      &:hover {
+        color: $purple;
+      }
+      &:focus {
+        color: $purple;
+      }
+    }
+  }
+}
