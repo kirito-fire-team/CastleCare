@@ -157,11 +157,9 @@ BANNER
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 300px;
-    z-index: 0;
-    animation-name: fade-in-bottom; }
+    height: 300px; }
   .office-img-container .overlay:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0px;
     top: 0px;
@@ -355,7 +353,7 @@ TESTIMONIALS
         font-weight: 300; }
 
 .overlay:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0px;
   top: 0px;
