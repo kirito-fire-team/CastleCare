@@ -14,32 +14,65 @@
 
 <body>
 
+  <!-- *******COPY BELOW THIS LINE*********  -->
+
+  <!-- SLIDER MENU FOR MOBILE -->
+  <!-- <div id="myNav" class="overlay"> -->
+  <div id="myNav" class="overlay">
+
+
+    <!-- Button to close the nav overlay -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Nav overlay content -->
+    <div class="overlay-content">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="physician.html">Physicians</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
   <header>
     <div class="container">
       <nav class="main-nav">
-        <div class="logo-box">
-          <img src="img/logo.png" alt="Castle Medical Logo">
-          <p>Castle Care</p>
-        </div>
+        <a href="index.html">
+          <div class="logo-box">
+            <img src="img/logo.png" alt="Castle Medical Logo">
+            <p>Castle Care</p>
+          </div>
+        </a>
         <div class="mobile-menu">
-          <i class="fas fa-bars"></i>
+          <!-- Opens the Slider Menu -->
+          <span onclick="openNav()"><i class="bars fas fa-bars"></i></span>
         </div>
         <div class="menu-bar">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Physicians</li>
-            <li>Locations</li>
-            <li>Contact</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="physician.html">Physicians</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
+      <div class="info-box">
+        <h1>Your health is <br> Our Concern</h1>
+        <p>Castle Care is a non-profit, family owned medical center, commited to serving the community with excellent
+          treatment with doctors who are possionate about helping others.</p>
+        <a href="#" class="we-help-btn">See how we can help <i class="fas arrow-right fa-chevron-right"></i></a>
+      </div>
     </div>
   </header>
+  <!-- **********COPY ABOVE THIS LINE********** -->
 
   <!-- START BANNER -->
-  <section>
+  <section class="banner-hack" style="position: relative; top: 0;">
     <div class="banner-container">
       <div class="office-img-container">
         <h1>about us</h1>
@@ -49,7 +82,7 @@
         </p>
 
         <div class="office-img"></div>
-        <div class="overlay"></div>
+        <div class="office-overlay"></div>
       </div>
   </section>
   <!-- END BANNER -->
@@ -87,8 +120,8 @@
 
   <!-- START OF DOCTORS -->
 
-
-  <section class="doctors">
+  <!-- DOCTORS MOBILE -->
+  <!-- <section class="doctors-mobile">
     <h2>our doctors <span></span></h2>
     <div class="doc-container">
       <div class="doc-box">
@@ -124,7 +157,59 @@
           inventore!</p>
       </div>
     </div>
+  </section> -->
+  <!-- END DOCTORS MOBILE -->
+
+  <!-- DOCTORS TABLET -->
+  <section class="doctors-tablet-1">
+    <h2>our doctors <span></span></h2>
+    <div class="doc-container">
+      <div class="doc-box">
+        <div class="doc-img-1"></div>
+        <h3>Roger Edwards</h3>
+        <span>Lead Physician</span>
+        <p>Roger Edwards is an alumni of the University of dolor sit amet consectetur, adipisicing elit. Veritatis error
+          facilis reiciendis maxime, quod
+          nemo ex autem? Minima itaque vero delectus voluptatum voluptate animi suscipit dolore, possimus in incidunt
+          inventore!</p>
+      </div>
+      <div class="doc-box">
+        <div class="doc-img-2"></div>
+        <h3>Stacy Blaine</h3>
+        <span>Lead Cardiologist</span>
+        <p>Stacy Blaine is one of the leading dolor sit amet consectetur, adipisicing elit. Veritatis error facilis
+          reiciendis maxime, quod
+          nemo ex autem? Minima itaque vero delectus voluptatum voluptate animi suscipit dolore, possimus in incidunt
+          inventore!</p>
+      </div>
   </section>
+
+  <section class="doctors-tablet-2">
+    <div class="doc-container">
+
+      <div class="doc-box">
+        <div class="doc-img-3"></div>
+        <h3>Ryan Beck</h3>
+        <span>Lead Neurologist</span>
+        <p>Ryan Beck has been a Neurologist for dolor sit amet consectetur, adipisicing elit. Veritatis error facilis
+          reiciendis maxime, quod
+          nemo ex autem? Minima itaque vero delectus voluptatum voluptate animi suscipit dolore, possimus in incidunt
+          inventore!</p>
+      </div>
+      <div class="doc-box">
+        <div class="doc-img-4"></div>
+        <h3>Lisa Charles</h3>
+        <span>Lead Pediatrician</span>
+        <p>Lisa Charles has over 11 years of dolor sit amet consectetur, adipisicing elit. Veritatis error facilis
+          reiciendis maxime, quod
+          nemo ex autem? Minima itaque vero delectus voluptatum voluptate animi suscipit dolore, possimus in incidunt
+          inventore!</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- END DOCTORS TABLET -->
+
 
 
   <!-- END OF DOCTORS -->
@@ -134,17 +219,15 @@
     <h2>Testimonials <span></span></h2>
     <div class="test-container-img">
       <div class="patient-container">
-        <blockquote>
-          <div class="patient-rev-img">
-          </div>
-          <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum, sunt quos aliquid
-              necessitatibus maiores excepturi maxime quis eveniet omnis nisi perferendis, ex assumenda pariatur facilis
-              accusantium! Eius, accusamus assumenda."</i><br>
-            <br>
-            - Robert J.
-          </p>
 
-        </blockquote>
+        <div class="patient-rev-img">
+        </div>
+        <p><i>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum, sunt quos aliquid
+            necessitatibus maiores excepturi maxime quis eveniet omnis nisi perferendis, ex assumenda pariatur facilis
+            accusantium! Eius, accusamus assumenda."</i><br>
+          <br>
+          - Robert J.
+        </p>
       </div>
       <!-- <div class="patient-container-2">
         <blockquote>
@@ -163,8 +246,8 @@
 
   <!-- Start of Appointment -->
   <section class="appointment">
+    <h2>Book an Appointment <span></span></h2>
     <div class="appoint-container">
-      <h2>Book an Appointment</h2>
       <!-- <a href="#">Book Now</a> -->
       <div class="form-container">
         <form action="submit">
@@ -174,7 +257,9 @@
           <input type="number" placeholder="Phone Number*">
           <button type="submit">Book Now</button>
         </form>
-
+      </div>
+      <div class="side-img-container">
+        <div class="side-img"></div>
       </div>
     </div>
   </section>
