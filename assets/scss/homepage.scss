@@ -239,12 +239,15 @@ SERVICES SECTION
           padding: 30px;
           border-radius: 5px;
           background: $blue;
+          display: grid;
+          grid-template-rows: 45px 40px;
           @include desktop {
             padding: 15px;
           }
           .icon {
             color: $white;
             font-size: 30px;
+            align-self: center;
           }
           p {
             padding-top: 10px;
