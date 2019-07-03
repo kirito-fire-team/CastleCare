@@ -727,7 +727,7 @@ TESTIMONIALS
   display: flex;
   flex-direction: column;
   align-items: center;
-  // position: relative;
+  position: relative;
 
   h2 {
     color: #444;
@@ -756,43 +756,65 @@ TESTIMONIALS
     // position: absolute;
     display: block;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center right;
     z-index: 0;
     text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
+    justify-content: space-around;
 
     @include tablet {
       height: 550px;
     }
 
     @include desktop {
-      height: 575px;
+      height: 700px;
     }
 
     .patient-rev-img img {
       // background: url("/public/img/patient-pic.jpg");
-      width: 100px;
-      height: 115px;
-      position: relative;
-      margin: 7% 18px 20px 0;
-      padding-bottom: 5px;
+      width: 95px;
+      height: 110px;
+      // position: relative;
+      // position: absolute;
+      // margin: 7% 18px 20px 0;
+      // margin: 0 auto;
+      top: 8%;
+      left: 39%;
+      // right: 35%;
+      // right: 400px;
+      // padding-bottom: 5px;
       z-index: 1;
       background-size: contain;
       border-radius: 50%;
       display: inline-block;
       text-align: center;
+      background-attachment: fixed;
 
 
       @include tablet {
-        margin-right: 3%;
-        margin-top: 10%;
+        // margin-right: 2%;
+        margin-top: 5%;
         width: 144px;
         height: 160px;
+        // right: 400px;
+        top: 7%;
+        left: 40%;
       }
 
       @include desktop {
-        margin-top: 5%;
+        // margin-top: 2%;
         // margin-bottom: 50px;
+        // right: 400px;
+        top: 15%;
+        left: 43%;
+        width: 152px;
+        height: 165px;
+        margin-top: 0;
+        margin-bottom: 100px;
+
       }
     }
 
@@ -807,10 +829,10 @@ TESTIMONIALS
       font-size: 15px;
       letter-spacing: 1px;
       font-weight: 400;
-      // margin-right: 20%;
+
       width: 75%;
       text-align: center;
-      // max-width: 620px;
+
 
       @include tablet {
         width: 60%;
@@ -828,7 +850,7 @@ TESTIMONIALS
       @include desktop {
         max-width: 60%;
         font-size: 22px;
-        top: 35%;
+        top: 37%;
         right: 13%;
       }
     }

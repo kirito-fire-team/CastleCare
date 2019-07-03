@@ -410,7 +410,8 @@ TESTIMONIALS
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .testimonials h2 {
     color: #444;
     text-align: center;
@@ -433,35 +434,45 @@ TESTIMONIALS
     position: relative;
     display: block;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center right;
     z-index: 0;
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
     @media (min-width: 768px) {
       .testimonials .test-container-img {
         height: 550px; } }
     @media (min-width: 992px) {
       .testimonials .test-container-img {
-        height: 575px; } }
+        height: 700px; } }
     .testimonials .test-container-img .patient-rev-img img {
-      width: 100px;
-      height: 115px;
-      position: relative;
-      margin: 7% 18px 20px 0;
-      padding-bottom: 5px;
+      width: 95px;
+      height: 110px;
+      top: 8%;
+      left: 39%;
       z-index: 1;
       background-size: contain;
       border-radius: 50%;
       display: inline-block;
-      text-align: center; }
+      text-align: center;
+      background-attachment: fixed; }
       @media (min-width: 768px) {
         .testimonials .test-container-img .patient-rev-img img {
-          margin-right: 3%;
-          margin-top: 10%;
+          margin-top: 5%;
           width: 144px;
-          height: 160px; } }
+          height: 160px;
+          top: 7%;
+          left: 40%; } }
       @media (min-width: 992px) {
         .testimonials .test-container-img .patient-rev-img img {
-          margin-top: 5%; } }
+          top: 15%;
+          left: 43%;
+          width: 152px;
+          height: 165px;
+          margin-top: 0;
+          margin-bottom: 100px; } }
     .testimonials .test-container-img p {
       color: #fff;
       z-index: 1;
@@ -486,7 +497,7 @@ TESTIMONIALS
         .testimonials .test-container-img p {
           max-width: 60%;
           font-size: 22px;
-          top: 35%;
+          top: 37%;
           right: 13%; } }
 
 .overlay:after {
