@@ -576,17 +576,17 @@ APPOINTMENT
     @media (min-width: 992px) {
       .appointment .side-img-container {
         display: block;
-        margin: 0; } }
-  .appointment .side-img {
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    padding: 50px;
-    border-radius: 5px;
-    margin-left: 10%; }
-    @media (min-width: 992px) {
-      .appointment .side-img {
+        margin: 0; }
+        .appointment .side-img-container .side-img {
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          padding: 50px;
+          border-radius: 5px;
+          margin-left: 10%; } }
+    @media (min-width: 992px) and (min-width: 992px) {
+      .appointment .side-img-container .side-img {
         height: 309px;
         width: 516px;
         margin: 0;
