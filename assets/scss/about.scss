@@ -166,7 +166,7 @@ header {
       @include desktop {
         display: inline-block;
 
-        ul > li {
+        ul>li {
           display: inline-flex;
           justify-content: flex-end;
           font-size: 17px;
@@ -364,19 +364,36 @@ BANNER
   // }
 
   .office-img {
-    background: url("/public/img/med_office.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 350px;
+    // background: url("/public/img/med_office.jpg");
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // width: 100%;
+    // height: 350px;
 
-    @include tablet {
-      height: 420px;
+    img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 350px;
+
+      @include tablet {
+        height: 420px;
+      }
+
+      @include desktop {
+        height: 700px;
+      }
+
+
     }
 
-    @include desktop {
-      height: 700px;
-    }
+    // @include tablet {
+    //   height: 420px;
+    // }
+
+    // @include desktop {
+    //   height: 700px;
+    // }
   }
 
   .office-overlay:after {
@@ -1038,7 +1055,7 @@ footer {
     }
 
     .menu-col {
-      ul > li {
+      ul>li {
         padding: 5px;
         display: inline-block;
 
