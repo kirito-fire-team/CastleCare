@@ -252,10 +252,11 @@ SERVICES SECTION
         .tab {
           grid-column: 1 / span 2;
           background: $darkblue;
-          padding: 10px;
+          padding: 20px;
           border-radius: 0 0 5px 5px ;
           @include tablet {
             grid-column: 1 / span 4;
+            padding: 10px;
           }
           @include desktop {
             grid-column: 1 / 2;
@@ -336,11 +337,75 @@ SERVICES SECTION
       }
     }
   }
-
- 
-
 }
 
+
+
+
+/*******************************************
+SPECIALITIES SECTION
+********************************************/
+.special-section {
+  padding: 30px 0 30px;
+  text-align: center;
+  color: $dark-text;
+  .title {
+    margin-bottom: 30px;
+    h3 {
+      @include h3title;
+    }
+    h2 {
+      @include h2title;
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    @include desktop {
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows: repeat(3, 33.33%);
+      width: 80%;
+      margin: 0 auto;
+    }
+    .med-box {
+      display: block;
+      background: #fff;
+      padding: 30px;
+      border-bottom: 1px solid rgba(0,0,0, .1);
+      border-right: 1px solid rgba(0,0,0, .1);
+      display: grid;
+      grid-template-columns: 100%;
+      justify-items: center;
+      transition: all .5s ease-in-out;
+      a {
+        display: grid;
+        grid-template-rows: 100px 50px;
+      }
+      &:nth-child(4n+0) {
+        border-right: none;
+      }
+      &:nth-last-child(-n+4) {
+        border-bottom: none;
+      }
+      &:hover {
+        background: rgba(0, 174, 255, 0.281);
+        color: #080e14;
+        font-size: 18px;
+      }
+      img {
+        display: block;
+        width: 60px;
+        align-self: center;
+        margin: 0 auto;
+      }
+      p {
+        align-self: center;
+        padding: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
 
 
 

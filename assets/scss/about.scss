@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
 @import "global";
 @import "variables";
 @import "mixins";
@@ -7,206 +7,190 @@
 HEADER
 ********************************************/
 header {
-    background: #ccc;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
-        url(/img/doc.jpg) center center no-repeat;
-    background-size: cover;
-    // height: 100vh;
-    position: relative;
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
+  background-size: cover;
+  // height: 100vh;
+  position: relative;
 
-    // Navigation
-    .main-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $white;
-        padding: 20px 0;
+  // Navigation
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
 
-        // Logo
-        .logo-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    // Logo
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-            img {
-                width: 45px;
+      img {
+        width: 45px;
 
-                @include tablet {
-                    width: 90px;
-                }
-
-                @include desktop {
-                    width: 65px;
-                }
-            }
-
-            p {
-                font-size: 21px;
-                text-transform: uppercase;
-                font-weight: 400;
-                padding-left: 10px;
-                letter-spacing: 4px;
-
-                @include tablet {
-                    font-size: 40px;
-                }
-
-                @include desktop {
-                    font-size: 24px;
-                }
-            }
+        @include tablet {
+          width: 90px;
         }
 
-        // Mobile Menu
-        .mobile-menu {
-            display: inline-block;
-            font-size: 23px;
+        @include desktop {
+          width: 65px;
+        }
+      }
 
-            @include tablet {
-                font-size: 40px;
-            }
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 10px;
+        letter-spacing: 4px;
 
-            @include desktop {
-                display: none;
-            }
+        @include tablet {
+          font-size: 40px;
         }
 
-        // Menu Bar
-        .menu-bar {
-            display: none;
-
-            @include desktop {
-                display: inline-block;
-
-                ul>li {
-                    display: inline-flex;
-                    justify-content: flex-end;
-                    font-size: 17px;
-                    font-weight: 400;
-                    padding: 5px 4px;
-                }
-            }
+        @include desktop {
+          font-size: 24px;
         }
+      }
     }
+
+    // Mobile Menu
+    .mobile-menu {
+      display: inline-block;
+      font-size: 23px;
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    // Menu Bar
+    .menu-bar {
+      display: none;
+
+      @include desktop {
+        display: inline-block;
+
+        ul > li {
+          display: inline-flex;
+          justify-content: flex-end;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 5px 4px;
+        }
+      }
+    }
+  }
 }
-
-
 
 /*******************************************
 BANNER
 ********************************************/
 
 @keyframes fade-in-left {
-    0% {
-        left: -80px;
-        opacity: 0;
-    }
+  0% {
+    left: -80px;
+    opacity: 0;
+  }
 
-
-
-    100% {
-        left: 6%;
-        opacity: 1;
-    }
+  100% {
+    left: 6%;
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in-bottom {
-    0% {
-        top: 30px;
-        opacity: 0;
-    }
+  0% {
+    top: 30px;
+    opacity: 0;
+  }
 
-    100% {
-        top: 0;
-        opacity: 1;
-    }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .banner-container {
-    width: 100%;
-    transition: all 2s ease-in-out;
-    margin: 0 auto;
+  width: 100%;
+  transition: all 2s ease-in-out;
+  margin: 0 auto;
 
-    h1 {
-        color: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 27%;
-        left: -200px;
-        font-size: 22px;
-        font-weight: 300;
-        letter-spacing: 1px;
-        text-transform: capitalize;
-        animation-name: fade-in-left;
-        opacity: 0;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        backface-visibility: hidden;
+  h1 {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 27%;
+    left: -200px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
 
-
-        span {
-            display: inline-block;
-            width: 19px;
-            border-bottom: 1px solid #fff;
-            backface-visibility: hidden;
-
-        }
-
-
+    span {
+      display: inline-block;
+      width: 19px;
+      border-bottom: 1px solid #fff;
+      backface-visibility: hidden;
     }
+  }
 
-    p {
-        margin-top: 8px;
-        display: inline-block;
-        position: absolute;
-        top: 37%;
-        left: -80px;
-        text-transform: capitalize;
-        animation-name: fade-in-left;
-        opacity: 0;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        font-size: 8px;
-        color: #fff;
-        z-index: 1;
-        letter-spacing: 1px;
-        backface-visibility: hidden;
+  p {
+    margin-top: 8px;
+    display: inline-block;
+    position: absolute;
+    top: 37%;
+    left: -80px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-size: 8px;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
+    backface-visibility: hidden;
+  }
 
-
-
-    }
-
-    a {
-        color: #111;
-        font-weight: 500;
-    }
+  a {
+    color: #111;
+    font-weight: 500;
+  }
 }
 
-
 .office-img-container {
-    position: relative;
+  position: relative;
+  width: 100%;
+
+  .office-img {
+    background: url("/img/med_office.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 300px;
+  }
 
-
-    .office-img {
-        background: url("/public/img/med_office.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 300px;
-        z-index: 0;
-        animation-name: fade-in-bottom;
-    }
-
-    .overlay:after {
-        content: '';
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, .5);
-    }
+  .overlay:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 /*******************************************
@@ -214,42 +198,145 @@ ABOUT
 ********************************************/
 
 .about-container {
-    width: 100%;
+  width: 100%;
 
+  .about-text {
+    h3 {
+      color: #444;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin: 40px 0 15px 0;
+      letter-spacing: 1px;
+      padding-left: 10px;
 
-    .about-text {
-
-
-        h3 {
-            color: #444;
-            text-transform: capitalize;
-            font-weight: 600;
-            margin: 40px 0 15px 0;
-            letter-spacing: 1px;
-            padding-left: 10px;
-
-            span {
-                display: inline-block;
-                width: 19px;
-                border-bottom: 1px solid $blue;
-            }
-        }
-
-        p {
-            line-height: 26px;
-            letter-spacing: 1px;
-            font-size: 17px;
-            padding: 10px;
-        }
+      span {
+        display: inline-block;
+        width: 19px;
+        border-bottom: 1px solid $blue;
+      }
     }
-}
 
+    p {
+      line-height: 26px;
+      letter-spacing: 1px;
+      font-size: 17px;
+      padding: 10px;
+    }
+  }
+}
 
 /*******************************************
 DOCTORS
 ********************************************/
 
 .doctors h2 {
+  color: #444;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding-bottom: 40px;
+
+  span {
+    display: inline-block;
+    width: 26px;
+    border-bottom: 1px solid $blue;
+    backface-visibility: hidden;
+  }
+}
+
+.doctors .doc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .doc-box {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 55px;
+
+    .doc-img-1 {
+      background: url("/img/doc-1.jpg");
+      width: 100%;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+    }
+
+    .doc-img-2 {
+      background: url("/public/img/doc-2.jpg");
+      width: 100%;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+    }
+
+    .doc-img-3 {
+      background: url("/public/img/doc-3.jpg");
+      width: 100%;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+    }
+
+    .doc-img-4 {
+      background: url("/public/img/doc-4.jpg");
+      width: 100%;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+    }
+
+    h3 {
+      font-weight: 500;
+      padding: 30px 0 10px 0;
+      letter-spacing: 1px;
+      font-size: 20px;
+      color: #444;
+    }
+
+    span {
+      font-size: 18px;
+      padding-bottom: 17px;
+      display: block;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: left;
+      line-height: 26px;
+    }
+  }
+}
+
+/*******************************************
+TESTIMONIALS
+********************************************/
+
+.testimonials {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // position: relative;
+
+  h2 {
     color: #444;
     text-align: center;
     font-weight: 500;
@@ -259,361 +346,228 @@ DOCTORS
     padding-bottom: 40px;
 
     span {
-        display: inline-block;
-        width: 26px;
-        border-bottom: 1px solid $blue;
-        backface-visibility: hidden;
-
+      display: inline-block;
+      width: 26px;
+      border-bottom: 1px solid $blue;
+      backface-visibility: hidden;
     }
-}
+  }
 
-.doctors .doc-container {
+  .test-container-img {
+    background: url("/public/img/doctorPatient19-sm.jpg");
+    background-size: cover;
+    height: 400px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    background-repeat: no-repeat;
+    position: relative;
+    // position: absolute;
+    display: block;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 0;
 
-    .doc-box {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        padding-bottom: 55px;
-
-        .doc-img-1 {
-            background: url("/public/img/doc-1.jpg");
-            width: 100%;
-            background-size: cover;
-            height: 300px;
-            background-repeat: no-repeat;
-            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-
-        }
-
-        .doc-img-2 {
-            background: url("/public/img/doc-2.jpg");
-            width: 100%;
-            background-size: cover;
-            height: 300px;
-            background-repeat: no-repeat;
-            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-
-        }
-
-        .doc-img-3 {
-            background: url("/public/img/doc-3.jpg");
-            width: 100%;
-            background-size: cover;
-            height: 300px;
-            background-repeat: no-repeat;
-            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-
-        }
-
-        .doc-img-4 {
-            background: url("/public/img/doc-4.jpg");
-            width: 100%;
-            background-size: cover;
-            height: 300px;
-            background-repeat: no-repeat;
-            -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-            box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
-
-        }
-
-        h3 {
-            font-weight: 500;
-            padding: 30px 0 10px 0;
-            letter-spacing: 1px;
-            font-size: 20px;
-            color: #444;
-        }
-
-        span {
-            font-size: 18px;
-            padding-bottom: 17px;
-            display: block;
-        }
-
-        p {
-            font-size: 18px;
-            text-align: left;
-            line-height: 26px;
-        }
-    }
-}
-
-/*******************************************
-TESTIMONIALS
-********************************************/
-
-
-.testimonials {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // position: relative;
-
-
-
-    h2 {
-        color: #444;
-        text-align: center;
-        font-weight: 500;
-        text-transform: capitalize;
-        letter-spacing: 1px;
-        font-size: 28px;
-        padding-bottom: 40px;
-
-        span {
-            display: inline-block;
-            width: 26px;
-            border-bottom: 1px solid $blue;
-            backface-visibility: hidden;
-
-        }
+    .patient-rev-img {
+      background: url("/public/img/patient-pic.jpg");
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      margin: 4% 0 10% 0;
+      padding: 31px 10px 31px 10px;
+      top: 0;
+      z-index: 1;
+      background-size: contain;
+      border-radius: 50%;
+      top: 8%;
+      display: inline-block;
+      left: 32%;
     }
 
-    .test-container-img {
-        background: url("/public/img/doctorPatient19-sm.jpg");
-        background-size: cover;
-        height: 400px;
-        width: 100%;
-        background-repeat: no-repeat;
+    p {
+      color: #fff;
+      z-index: 1;
+      display: block;
+      position: absolute;
+      top: 40%;
+      padding: 10px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .patient-container-2 {
+      z-index: 1;
+      position: relative;
+      top: 60%;
+
+      .patient-rev-img-2 {
+        background: url("/public/img/patient-pic.jpg");
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-bottom: 30px;
         position: relative;
-        // position: absolute;
+        top: 0;
+        z-index: 1;
+        background-size: contain;
+        border-radius: 50%;
+        // top: 8%;
+        // left: 34%;
+        display: inline-block;
+        text-align: center;
+      }
+
+      p {
+        color: #fff;
+        z-index: 1;
         display: block;
-        background-attachment: fixed;
-        background-position: center;
-        z-index: 0;
-
-        .patient-rev-img {
-            background: url("/public/img/patient-pic.jpg");
-            width: 110px;
-            height: 110px;
-            position: absolute;
-            margin: 4% 0 10% 0;
-            padding: 31px 10px 31px 10px;
-            top: 0;
-            z-index: 1;
-            background-size: contain;
-            border-radius: 50%;
-            top: 8%;
-            display: inline-block;
-            left: 32%;
-        }
-
-        p {
-            color: #fff;
-            z-index: 1;
-            display: block;
-            position: absolute;
-            top: 40%;
-            padding: 10px;
-            font-size: 15px;
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-
-        .patient-container-2 {
-            z-index: 1;
-            position: relative;
-            top: 60%;
-
-            .patient-rev-img-2 {
-                background: url("/public/img/patient-pic.jpg");
-                width: 100px;
-                height: 100px;
-                position: absolute;
-                margin-bottom: 30px;
-                position: relative;
-                top: 0;
-                z-index: 1;
-                background-size: contain;
-                border-radius: 50%;
-                // top: 8%;
-                // left: 34%;
-                display: inline-block;
-                text-align: center;
-            }
-
-            p {
-                color: #fff;
-                z-index: 1;
-                display: block;
-                position: absolute;
-                top: 40%;
-                padding: 10px;
-                font-size: 15px;
-                letter-spacing: 1px;
-                font-weight: 300;
-            }
-
-
-        }
+        position: absolute;
+        top: 40%;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 300;
+      }
     }
-
-
-
+  }
 }
 
 .overlay:after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .5);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
-
 
 /*******************************************
 APPOINTMENT
 ********************************************/
 
 .appointment {
+  width: 100%;
+  // text-align: left;
+  height: 400px;
+  padding: 40px auto;
+  margin: 60px auto 40px auto;
+
+  .appoint-container {
+    text-align: center;
     width: 100%;
-    // text-align: left;
-    height: 400px;
-    padding: 40px auto;
-    margin: 60px auto 40px auto;
+    margin-bottom: 10px;
 
-    .appoint-container {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 10px;
-
-        h2 {
-            color: #555;
-            text-align: center;
-            font-weight: 400;
-            text-transform: capitalize;
-            letter-spacing: 1px;
-            font-size: 24px;
-            padding: 40px 0 20px 0;
-
-        }
-
-        .form-container {
-            text-align: center;
-            // s
-            // width: 100%;
-
-            input {
-                padding-top: 20px;
-                padding-bottom: 5px;
-                margin: 5px 0;
-                width: 80%;
-                border: 0;
-                border-bottom: 1px solid $purple;
-                outline: 0;
-            }
-
-            button {
-                display: block;
-                padding: 15px 71px;
-                background: $purple;
-                color: #fff;
-                border: 0;
-                border-radius: 40px;
-                margin: 60px auto 50px auto;
-                cursor: pointer;
-            }
-
-
-        }
-
-
-
-
+    h2 {
+      color: #555;
+      text-align: center;
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-size: 24px;
+      padding: 40px 0 20px 0;
     }
 
+    .form-container {
+      text-align: center;
+      // s
+      // width: 100%;
+
+      input {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin: 5px 0;
+        width: 80%;
+        border: 0;
+        border-bottom: 1px solid $purple;
+        outline: 0;
+      }
+
+      button {
+        display: block;
+        padding: 15px 71px;
+        background: $purple;
+        color: #fff;
+        border: 0;
+        border-radius: 40px;
+        margin: 60px auto 50px auto;
+        cursor: pointer;
+      }
+    }
+  }
 }
-
-
-
 
 /*******************************************
 FOOTER
 ********************************************/
 
 footer {
-    background: $purple;
-    padding: 20px 0;
-    color: $white;
+  background: $purple;
+  padding: 20px 0;
+  color: $white;
+  text-align: center;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 15px;
     text-align: center;
 
     @include tablet {
-        padding: 50px 0;
+      grid-template-columns: 25% 40% 30%;
+      grid-template-rows: auto;
+      grid-column-gap: 15px;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3, auto);
-        grid-row-gap: 15px;
-        text-align: center;
+    .address-col {
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
 
-        @include tablet {
-            grid-template-columns: 25% 40% 30%;
-            grid-template-rows: auto;
-            grid-column-gap: 15px;
+        @include desktop {
+          font-size: 30px;
         }
+      }
 
-        .address-col {
-            h5 {
-                font-size: 20px;
-                font-weight: 500;
+      p {
+        font-size: 14px;
+        line-height: 1.5;
 
-                @include desktop {
-                    font-size: 30px;
-                }
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.5;
-
-                @include desktop {
-                    font-size: 20px;
-                }
-            }
+        @include desktop {
+          font-size: 20px;
         }
-
-        .social-col {
-            .icon {
-                font-size: 20px;
-                padding: 0 20px;
-
-                @include desktop {
-                    font-size: 30px;
-                }
-            }
-        }
-
-        .menu-col {
-            ul>li {
-                padding: 5px;
-                display: inline-block;
-
-                @include desktop {
-                    font-size: 20px;
-                }
-
-                a {
-                    color: $white;
-                }
-            }
-        }
+      }
     }
+
+    .social-col {
+      .icon {
+        font-size: 20px;
+        padding: 0 20px;
+
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .menu-col {
+      ul > li {
+        padding: 5px;
+        display: inline-block;
+
+        @include desktop {
+          font-size: 20px;
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
 }
