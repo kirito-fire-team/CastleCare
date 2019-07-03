@@ -365,11 +365,17 @@ BANNER
 
   .office-img {
 //     background: url("/public/img/med_office.jpg");
-    background: url("/public/img/med_office.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 350px;
+//     background: url("/public/img/med_office.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 350px;
+     img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 350px;
+    }
 
     @include tablet {
       height: 420px;
