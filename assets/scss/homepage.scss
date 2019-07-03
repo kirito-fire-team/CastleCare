@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixins";
 
+
 /*******************************************
 HEADER
 ********************************************/
@@ -75,7 +76,8 @@ header {
           a {
             color: $white;
             transition: all .2s ease-in-out;
-            &:hover {
+            &:hover,
+            &.selected {
               color: $blue;
               font-weight: 600;
               padding: 8px 0;
@@ -361,7 +363,9 @@ SPECIALITIES SECTION
 
   .grid-container {
     display: grid;
-    @include desktop {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    @include tablet {
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: repeat(3, 33.33%);
       width: 80%;
@@ -377,31 +381,68 @@ SPECIALITIES SECTION
       grid-template-columns: 100%;
       justify-items: center;
       transition: all .5s ease-in-out;
+      @include tablet {
+        background: #fff;
+        padding: 30px;
+        border-bottom: 1px solid rgba(0,0,0, .1);
+        border-right: 1px solid rgba(0,0,0, .1);
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        transition: all .5s ease-in-out;
+      }
+      
       a {
         display: grid;
-        grid-template-rows: 100px 50px;
+        grid-template-rows: 50px 20px;
+        &:visited {
+          color: $dark-text;
+        }
+        @include tablet {
+          grid-template-rows: 100px 50px;
+        }
       }
-      &:nth-child(4n+0) {
+      &:nth-child(2n+0) {
         border-right: none;
       }
-      &:nth-last-child(-n+4) {
+      &:nth-last-child(-n+2) {
         border-bottom: none;
       }
-      &:hover {
-        background: rgba(0, 174, 255, 0.281);
-        color: #080e14;
-        font-size: 18px;
+      @include tablet {
+        &:nth-child(2n+0) {
+          border-right: 1px solid rgba(0,0,0, .1);
+        }
+        &:nth-child(4n+0) {
+          border-right: none;
+        }
+        &:nth-last-child(-n+2) {
+          border-bottom: 1px solid rgba(0,0,0, .1);
+        }
+        &:nth-last-child(-n+4) {
+          border-bottom: none;
+        }
+        &:hover {
+          background: rgba(0, 174, 255, 0.281);
+          color: #080e14;
+          font-size: 18px;
+        }
       }
       img {
         display: block;
-        width: 60px;
+        width: 35px;
         align-self: center;
         margin: 0 auto;
+        @include tablet {
+          width: 60px;
+        }
       }
       p {
         align-self: center;
-        padding: 20px;
+        padding: 5px;
         font-weight: 600;
+        @include tablet {
+          padding: 20px;
+        }
       }
     }
   }
