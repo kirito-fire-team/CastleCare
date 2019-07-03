@@ -220,16 +220,16 @@ BANNER
 .office-img-container {
   position: relative;
   width: 100%; }
-  .office-img-container .office-img img {
+  .office-img-container .office-img img img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 350px; }
     @media (min-width: 768px) {
-      .office-img-container .office-img img {
+      .office-img-container .office-img img img {
         height: 420px; } }
     @media (min-width: 992px) {
-      .office-img-container .office-img img {
+      .office-img-container .office-img img img {
         height: 700px; } }
   .office-img-container .office-overlay:after {
     content: "";
