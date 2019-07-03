@@ -231,14 +231,15 @@ BANNER
     @media (min-width: 992px) {
       .office-img-container .office-img img {
         height: 700px; } }
-  .office-img-container .office-overlay:after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); }
+
+.office-overlay:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
 
 /*******************************************
 ABOUT
