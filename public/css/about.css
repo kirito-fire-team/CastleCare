@@ -221,6 +221,7 @@ BANNER
   position: relative;
   width: 100%; }
   .office-img-container .office-img {
+/*     background: url("/public/img/med_office.jpg"); */
     background: url("/public/img/med_office.jpg");
     background-size: cover;
     background-repeat: no-repeat;
