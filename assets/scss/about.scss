@@ -402,7 +402,7 @@ DOCTORS
   }
 
   .doc-box {
-    width: 95%;
+    width: 92%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px;
@@ -509,7 +509,7 @@ DOCTORS
       letter-spacing: 1px;
       font-weight: 500;
       color: #333;
-      padding-left: 4%;
+      padding-left: 5px;
 
       @include tablet {
         padding: 5px 0 0 5%;
@@ -562,7 +562,7 @@ DOCTORS
   }
 
   .doc-box {
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px;
@@ -574,8 +574,8 @@ DOCTORS
     .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
-      // width: 345px;
-      width: 100%;
+      width: 345px;
+      // width: 100%;
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -586,6 +586,7 @@ DOCTORS
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards;
+
 
       @include tablet {
         width: 335px
@@ -605,8 +606,8 @@ DOCTORS
 
     .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      width: 100%;
-      // width: 345px;
+      // width: 100%;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -658,11 +659,11 @@ DOCTORS
       font-size: 18px;
       text-align: left;
       line-height: 26px;
-
+      // padding: 20px;
       letter-spacing: 1px;
-
       font-weight: 500;
       color: #333;
+      padding-left: 7px;
 
       @include tablet {
 

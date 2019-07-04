@@ -308,7 +308,7 @@ DOCTORS
     .doctors-tablet-1 .doc-container {
       flex-direction: row; } }
   .doctors-tablet-1 .doc-container .doc-box {
-    width: 95%;
+    width: 92%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px;
@@ -387,7 +387,7 @@ DOCTORS
       letter-spacing: 1px;
       font-weight: 500;
       color: #333;
-      padding-left: 4%; }
+      padding-left: 5px; }
       @media (min-width: 768px) {
         .doctors-tablet-1 .doc-container .doc-box p {
           padding: 5px 0 0 5%;
@@ -427,7 +427,7 @@ DOCTORS
     .doctors-tablet-2 .doc-container {
       flex-direction: row; } }
   .doctors-tablet-2 .doc-container .doc-box {
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px; }
@@ -437,7 +437,7 @@ DOCTORS
     .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
-      width: 100%;
+      width: 345px;
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -460,7 +460,7 @@ DOCTORS
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      width: 100%;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -498,7 +498,8 @@ DOCTORS
       line-height: 26px;
       letter-spacing: 1px;
       font-weight: 500;
-      color: #333; }
+      color: #333;
+      padding-left: 7px; }
       @media (min-width: 768px) {
         .doctors-tablet-2 .doc-container .doc-box p {
           padding: 5px 0 0 5%;
