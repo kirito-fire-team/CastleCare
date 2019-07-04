@@ -170,7 +170,7 @@ BANNER
     z-index: 1;
     top: 27%;
     left: -200px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -257,10 +257,10 @@ ABOUT
     font-weight: 600;
     margin: 40px 0 15px 0;
     letter-spacing: 1px;
-    padding-left: 2%; }
+    padding-left: 5%; }
     @media (min-width: 768px) {
       .about-container .about-text h3 {
-        font-size: 22px;
+        font-size: 20px;
         padding-left: 4%; } }
     .about-container .about-text h3 span {
       display: inline-block;
@@ -270,10 +270,12 @@ ABOUT
     line-height: 28px;
     letter-spacing: 1px;
     font-size: 18px;
-    padding: 8px 4%; }
+    padding: 8px 5% 8px 4%;
+    font-weight: 500;
+    color: #333; }
     @media (min-width: 768px) {
       .about-container .about-text p {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 34px; } }
 
 /*******************************************
@@ -290,7 +292,7 @@ DOCTORS
   @media (min-width: 768px) {
     .doctors-tablet-1 h2 {
       color: 444;
-      padding-bottom: 55px; } }
+      padding: 50px 0 80px 0; } }
   .doctors-tablet-1 h2 span {
     display: inline-block;
     width: 26px;
@@ -313,11 +315,15 @@ DOCTORS
     position: relative; }
     @media (min-width: 768px) {
       .doctors-tablet-1 .doc-container .doc-box {
-        width: 50%; } }
+        width: 50%;
+        padding-bottom: 65px; } }
+    @media (min-width: 992px) {
+      .doctors-tablet-1 .doc-container .doc-box {
+        padding-bottom: 70px; } }
     .doctors-tablet-1 .doc-container .doc-box .doc-img-1 {
-      background: url("../../public/img/doc-1.jpg");
+      background: url("../../public/img/doc-1-sm.jpg");
       margin: 0 auto;
-      width: 345px;
+      width: 100%;
       display: block;
       background-size: cover;
       height: 300px;
@@ -329,13 +335,19 @@ DOCTORS
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards; }
+      @media (min-width: 768px) {
+        .doctors-tablet-1 .doc-container .doc-box .doc-img-1 {
+          width: 335px; } }
+      @media (min-width: 992px) {
+        .doctors-tablet-1 .doc-container .doc-box .doc-img-1 {
+          width: 345px; } }
       .doctors-tablet-1 .doc-container .doc-box .doc-img-1:hover {
         -webkit-box-shadow: 0px 10px 20px 0px #444444;
         -moz-box-shadow: 0px 10px 20px 0px #444444;
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-1 .doc-container .doc-box .doc-img-2 {
       background: url("../../public/img/doc-2.jpg");
-      width: 345px;
+      width: 100%;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -347,13 +359,19 @@ DOCTORS
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards; }
+      @media (min-width: 768px) {
+        .doctors-tablet-1 .doc-container .doc-box .doc-img-2 {
+          width: 335px; } }
+      @media (min-width: 992px) {
+        .doctors-tablet-1 .doc-container .doc-box .doc-img-2 {
+          width: 345px; } }
       .doctors-tablet-1 .doc-container .doc-box .doc-img-2:hover {
         -webkit-box-shadow: 0px 10px 20px 0px #444444;
         -moz-box-shadow: 0px 10px 20px 0px #444444;
         box-shadow: 0px 10px 20px 0px #444444;
         transition: all 0.4s ease-in-out; }
     .doctors-tablet-1 .doc-container .doc-box h3 {
-      font-weight: 500;
+      font-weight: 600;
       padding: 30px 0 10px 0;
       letter-spacing: 1px;
       font-size: 22px;
@@ -363,21 +381,25 @@ DOCTORS
       padding-bottom: 17px;
       display: block; }
     .doctors-tablet-1 .doc-container .doc-box p {
-      font-size: 20px;
+      font-size: 18px;
       text-align: left;
       line-height: 26px;
-      padding: 20px; }
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: #333;
+      padding-left: 4%; }
       @media (min-width: 768px) {
         .doctors-tablet-1 .doc-container .doc-box p {
-          padding: 5px 0 0 8%;
-          font-size: 22px;
+          padding: 5px 0 0 5%;
+          font-size: 18px;
           line-height: 34px; } }
       @media (min-width: 992px) {
         .doctors-tablet-1 .doc-container .doc-box p {
           margin-left: 12%;
           width: 70%;
           margin: 5px auto;
-          padding: 0; } }
+          padding: 0;
+          letter-spacing: 0; } }
 
 .doctors-tablet-2 h2 {
   color: #444;
@@ -389,7 +411,6 @@ DOCTORS
   padding-bottom: 40px; }
   @media (min-width: 768px) {
     .doctors-tablet-2 h2 {
-      color: #444;
       padding-bottom: 55px; } }
   .doctors-tablet-2 h2 span {
     display: inline-block;
@@ -416,7 +437,7 @@ DOCTORS
     .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
-      width: 345px;
+      width: 100%;
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -427,13 +448,19 @@ DOCTORS
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards; }
+      @media (min-width: 768px) {
+        .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
+          width: 335px; } }
+      @media (min-width: 992px) {
+        .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
+          width: 345px; } }
       .doctors-tablet-2 .doc-container .doc-box .doc-img-3:hover {
         -webkit-box-shadow: 0px 10px 20px 0px #444444;
         -moz-box-shadow: 0px 10px 20px 0px #444444;
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      width: 345px;
+      width: 100%;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -445,12 +472,16 @@ DOCTORS
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards; }
+      @media (min-width: 768px) {
+        .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
+          width: 335px; } }
+      @media (min-width: 992px) {
+        .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
+          width: 345px; } }
       .doctors-tablet-2 .doc-container .doc-box .doc-img-4:hover {
         -webkit-box-shadow: 0px 10px 20px 0px #444444;
         -moz-box-shadow: 0px 10px 20px 0px #444444;
         box-shadow: 0px 10px 20px 0px #444444; }
-    .doctors-tablet-2 .doc-container .doc-box .lisa-text {
-      padding-right: 15px; }
     .doctors-tablet-2 .doc-container .doc-box h3 {
       font-weight: 500;
       padding: 30px 0 10px 0;
@@ -462,21 +493,24 @@ DOCTORS
       padding-bottom: 17px;
       display: block; }
     .doctors-tablet-2 .doc-container .doc-box p {
-      font-size: 20px;
+      font-size: 18px;
       text-align: left;
       line-height: 26px;
-      padding: 20px; }
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: #333; }
       @media (min-width: 768px) {
         .doctors-tablet-2 .doc-container .doc-box p {
-          padding: 5px 0 0 8%;
-          font-size: 22px;
+          padding: 5px 0 0 5%;
+          font-size: 18px;
           line-height: 34px; } }
       @media (min-width: 992px) {
         .doctors-tablet-2 .doc-container .doc-box p {
           margin-left: 12%;
           width: 70%;
           margin: 5px auto;
-          padding: 0; } }
+          padding: 0;
+          letter-spacing: 0; } }
 
 /*******************************************
 TESTIMONIALS
@@ -496,6 +530,9 @@ TESTIMONIALS
     letter-spacing: 1px;
     font-size: 28px;
     padding-bottom: 40px; }
+    @media (min-width: 992px) {
+      .testimonials h2 {
+        padding: 50px 0 60px 0; } }
     .testimonials h2 span {
       display: inline-block;
       width: 26px;
@@ -651,19 +688,19 @@ APPOINTMENT
         display: block;
         margin: 0; }
         .appointment .side-img-container .side-img {
+          background: url("../../public/img/doctorPatient14.jpg");
           background-size: cover;
           width: 100%;
           height: 100%;
           background-repeat: no-repeat;
-          padding: 50px;
           border-radius: 5px;
-          margin-left: 10%; } }
+          margin-left: 10%;
+          height: 309px;
+          width: 516px;
+          display: none; } }
     @media (min-width: 992px) and (min-width: 992px) {
       .appointment .side-img-container .side-img {
-        height: 309px;
-        width: 516px;
-        margin: 0;
-        padding: 0; } }
+        display: block; } }
 
 /*******************************************
 FOOTER
