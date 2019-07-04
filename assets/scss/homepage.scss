@@ -465,7 +465,7 @@ NEW APP SECTION
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 0%,rgba(0, 32, 41, 0.61) 100%), 
   url(/img/phone3.png) right center no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -516,7 +516,7 @@ NEW APP SECTION
       .app-store {
         padding-top: 20px;
         img {
-          padding: 0 10px;
+          padding: 10px;
         }
       }
     }
@@ -527,10 +527,12 @@ NEW APP SECTION
       }
       img {
         position: absolute;
-        top: 35px;
+        top: 55px;
         right: 1px;
-        width: 221px;
+        width: 250px;
+        z-index: 1;
         @include desktop {
+          top: 38px;
           width: 389px;
         }
         @include large-desktop {
@@ -555,6 +557,8 @@ footer {
   padding: 20px 0;
   color: $white;
   text-align: center;
+  position: relative;
+  z-index: 500;
   @include tablet {
     padding: 50px 0;
   }
