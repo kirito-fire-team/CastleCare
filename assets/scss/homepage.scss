@@ -453,6 +453,32 @@ SPECIALITIES SECTION
 
 
 
+/*******************************************
+NEW APP SECTION
+********************************************/
+
+.new-app-section {
+  padding: 30px 0 30px;
+  text-align: center;
+  color: $dark-text;
+  background: #ccc;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    .image-box {
+      display: none;
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+
+
+
+
 
 /*******************************************
 FOOTER
