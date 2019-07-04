@@ -163,8 +163,7 @@ BANNER
   width: 100%;
   transition: all 2s ease-in-out;
   margin: 0 auto;
-  position: relative;
-  top: -50px; }
+  position: relative; }
   .banner-container h1 {
     color: #fff;
     position: absolute;
@@ -226,22 +225,13 @@ BANNER
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 350px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
     height: 350px; }
-    .office-img-container .office-img img {
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 350px; }
-      @media (min-width: 768px) {
-        .office-img-container .office-img img {
-          height: 420px; } }
-      @media (min-width: 992px) {
-        .office-img-container .office-img img {
-          height: 700px; } }
+    @media (min-width: 768px) {
+      .office-img-container .office-img {
+        height: 420px; } }
+    @media (min-width: 992px) {
+      .office-img-container .office-img {
+        height: 700px; } }
 
 .office-overlay:after {
   content: "";
@@ -271,7 +261,7 @@ ABOUT
     @media (min-width: 768px) {
       .about-container .about-text h3 {
         font-size: 22px;
-        padding-left: 2%; } }
+        padding-left: 4%; } }
     .about-container .about-text h3 span {
       display: inline-block;
       width: 19px;
@@ -280,7 +270,7 @@ ABOUT
     line-height: 28px;
     letter-spacing: 1px;
     font-size: 18px;
-    padding: 8px 2%; }
+    padding: 8px 4%; }
     @media (min-width: 768px) {
       .about-container .about-text p {
         font-size: 22px;
@@ -314,10 +304,9 @@ DOCTORS
   justify-content: space-around; }
   @media (min-width: 768px) {
     .doctors-tablet-1 .doc-container {
-      flex-direction: row;
-      padding-right: 3%; } }
+      flex-direction: row; } }
   .doctors-tablet-1 .doc-container .doc-box {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px;
@@ -328,7 +317,7 @@ DOCTORS
     .doctors-tablet-1 .doc-container .doc-box .doc-img-1 {
       background: url("../../public/img/doc-1.jpg");
       margin: 0 auto;
-      width: 300px;
+      width: 345px;
       display: block;
       background-size: cover;
       height: 300px;
@@ -346,7 +335,7 @@ DOCTORS
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-1 .doc-container .doc-box .doc-img-2 {
       background: url("../../public/img/doc-2.jpg");
-      width: 300px;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -383,11 +372,12 @@ DOCTORS
           padding: 5px 0 0 8%;
           font-size: 22px;
           line-height: 34px; } }
-  @media (min-width: 768px) and (min-width: 992px) {
-    .doctors-tablet-1 .doc-container .doc-box p {
-      margin-left: 12%;
-      width: 70%;
-      margin: 5px auto; } }
+      @media (min-width: 992px) {
+        .doctors-tablet-1 .doc-container .doc-box p {
+          margin-left: 12%;
+          width: 70%;
+          margin: 5px auto;
+          padding: 0; } }
 
 .doctors-tablet-2 h2 {
   color: #444;
@@ -414,8 +404,7 @@ DOCTORS
   justify-content: space-around; }
   @media (min-width: 768px) {
     .doctors-tablet-2 .doc-container {
-      flex-direction: row;
-      padding-right: 3%; } }
+      flex-direction: row; } }
   .doctors-tablet-2 .doc-container .doc-box {
     width: 90%;
     margin: 0 auto;
@@ -427,7 +416,7 @@ DOCTORS
     .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
-      width: 300px;
+      width: 345px;
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -444,7 +433,7 @@ DOCTORS
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      width: 300px;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -460,6 +449,8 @@ DOCTORS
         -webkit-box-shadow: 0px 10px 20px 0px #444444;
         -moz-box-shadow: 0px 10px 20px 0px #444444;
         box-shadow: 0px 10px 20px 0px #444444; }
+    .doctors-tablet-2 .doc-container .doc-box .lisa-text {
+      padding-right: 15px; }
     .doctors-tablet-2 .doc-container .doc-box h3 {
       font-weight: 500;
       padding: 30px 0 10px 0;
@@ -484,7 +475,8 @@ DOCTORS
         .doctors-tablet-2 .doc-container .doc-box p {
           margin-left: 12%;
           width: 70%;
-          margin: 5px auto; } }
+          margin: 5px auto;
+          padding: 0; } }
 
 /*******************************************
 TESTIMONIALS
@@ -518,7 +510,7 @@ TESTIMONIALS
     position: relative;
     display: block;
     background-attachment: fixed;
-    background-position: center right;
+    background-position: center;
     z-index: 1;
     text-align: center;
     margin: 0 auto;
@@ -532,27 +524,30 @@ TESTIMONIALS
       .testimonials .test-container-img {
         height: 700px; } }
     .testimonials .test-container-img .patient-rev-img {
-      width: 95px;
+      background: url("../../public/img/patient-pic.jpg");
+      width: 110px;
       height: 110px;
-      top: -12%;
+      top: -25%;
       left: -2%;
       z-index: 1;
       background-size: contain;
       border-radius: 50%;
       display: inline-block;
       text-align: center;
-      position: relative; }
+      position: relative;
+      background-repeat: no-repeat; }
       @media (min-width: 768px) {
         .testimonials .test-container-img .patient-rev-img {
           margin-top: 5%;
-          width: 144px;
-          height: 160px;
-          top: -16%; } }
+          width: 145px;
+          height: 145px;
+          top: -29%; } }
       @media (min-width: 992px) {
         .testimonials .test-container-img .patient-rev-img {
-          width: 152px;
-          height: 165px;
-          margin-top: 0; } }
+          width: 155px;
+          height: 155px;
+          margin-top: 0;
+          top: -29%; } }
     .testimonials .test-container-img p {
       color: #fff;
       z-index: 1;

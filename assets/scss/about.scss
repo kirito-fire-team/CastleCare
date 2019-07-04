@@ -6,89 +6,7 @@
 /*******************************************
 HEADER
 ********************************************/
-// header {
-//   background: #ccc;
-//   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
-//     url(/img/doc.jpg) center center no-repeat;
-//   background-size: cover;
-//   // height: 100vh;
-//   position: relative;
 
-//   // Navigation
-//   .main-nav {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     color: $white;
-//     padding: 20px 0;
-
-//     // Logo
-//     .logo-box {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-
-//       img {
-//         width: 45px;
-
-//         @include tablet {
-//           width: 90px;
-//         }
-
-//         @include desktop {
-//           width: 65px;
-//         }
-//       }
-
-//       p {
-//         font-size: 21px;
-//         text-transform: uppercase;
-//         font-weight: 400;
-//         padding-left: 10px;
-//         letter-spacing: 4px;
-
-//         @include tablet {
-//           font-size: 40px;
-//         }
-
-//         @include desktop {
-//           font-size: 24px;
-//         }
-//       }
-//     }
-
-//     // Mobile Menu
-//     .mobile-menu {
-//       display: inline-block;
-//       font-size: 23px;
-
-//       @include tablet {
-//         font-size: 40px;
-//       }
-
-//       @include desktop {
-//         display: none;
-//       }
-//     }
-
-//     // Menu Bar
-//     .menu-bar {
-//       display: none;
-
-//       @include desktop {
-//         display: inline-block;
-
-//         ul>li {
-//           display: inline-flex;
-//           justify-content: flex-end;
-//           font-size: 17px;
-//           font-weight: 400;
-//           padding: 5px 4px;
-//         }
-//       }
-//     }
-//   }
-// }
 
 header {
   background: #ccc;
@@ -284,7 +202,7 @@ BANNER
   transition: all 2s ease-in-out;
   margin: 0 auto;
   position: relative;
-  top: -50px;
+  // top: -50px;
 
   h1 {
     color: #fff;
@@ -362,27 +280,18 @@ BANNER
     background-repeat: no-repeat;
     width: 100%;
     height: 350px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 350px;
 
-    img {
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 350px;
+    @include tablet {
+      height: 420px;
+    }
 
-      @include tablet {
-        height: 420px;
-      }
-
-      @include desktop {
-        height: 700px
-      }
+    @include desktop {
+      height: 700px // 
     }
   }
 }
+
+
 
 
 
@@ -422,7 +331,7 @@ ABOUT
 
       @include tablet {
         font-size: 22px;
-        padding-left: 2%;
+        padding-left: 4%;
       }
 
       span {
@@ -436,11 +345,17 @@ ABOUT
       line-height: 28px;
       letter-spacing: 1px;
       font-size: 18px;
-      padding: 8px 2%;
+      padding: 8px 4%;
 
       @include tablet {
         font-size: 22px;
         line-height: 34px;
+      }
+
+      @include desktop {
+        // padding: 6px;
+        // padding-left: 10px;
+        // margin-left: 10px;
       }
     }
   }
@@ -487,11 +402,11 @@ DOCTORS
 
   @include tablet {
     flex-direction: row;
-    padding-right: 3%;
+    // padding-right: 3%;
   }
 
   .doc-box {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 55px;
@@ -505,7 +420,7 @@ DOCTORS
       //   background: url("/public/img/doc-1.jpg");
       background: url("../../public/img/doc-1.jpg");
       margin: 0 auto;
-      width: 300px;
+      width: 345px;
       display: block;
       background-size: cover;
       height: 300px;
@@ -532,7 +447,7 @@ DOCTORS
 
     .doc-img-2 {
       background: url("../../public/img/doc-2.jpg");
-      width: 300px;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -577,12 +492,13 @@ DOCTORS
         padding: 5px 0 0 8%;
         font-size: 22px;
         line-height: 34px;
+      }
 
-        @include desktop {
-          margin-left: 12%;
-          width: 70%;
-          margin: 5px auto;
-        }
+      @include desktop {
+        margin-left: 12%;
+        width: 70%;
+        margin: 5px auto;
+        padding: 0;
       }
     }
   }
@@ -618,7 +534,7 @@ DOCTORS
 
   @include tablet {
     flex-direction: row;
-    padding-right: 3%;
+    // padding-right: 3%;
   }
 
   .doc-box {
@@ -634,7 +550,7 @@ DOCTORS
     .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
-      width: 300px;
+      width: 345px;
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -655,7 +571,7 @@ DOCTORS
 
     .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      width: 300px;
+      width: 345px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -668,11 +584,17 @@ DOCTORS
       transition: all 0.2s ease-in-out;
       animation-fill-mode: forwards;
 
+
       &:hover {
         -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
         -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
         box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
       }
+
+    }
+
+    .lisa-text {
+      padding-right: 15px;
     }
 
     h3 {
@@ -705,6 +627,7 @@ DOCTORS
         margin-left: 12%;
         width: 70%;
         margin: 5px auto;
+        padding: 0;
       }
     }
   }
@@ -746,10 +669,9 @@ TESTIMONIALS
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-    // position: absolute;
     display: block;
     background-attachment: fixed;
-    background-position: center right;
+    background-position: center;
     z-index: 1;
     text-align: center;
     margin: 0 auto;
@@ -767,10 +689,10 @@ TESTIMONIALS
     }
 
     .patient-rev-img {
-      // background: url("/public/img/patient-pic.jpg");
-      width: 95px;
+      background: url("../../public/img/patient-pic.jpg");
+      width: 110px;
       height: 110px;
-      top: -12%;
+      top: -25%;
       left: -2%;
       z-index: 1;
       background-size: contain;
@@ -778,23 +700,23 @@ TESTIMONIALS
       display: inline-block;
       text-align: center;
       position: relative;
+      background-repeat: no-repeat;
 
 
 
       @include tablet {
         margin-top: 5%;
-        width: 144px;
-        height: 160px;
-        top: -16%;
+        width: 145px;
+        height: 145px;
+        top: -29%;
 
       }
 
       @include desktop {
-        // top: 15%;
-        // left: 43%;
-        width: 152px;
-        height: 165px;
+        width: 155px;
+        height: 155px;
         margin-top: 0;
+        top: -29%;
 
 
       }
@@ -819,10 +741,7 @@ TESTIMONIALS
       @include tablet {
         width: 60%;
         max-width: 600px;
-        // position: relative;
-        // left: -4px;
         font-size: 20px;
-        // margin: 20px 12% 20px 15%;
         margin-top: 35px;
         margin-right: 8%;
 
@@ -856,7 +775,6 @@ APPOINTMENT
 
 .appointment {
   width: 100%;
-  // text-align: left;
   height: 400px;
   padding: 40px auto;
   margin: 60px auto 75px auto;
@@ -886,8 +804,6 @@ APPOINTMENT
     }
 
     .form-container {
-      // text-align: center;
-
       @include desktop {
         margin-left: 10%;
         width: 80%;
@@ -917,14 +833,6 @@ APPOINTMENT
         position: relative;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
-
-        // background: #00a4d6;
-        // border: none;
-        // border-radius: 4px;
-        // padding: 15px;
-        // font-weight: 300;
-        // font-size: 16px;
-        // color: #fff;
 
         &:hover {
           -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
