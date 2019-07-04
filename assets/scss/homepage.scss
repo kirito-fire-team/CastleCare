@@ -545,6 +545,41 @@ NEW APP SECTION
 
 
 
+/*******************************************
+TESTIMONIALS
+********************************************/
+
+.testimonials {
+  .title {
+
+  }
+  .testimonials-container {
+    position: relative;
+    background: orange;
+    display: grid;
+    grid-template-rows: 40% 20% 20% 40%;
+    .slides {
+      display: none;
+      padding: 80px;
+      text-align: center;
+    }
+    .bar-container {
+      text-align: center;
+      padding: 20px;
+      background: deepskyblue;
+      .bars {
+        cursor: pointer;
+        height: 15px;
+        width: 40px;
+        margin: 0 1px;
+        background-color: #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        transition: background-color .6s ease-in-out;
+      }
+    }
+  }
+} 
 
 
 
