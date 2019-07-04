@@ -72,6 +72,29 @@ header{
                 font-size: 17px;
             }
         }
+        #letters{
+            li{
+                display: inline-block;
+                list-style: none;
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+                background: rgb(206,219,233); /* Old browsers */
+                background: -moz-linear-gradient(-45deg, rgba(206,219,233,1) 0%, rgba(145,150,165,1) 36%, rgba(97,153,199,1) 49%, rgba(106,121,166,1) 65%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg, rgba(206,219,233,1) 0%,rgba(145,150,165,1) 36%,rgba(97,153,199,1) 49%,rgba(106,121,166,1) 65%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg, rgba(206,219,233,1) 0%,rgba(145,150,165,1) 36%,rgba(97,153,199,1) 49%,rgba(106,121,166,1) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                a{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 25px;
+                    position: relative;
+                    top: 25%;
+                }
+            }
+            li:hover{
+                transform: scale(1.5);
+            }
+        }
     }
     #serviceCards{
         width: 80%;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
 @import "global";
 @import "variables";
 @import "mixins";
@@ -5,88 +6,930 @@
 /*******************************************
 HEADER
 ********************************************/
+
+
 header {
-    background: #ccc;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
-        url(/img/doc.jpg) center center no-repeat;
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
+    url(/img/doc.jpg) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  // Navigation
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
+
+    a {
+      color: #fff;
+    }
+
+    // Logo
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 45px;
+
+        @include tablet {
+          width: 90px;
+        }
+
+        @include desktop {
+          width: 65px;
+        }
+      }
+
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 10px;
+        letter-spacing: 4px;
+
+        @include tablet {
+          font-size: 40px;
+        }
+
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+    }
+
+    // Mobile Menu
+    .mobile-menu {
+      display: inline-block;
+      font-size: 23px;
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    // Menu Bar
+    .menu-bar {
+      display: none;
+
+      @include desktop {
+        display: inline-block;
+
+        ul>li {
+          display: inline-flex;
+          justify-content: flex-end;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 5px 4px;
+
+          a {
+            color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &:hover,
+            &.selected {
+              color: $blue;
+              font-weight: 600;
+              padding: 8px 0;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Info Box
+  .info-box {
+    width: 100%;
+    color: $white;
+    text-align: center;
+    margin-top: 30px;
+
+    @include tablet {
+      position: absolute;
+      width: 80%;
+      top: 40%;
+      right: 10%;
+    }
+
+    @include desktop {
+      width: 33%;
+      top: 35%;
+      right: 15%;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-bottom: 30px;
+
+      @include desktop {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5;
+      padding-bottom: 40px;
+    }
+
+    .we-help-btn {
+      background: $blue;
+      border: none;
+      border-radius: 4px;
+      padding: 15px;
+      font-weight: 300;
+      font-size: 16px;
+      color: $white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $purple;
+      }
+
+      i.arrow-right {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+/*******************************************
+BANNER
+********************************************/
+
+@keyframes fade-in-left {
+  0% {
+    left: -80px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 6%;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    top: 30px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+.banner-container {
+  width: 100%;
+  transition: all 2s ease-in-out;
+  margin: 0 auto;
+  position: relative;
+
+  h1 {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 27%;
+    left: -200px;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+    }
+
+    span {
+      display: inline-block;
+      width: 19px;
+      border-bottom: 1px solid #fff;
+      backface-visibility: hidden;
+    }
+  }
+
+  p {
+    margin-top: 8px;
+    display: inline-block;
+    position: absolute;
+    top: 37%;
+    left: -80px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-size: 8px;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
+    backface-visibility: hidden;
+
+    @include tablet {
+      font-size: 10px;
+      top: 40%;
+    }
+
+    @include desktop {
+      font-size: 14px;
+    }
+  }
+
+  a {
+    color: #111;
+    font-weight: 500;
+  }
+}
+
+
+.office-img-container {
+  position: relative;
+  width: 100%;
+
+  .office-img {
+    background: url("../../public/img/med_office.jpg");
     background-size: cover;
-    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+
+    @include tablet {
+      height: 420px;
+    }
+
+    @include desktop {
+      height: 700px // 
+    }
+  }
+}
+
+
+
+
+
+
+
+.office-overlay:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+/*******************************************
+ABOUT
+********************************************/
+
+.about-container {
+  width: 100%;
+
+  @include desktop {
+    width: 87%;
+    padding-left: 12%;
+  }
+
+  .about-text {
+    h3 {
+      color: #444;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin: 40px 0 15px 0;
+      letter-spacing: 1px;
+      padding-left: 5%;
+
+      @include tablet {
+        font-size: 20px;
+        padding-left: 4%;
+      }
+
+      span {
+        display: inline-block;
+        width: 19px;
+        border-bottom: 1px solid $blue;
+      }
+    }
+
+    p {
+      line-height: 28px;
+      letter-spacing: 1px;
+      font-size: 18px;
+      padding: 8px 5% 8px 4%;
+      font-weight: 500;
+      color: #333;
+
+      @include tablet {
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      @include desktop {
+        // padding: 6px;
+        // padding-left: 10px;
+        // margin-left: 10px;
+      }
+    }
+  }
+}
+
+/*******************************************
+DOCTORS
+********************************************/
+
+
+.doctors-tablet-1 h2 {
+  color: #444;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    color: 444;
+    padding: 50px 0 80px 0;
+  }
+
+  span {
+    display: inline-block;
+    width: 26px;
+    border-bottom: 1px solid $blue;
+    backface-visibility: hidden;
+  }
+}
+
+.doctors-tablet-1 .doc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // transition: all 0.5s ease-in-out;
+
+  @include tablet {
+    flex-direction: row;
+    // padding-right: 3%;
+  }
+
+  .doc-box {
+    width: 92%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 55px;
     position: relative;
 
-    // Navigation
-    .main-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $white;
-        padding: 20px 0;
-
-        // Logo
-        .logo-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 45px;
-
-                @include tablet {
-                    width: 90px;
-                }
-
-                @include desktop {
-                    width: 65px;
-                }
-            }
-
-            p {
-                font-size: 21px;
-                text-transform: uppercase;
-                font-weight: 400;
-                padding-left: 10px;
-                letter-spacing: 4px;
-
-                @include tablet {
-                    font-size: 40px;
-                }
-
-                @include desktop {
-                    font-size: 24px;
-                }
-            }
-        }
-
-        // Mobile Menu
-        .mobile-menu {
-            display: inline-block;
-            font-size: 23px;
-
-            @include tablet {
-                font-size: 40px;
-            }
-
-            @include desktop {
-                display: none;
-            }
-        }
-
-        // Menu Bar
-        .menu-bar {
-            display: none;
-
-            @include desktop {
-                display: inline-block;
-
-                ul>li {
-                    display: inline-flex;
-                    justify-content: flex-end;
-                    font-size: 17px;
-                    font-weight: 400;
-                    padding: 5px 4px;
-                }
-            }
-        }
+    @include tablet {
+      width: 50%;
+      padding-bottom: 65px;
     }
+
+    @include desktop {
+      padding-bottom: 70px;
+    }
+
+    .doc-img-1 {
+      background: url("../../public/img/doc-1-sm.jpg");
+      margin: 0 auto;
+      width: 100%;
+      display: block;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+
+      @include tablet {
+        width: 335px
+      }
+
+      @include desktop {
+        width: 345px;
+      }
+
+
+
+      &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+      }
+
+      // @include tablet {
+      //   width: 350px;
+      // }
+    }
+
+    .doc-img-2 {
+      background: url("../../public/img/doc-2.jpg");
+      // width: 345px;
+      width: 100%;
+      margin: 0 auto;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+
+      @include tablet {
+        width: 335px
+      }
+
+      @include desktop {
+        width: 345px;
+      }
+
+
+      &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        transition: all 0.4s ease-in-out;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      padding: 30px 0 10px 0;
+      letter-spacing: 1px;
+      font-size: 22px;
+      color: #444;
+    }
+
+    span {
+      font-size: 18px;
+      padding-bottom: 17px;
+      display: block;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: left;
+      line-height: 26px;
+      // padding: 20px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: #333;
+      padding-left: 5px;
+
+      @include tablet {
+        padding: 5px 0 0 5%;
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      @include desktop {
+        margin-left: 12%;
+        width: 70%;
+        margin: 5px auto;
+        padding: 0;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.doctors-tablet-2 h2 {
+  color: #444;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 28px;
+  padding-bottom: 40px;
+
+  @include tablet {
+
+    padding-bottom: 55px;
+  }
+
+  span {
+    display: inline-block;
+    width: 26px;
+    border-bottom: 1px solid $blue;
+    backface-visibility: hidden;
+  }
+}
+
+.doctors-tablet-2 .doc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include tablet {
+    flex-direction: row;
+    // padding-right: 3%;
+  }
+
+  .doc-box {
+    width: 92%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 55px;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    .doc-img-3 {
+      background: url("../../public/img/doc-3.jpg");
+      margin: 0 auto;
+      width: 345px;
+      // width: 100%;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+
+
+      @include tablet {
+        width: 335px
+      }
+
+      @include desktop {
+        width: 345px;
+      }
+
+
+      &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+      }
+    }
+
+    .doc-img-4 {
+      background: url("../../public/img/doc-4.jpg");
+      // width: 100%;
+      width: 345px;
+      margin: 0 auto;
+      background-size: cover;
+      height: 300px;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      animation-fill-mode: forwards;
+
+      @include tablet {
+        width: 335px
+      }
+
+      @include desktop {
+        width: 345px;
+      }
+
+
+      &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+      }
+
+    }
+
+    // .lisa-text {
+    //   padding-right: 15px;
+    // }
+
+    h3 {
+      font-weight: 500;
+      padding: 30px 0 10px 0;
+      letter-spacing: 1px;
+      font-size: 22px;
+      color: #444;
+    }
+
+    span {
+      font-size: 18px;
+      padding-bottom: 17px;
+      display: block;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: left;
+      line-height: 26px;
+      // padding: 20px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: #333;
+      padding-left: 7px;
+
+      @include tablet {
+
+        padding: 5px 0 0 5%;
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      @include desktop {
+        margin-left: 12%;
+        width: 70%;
+        margin: 5px auto;
+        padding: 0;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+/*******************************************
+TESTIMONIALS
+********************************************/
+
+.testimonials {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h2 {
+    color: #444;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 28px;
+    padding-bottom: 40px;
+
+    @include desktop {
+      padding: 50px 0 60px 0;
+    }
+
+    span {
+      display: inline-block;
+      width: 26px;
+      border-bottom: 1px solid $blue;
+      backface-visibility: hidden;
+    }
+  }
+
+  .test-container-img {
+    background: url("../../public/img/doctorPatient19-sm.jpg");
+    background-size: cover;
+    height: 375px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    @include tablet {
+      height: 550px;
+    }
+
+    @include desktop {
+      height: 700px;
+    }
+
+    .patient-rev-img {
+      background: url("../../public/img/patient-pic.jpg");
+      width: 110px;
+      height: 110px;
+      top: -25%;
+      left: -2%;
+      z-index: 1;
+      background-size: contain;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      background-repeat: no-repeat;
+
+
+
+      @include tablet {
+        margin-top: 5%;
+        width: 145px;
+        height: 145px;
+        top: -29%;
+
+      }
+
+      @include desktop {
+        width: 155px;
+        height: 155px;
+        margin-top: 0;
+        top: -29%;
+
+
+      }
+    }
+
+    p {
+      color: #fff;
+      z-index: 1;
+      display: block;
+      position: absolute;
+      top: 40%;
+      right: 13%;
+      padding: 10px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-weight: 400;
+
+      width: 75%;
+      text-align: center;
+
+
+      @include tablet {
+        width: 60%;
+        max-width: 600px;
+        font-size: 20px;
+        margin-top: 35px;
+        margin-right: 8%;
+
+
+      }
+
+      @include desktop {
+        max-width: 60%;
+        font-size: 22px;
+        top: 37%;
+        right: 13%;
+      }
+    }
+  }
+}
+
+.overlay:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/*******************************************
+APPOINTMENT
+********************************************/
+
+.appointment {
+  width: 100%;
+  height: 400px;
+  padding: 40px auto;
+  margin: 60px auto 75px auto;
+
+  @include desktop {
+    padding: 0 50px 0 0;
+  }
+
+  h2 {
+    color: #555;
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding: 40px 0 40px 0;
+  }
+
+  .appoint-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .form-container {
+      @include desktop {
+        margin-left: 10%;
+        width: 80%;
+      }
+
+      input {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin: 5px 0;
+        width: 80%;
+        border: 0;
+        border-bottom: 1px solid $purple;
+        outline: 0;
+      }
+
+      button {
+        display: block;
+        padding: 15px 35px;
+        background: $blue;
+        color: #fff;
+        border: 0;
+        border-radius: 40px;
+        margin: 60px auto 50px auto;
+        -webkit-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+        -moz-box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+        box-shadow: 0px 3px 10px 0px rgba(68, 68, 68, 1);
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          -webkit-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+          -moz-box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+          box-shadow: 0px 10px 20px 0px rgba(68, 68, 68, 1);
+        }
+      }
+    }
+  }
+
+  .side-img-container {
+    width: 100%;
+    height: 300px;
+    display: none;
+
+    @include desktop {
+      display: block;
+      // padding: 10px;
+      // height: 600px;
+      margin: 0;
+
+
+      .side-img {
+        background: url("../../public/img/doctorPatient14.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        // padding: 50px;
+        border-radius: 5px;
+        margin-left: 10%;
+        height: 309px;
+        width: 516px;
+        display: none;
+
+        @include desktop {
+          display: block;
+        }
+      }
+    }
+
+
+  }
 }
 
 /*******************************************
@@ -94,72 +937,72 @@ FOOTER
 ********************************************/
 
 footer {
-    background: $purple;
-    padding: 20px 0;
-    color: $white;
+  background: $purple;
+  padding: 20px 0;
+  color: $white;
+  text-align: center;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 15px;
     text-align: center;
 
     @include tablet {
-        padding: 50px 0;
+      grid-template-columns: 25% 40% 30%;
+      grid-template-rows: auto;
+      grid-column-gap: 15px;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3, auto);
-        grid-row-gap: 15px;
-        text-align: center;
+    .address-col {
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
 
-        @include tablet {
-            grid-template-columns: 25% 40% 30%;
-            grid-template-rows: auto;
-            grid-column-gap: 15px;
+        @include desktop {
+          font-size: 30px;
         }
+      }
 
-        .address-col {
-            h5 {
-                font-size: 20px;
-                font-weight: 500;
+      p {
+        font-size: 14px;
+        line-height: 1.5;
 
-                @include desktop {
-                    font-size: 30px;
-                }
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.5;
-
-                @include desktop {
-                    font-size: 20px;
-                }
-            }
+        @include desktop {
+          font-size: 20px;
         }
-
-        .social-col {
-            .icon {
-                font-size: 20px;
-                padding: 0 20px;
-
-                @include desktop {
-                    font-size: 30px;
-                }
-            }
-        }
-
-        .menu-col {
-            ul>li {
-                padding: 5px;
-                display: inline-block;
-
-                @include desktop {
-                    font-size: 20px;
-                }
-
-                a {
-                    color: $white;
-                }
-            }
-        }
+      }
     }
+
+    .social-col {
+      .icon {
+        font-size: 20px;
+        padding: 0 20px;
+
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .menu-col {
+      ul>li {
+        padding: 5px;
+        display: inline-block;
+
+        @include desktop {
+          font-size: 20px;
+        }
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
 }
