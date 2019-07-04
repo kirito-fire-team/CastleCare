@@ -426,7 +426,7 @@ TESTIMONIALS
       border-bottom: 1px solid #00a4d6;
       backface-visibility: hidden; }
   .testimonials .test-container-img {
-    background: url("/public/img/doctorPatient19-sm.jpg");
+    background: url("../../public/img/doctorPatient19-sm.jpg");
     background-size: cover;
     height: 375px;
     width: 100%;
