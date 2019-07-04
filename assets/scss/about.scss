@@ -278,118 +278,111 @@ BANNER
   }
 }
 
-// .banner-hack {
-//   position: relative;
-//   top: -6.5rem;
-// }
 
-// .banner-container {
-//   width: 100%;
-//   transition: all 2s ease-in-out;
-//   margin: 0 auto;
-//   position: relative;
-//   top: -50px;
+.banner-container {
+  width: 100%;
+  transition: all 2s ease-in-out;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
 
-//   h1 {
-//     color: #fff;
-//     position: absolute;
-//     z-index: 1;
-//     top: 27%;
-//     left: -200px;
-//     font-size: 22px;
-//     font-weight: 300;
-//     letter-spacing: 1px;
-//     text-transform: capitalize;
-//     animation-name: fade-in-left;
-//     opacity: 0;
-//     animation-duration: 2s;
-//     animation-fill-mode: forwards;
-//     backface-visibility: hidden;
+  h1 {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 27%;
+    left: -200px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
 
-//     @include tablet {
-//       font-size: 32px;
-//     }
+    @include tablet {
+      font-size: 32px;
+    }
 
-//     @include desktop {
-//       font-size: 40px;
-//     }
+    @include desktop {
+      font-size: 40px;
+    }
 
-//     span {
-//       display: inline-block;
-//       width: 19px;
-//       border-bottom: 1px solid #fff;
-//       backface-visibility: hidden;
-//     }
-//   }
+    span {
+      display: inline-block;
+      width: 19px;
+      border-bottom: 1px solid #fff;
+      backface-visibility: hidden;
+    }
+  }
 
-//   p {
-//     margin-top: 8px;
-//     display: inline-block;
-//     position: absolute;
-//     top: 37%;
-//     left: -80px;
-//     text-transform: capitalize;
-//     animation-name: fade-in-left;
-//     opacity: 0;
-//     animation-duration: 2s;
-//     animation-fill-mode: forwards;
-//     font-size: 8px;
-//     color: #fff;
-//     z-index: 1;
-//     letter-spacing: 1px;
-//     backface-visibility: hidden;
+  p {
+    margin-top: 8px;
+    display: inline-block;
+    position: absolute;
+    top: 37%;
+    left: -80px;
+    text-transform: capitalize;
+    animation-name: fade-in-left;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-size: 8px;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
+    backface-visibility: hidden;
 
-//     @include tablet {
-//       font-size: 10px;
-//       top: 40%;
-//     }
+    @include tablet {
+      font-size: 10px;
+      top: 40%;
+    }
 
-//     @include desktop {
-//       font-size: 14px;
-//     }
-//   }
+    @include desktop {
+      font-size: 14px;
+    }
+  }
 
-//   a {
-//     color: #111;
-//     font-weight: 500;
-//   }
-// }
+  a {
+    color: #111;
+    font-weight: 500;
+  }
+}
 
 
-// .office-img-container {
-//   position: relative;
-//   width: 100%;
+.office-img-container {
+  position: relative;
+  width: 100%;
 
-// .office-img {
-//   background: url("/public/img/med_office.jpg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   width: 100%;
-//   height: 350px;
+  .office-img {
+    background: url("../../public/img/med_office.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
 
-//     background: url("/public/img/med_office.jpg");
+    img {
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 350px;
 
-//     background: url("/public/img/med_office.jpg");
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     width: 100%;
-//     height: 350px;
-//     img {
-//       background-size: contain;
-//       background-repeat: no-repeat;
-//       width: 100%;
-//       height: 350px;
+      @include tablet {
+        height: 420px;
+      }
 
-//       @include tablet {
-//         height: 420px;
-//       }
-
-//       @include desktop {
-//         height: 700px
-//       }
-//     }
-//   }
-// }
+      @include desktop {
+        height: 700px
+      }
+    }
+  }
+}
 
 
 
@@ -510,7 +503,7 @@ DOCTORS
 
     .doc-img-1 {
       //   background: url("/public/img/doc-1.jpg");
-      background: url("/public/img/doc-1.jpg");
+      background: url("../../public/img/doc-1.jpg");
       margin: 0 auto;
       width: 300px;
       display: block;
@@ -538,7 +531,7 @@ DOCTORS
     }
 
     .doc-img-2 {
-      background: url("/public/img/doc-2.jpg");
+      background: url("../../public/img/doc-2.jpg");
       width: 300px;
       margin: 0 auto;
       background-size: cover;
@@ -639,7 +632,7 @@ DOCTORS
     }
 
     .doc-img-3 {
-      background: url("/public/img/doc-3.jpg");
+      background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
       width: 300px;
       background-size: cover;
@@ -661,7 +654,7 @@ DOCTORS
     }
 
     .doc-img-4 {
-      background: url("/public/img/doc-4.jpg");
+      background: url("../../public/img/doc-4.jpg");
       width: 300px;
       margin: 0 auto;
       background-size: cover;
