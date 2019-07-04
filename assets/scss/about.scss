@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+=======
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+>>>>>>> fd5909ad1d034637ebb1cdbf0d90fc81a69bb9aa
 @import "global";
 @import "variables";
 @import "mixins";
@@ -9,6 +13,7 @@ HEADER
 
 
 header {
+<<<<<<< HEAD
   background: #ccc;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
     url(/img/doc.jpg) center center no-repeat;
@@ -23,6 +28,14 @@ header {
     align-items: center;
     color: $white;
     padding: 20px 0;
+=======
+    background: #ccc;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
+        url(/img/doc.jpg) center center no-repeat;
+    background-size: cover;
+    // height: 100vh;
+    position: relative;
+>>>>>>> fd5909ad1d034637ebb1cdbf0d90fc81a69bb9aa
 
     a {
       color: #fff;
@@ -106,7 +119,12 @@ header {
         }
       }
     }
+<<<<<<< HEAD
   }
+=======
+}
+
+>>>>>>> fd5909ad1d034637ebb1cdbf0d90fc81a69bb9aa
 
   // Info Box
   .info-box {
