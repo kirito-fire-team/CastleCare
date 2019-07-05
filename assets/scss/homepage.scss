@@ -262,6 +262,9 @@ SERVICES SECTION
           @include tablet {
             grid-column: 1 / span 4;
             padding: 10px;
+            &:hover {
+              background-color: $purple;
+            }
           }
           @include desktop {
             grid-column: 1 / 2;
@@ -269,6 +272,7 @@ SERVICES SECTION
           }
           a {
             color: $white;
+            padding: 4px 25px;
           }
         }
       }
