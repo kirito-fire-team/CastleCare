@@ -553,7 +553,13 @@ TESTIMONIALS
   padding: 30px 0 30px;
   text-align: center;
   color: $dark-text;
-  height: 586px;
+  height: 825px;
+  position: relative;
+  z-index: 300;
+  background: #fcfcfc;
+  @include tablet {
+    height: 700px;
+  }
   .title {
     margin-bottom: 30px;
     h3 {
@@ -564,16 +570,31 @@ TESTIMONIALS
     }
   }
   .testimonials-container {
-    
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    height: 667px;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 500px;
+    }
     .slider {
       display: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
-      height: 339px;
+      height: 511px;
+      @include tablet {
+        width: 80%;
+        height: 460px;
+      }
       img {
         width: 110px;
         height: 110px;
@@ -581,31 +602,50 @@ TESTIMONIALS
         margin-bottom: 30px;
       }
       q {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.4;
-        padding-bottom: 20px;
+        padding-bottom: 18px;
+        @include tablet {
+          font-size: 20px;
+          padding-bottom: 20px;
+          line-height: 1.5;
+        }
       }
       h3 {
         display: block;
         width: 100%;
-        font-size: 20px;
+        font-size: 15px;
         letter-spacing: 2px;
         font-weight: 600;
         text-transform: uppercase;
-        padding-bottom: 5px;
+        padding-bottom: 7px;
+        @include tablet {
+          font-size: 20px;
+        }
       }
       p {
         display: block;
         font-weight: 600;
+        font-size: 12px;
+        @include tablet {
+          font-size: 14px;
+          padding-bottom: 30px;
+        }
       }
     }
     .bar-container {
-      padding: 20px;
+      padding: 6px;
       text-align: center;
+      width: 100%;
+      margin-bottom: 58px;
+      @include tablet {
+        padding: 20px;
+        margin-bottom: 0;
+      }
       .bar {
         cursor: pointer;
-        width: 50px;
-        height: 15px;
+        width: 70px;
+        height: 45px;
         margin: 0 1px;
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.37);
@@ -614,6 +654,10 @@ TESTIMONIALS
         &.active,
         &:hover {
           background-color: $blue;
+        }
+        @include tablet {
+          width: 50px;
+          height: 15px;
         }
       }
     }
