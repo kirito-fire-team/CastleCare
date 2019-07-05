@@ -550,36 +550,75 @@ TESTIMONIALS
 ********************************************/
 
 .testimonials {
+  padding: 30px 0 30px;
+  text-align: center;
+  color: $dark-text;
+  height: 586px;
   .title {
-
+    margin-bottom: 30px;
+    h3 {
+      @include h3title;
+    }
+    h2 {
+      @include h2title;
+    }
   }
   .testimonials-container {
-    position: relative;
-    background: orange;
-    display: grid;
-    grid-template-rows: 40% 20% 20% 40%;
-    .slides {
+    
+    .slider {
       display: none;
-      padding: 80px;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      height: 339px;
+      img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+      }
+      q {
+        font-size: 20px;
+        line-height: 1.4;
+        padding-bottom: 20px;
+      }
+      h3 {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+      }
+      p {
+        display: block;
+        font-weight: 600;
+      }
     }
     .bar-container {
-      text-align: center;
       padding: 20px;
-      background: deepskyblue;
-      .bars {
+      text-align: center;
+      .bar {
         cursor: pointer;
+        width: 50px;
         height: 15px;
-        width: 40px;
         margin: 0 1px;
-        background-color: #ccc;
-        border-radius: 5px;
         display: inline-block;
-        transition: background-color .6s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.37);
+        border-radius: 2px;
+        transition: background-color .6s ease;
+        &.active,
+        &:hover {
+          background-color: $blue;
+        }
       }
     }
   }
-} 
+}
 
 
 
