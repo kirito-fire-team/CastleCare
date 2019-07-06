@@ -14,8 +14,12 @@ header {
   background: #ccc;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   position: relative;
+
+  @include desktop {
+    height: 95vh;
+  }
 
   // Navigation
   .main-nav {
@@ -273,6 +277,7 @@ BANNER
 .office-img-container {
   position: relative;
   width: 100%;
+  // top: -110px;
 
   .office-img {
     background: url("../../public/img/med_office.jpg");
@@ -280,6 +285,7 @@ BANNER
     background-repeat: no-repeat;
     width: 100%;
     height: 350px;
+    // height: 400px;
 
     @include tablet {
       height: 420px;
@@ -332,6 +338,7 @@ ABOUT
       @include tablet {
         font-size: 20px;
         padding-left: 4%;
+        margin-top: 57px;
       }
 
       span {
@@ -422,6 +429,7 @@ DOCTORS
       background: url("../../public/img/doc-1-sm.jpg");
       margin: 0 auto;
       width: 100%;
+      width: 345px;
       display: block;
       background-size: cover;
       height: 300px;
@@ -458,7 +466,9 @@ DOCTORS
     .doc-img-2 {
       background: url("../../public/img/doc-2.jpg");
       // width: 345px;
-      width: 100%;
+      // width: 100%;
+      width: 345px;
+      display: block;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -575,8 +585,10 @@ DOCTORS
     .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
+      width: 100%;
       width: 345px;
-      // width: 100%;
+      // width: 380px;
+
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -607,7 +619,8 @@ DOCTORS
 
     .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
-      // width: 100%;
+      // width: 380px;
+      width: 100%;
       width: 345px;
       margin: 0 auto;
       background-size: cover;
@@ -696,14 +709,23 @@ TESTIMONIALS
   align-items: center;
   position: relative;
 
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
+
   h2 {
+    // color: #fff;
     color: #444;
     text-align: center;
     font-weight: 500;
     text-transform: capitalize;
     letter-spacing: 1px;
     font-size: 28px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+
+    @include tablet {
+      padding-top: 0;
+      // padding-bottom: 30px;
+    }
 
     @include desktop {
       padding: 50px 0 60px 0;
@@ -718,25 +740,30 @@ TESTIMONIALS
   }
 
   .test-container-img {
-    background: url("../../public/img/doctorPatient19-sm.jpg");
+    background: url("../../public/img/doctorPatient19.jpg");
     background-size: cover;
     height: 375px;
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-    display: block;
-    background-attachment: fixed;
+    display: flex;
+    // z-index: -3;
+
+
+    // background-attachment: fixed;
     background-position: center;
     z-index: 1;
     text-align: center;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
 
     justify-content: space-around;
 
     @include tablet {
       height: 550px;
+      background-attachment: fixed;
+
+
     }
 
     @include desktop {
@@ -813,7 +840,7 @@ TESTIMONIALS
   }
 }
 
-.overlay:after {
+.testimonial-overlay:after {
   content: "";
   position: absolute;
   left: 0px;
@@ -822,6 +849,10 @@ TESTIMONIALS
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 /*******************************************
@@ -922,6 +953,10 @@ APPOINTMENT
         height: 309px;
         width: 516px;
         display: none;
+
+        @include tablet {
+          margin-left: 5%;
+        }
 
         @include desktop {
           display: block;
