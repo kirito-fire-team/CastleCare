@@ -12,6 +12,26 @@
 </head>
 
 <body>
+    <!-- *******COPY BELOW THIS LINE*********  -->
+  
+    <!-- SLIDER MENU FOR MOBILE -->
+    <div id="myNav" class="overlay">
+  
+        <!-- Button to close the nav overlay -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+        <!-- Nav overlay content -->
+        <div class="overlay-content">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="physician.html">Physicians</a></li>
+              <li><a href="locations.html">Locations</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+      </div>
 
 <!-- ======================================== Header ========================================== -->
   <header>
@@ -32,16 +52,14 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="physician.html">Physicians</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
       <div class="info-box">
-        <h1>Your health is <br> Our Concern</h1>
-
-        <p>Castle Care is a non-profit, family owned medical center, commited to serving the community with excellent treatment with doctors who are possionate about helping others.</p>
-        <a href="#" class="we-help-btn">See how we can help <i class="fas arrow-right fa-chevron-right"></i></a>
+        <p>Whether you need routine medical care, advanced treatment and surgery or emergency services, Castle Care can help.</p>
+        <a href="#serviceWelcome" class="we-help-btn">Select Service <i class="fas arrow-right fa-chevron-right"></i></a>
 
       </div>
     </div>
@@ -52,30 +70,9 @@
   <section id = "chooseService" class = "container">
 <!-- ==================== Left Column ====================== -->
     <div id = "selectService">
-        <div id = "charSelect">
+        <div id = "serviceWelcome">
             <h1>Health Services</h1>
-            <ul id = "letters">
-                <li><a href = "#a">A</a></li>
-                <li><a href = "#b">B</a></li>
-                <li><a href = "#c">C</a></li>
-                <li><a href = "#d">D</a></li>
-                <li><a href = "#e">E</a></li>
-                <li><a href = "#f">F</a></li>
-                <li><a href = "#g">G</a></li>
-                <li><a href = "#h">H</a></li>
-                <li><a href = "#i">I</a></li>
-                <li><a href = "#l">L</a></li>
-                <li><a href = "#m">M</a></li>
-                <li><a href = "#n">N</a></li>
-                <li><a href = "#o">O</a></li>
-                <li><a href = "#p">P</a></li>
-                <li><a href = "#r">R</a></li>
-                <li><a href = "#s">S</a></li>
-                <li><a href = "#t">T</a></li>
-                <li><a href = "#u">U</a></li>
-                <li><a href = "#v">V</a></li>
-                <li><a href = "#w">W</a></li>
-            </ul>
+            <p>Amputate anus bruise complete blood count (cbc) controller medications corticosteroids cough decongestants diaphragm disinfectants enamel fever fluoride frostbite ketones laxatives nausea nearsighted peak flow meter perspiration pneumonia red blood cells sclera spirometer wisdom teeth. Addiction amputate astringents cerebral cortex dyslexia emotions external otitis genetics glucagon hematoma histamine immunizations nasal cavity nits orthodontist pancreas pneumonia prosthesis rheumatologist sebum stapes surgery varicella zoster vertebrae violence whitehead. Anesthesia arthritis blackhead carbohydrate counting cerebellum dyslexia eeg (electroencephalogram) epidermis fats fiber frostbite genes glycogen growth hormone ketoacidosis larynx mucous membrane nausea night guard peak flow meter pimple polydipsia red blood cells rx saliva scar suture tragus.</p>
         </div>
         <div id = "serviceCards" class = "container">
             <ul id = "cards">
@@ -102,20 +99,20 @@
                 <li id = "c" class = "letterCard">
                     <h1>C</h1>
                     <ul>
-                        <li>Cancer conferences</li>
+                        <li>Cardiology</li>
+                        <li>Clinical analysis</li>
                         <li>Cancer registry</li>
                         <li>Cancor survivor program</li>
                         <li>Career exploration</li>
-                        <li>Colonoscopy</li>
                     </ul>
                 </li>
                 <li id = "d" class = "letterCard">
                     <h1>D</h1>
                     <ul>
-                        <li>Diabetes</li>
+                        <li>DNA testing</li>
+                        <li>Dermatology</li>
                         <li>Drug testing</li>
                         <li>Deep brain stimulation</li>
-                        <li>Digestive health</li>
                         <li>Diagnostic imaging</li>
                     </ul>
                 </li>
@@ -200,17 +197,17 @@
                 <li id = "o" class = "letterCard">
                     <h1>O</h1>
                     <ul>
-                        <li>Obstetrics</li>
+                        <li>Opthalmology</li>
                         <li>Orthopedic services</li>
                         <li>Osteoporosis</li>
                         <li>Oncology Palliative Care Program</li>
-                        <li>Optimal Aging</li>
+
                     </ul>
                 </li>
                 <li id = "p" class = "letterCard">
                     <h1>P</h1>
                     <ul>
-                        <li>Pain management</li>
+                        <li>Pulmonology</li>
                         <li>Palliative care</li>
                         <li>Physical therapy</li>
                         <li>Pregnancy and childbirth</li>
@@ -271,6 +268,30 @@
                         <li>Wound and ostomy care</li>
                     </ul>
                 </li>
+            </ul>
+        </div>
+        <div id = "charSelect">
+            <ul id = "letters">
+                <li><a href = "#a">A</a></li>
+                <li><a href = "#b">B</a></li>
+                <li><a href = "#c">C</a></li>
+                <li><a href = "#d">D</a></li>
+                <li><a href = "#e">E</a></li>
+                <li><a href = "#f">F</a></li>
+                <li><a href = "#g">G</a></li>
+                <li><a href = "#h">H</a></li>
+                <li><a href = "#i">I</a></li>
+                <li><a href = "#l">L</a></li>
+                <li><a href = "#m">M</a></li>
+                <li><a href = "#n">N</a></li>
+                <li><a href = "#o">O</a></li>
+                <li><a href = "#p">P</a></li>
+                <li><a href = "#r">R</a></li>
+                <li><a href = "#s">S</a></li>
+                <li><a href = "#t">T</a></li>
+                <li><a href = "#u">U</a></li>
+                <li><a href = "#v">V</a></li>
+                <li><a href = "#w">W</a></li>
             </ul>
         </div>
     </div>
