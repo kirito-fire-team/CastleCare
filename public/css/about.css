@@ -29,15 +29,80 @@ ul > li {
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body,
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: #ffffff; }
+
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.body-container {
+  width: 70%;
+  margin: 0 auto; }
+
+a:link {
+  text-decoration: none; }
+
+ul > li {
+  list-style: none; }
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 5000;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #00a4d6; }
+  .overlay .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px; }
+    .overlay .overlay-content a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #00a4d6;
+      display: block;
+      transition: 0.3s; }
+      .overlay .overlay-content a:hover {
+        color: #6670a3; }
+      .overlay .overlay-content a:focus {
+        color: #6670a3; }
+
 /*******************************************
 HEADER
 ********************************************/
 header {
   background: #ccc;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url(/img/doc.jpg) center center no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   position: relative; }
+  @media (min-width: 992px) {
+    header {
+      height: 95vh; } }
   header .main-nav {
     display: flex;
     justify-content: space-between;
@@ -261,7 +326,8 @@ ABOUT
     @media (min-width: 768px) {
       .about-container .about-text h3 {
         font-size: 20px;
-        padding-left: 4%; } }
+        padding-left: 4%;
+        margin-top: 57px; } }
     .about-container .about-text h3 span {
       display: inline-block;
       width: 19px;
@@ -324,6 +390,7 @@ DOCTORS
       background: url("../../public/img/doc-1-sm.jpg");
       margin: 0 auto;
       width: 100%;
+      width: 345px;
       display: block;
       background-size: cover;
       height: 300px;
@@ -347,7 +414,8 @@ DOCTORS
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-1 .doc-container .doc-box .doc-img-2 {
       background: url("../../public/img/doc-2.jpg");
-      width: 100%;
+      width: 345px;
+      display: block;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -437,6 +505,7 @@ DOCTORS
     .doctors-tablet-2 .doc-container .doc-box .doc-img-3 {
       background: url("../../public/img/doc-3.jpg");
       margin: 0 auto;
+      width: 100%;
       width: 345px;
       background-size: cover;
       height: 300px;
@@ -460,6 +529,7 @@ DOCTORS
         box-shadow: 0px 10px 20px 0px #444444; }
     .doctors-tablet-2 .doc-container .doc-box .doc-img-4 {
       background: url("../../public/img/doc-4.jpg");
+      width: 100%;
       width: 345px;
       margin: 0 auto;
       background-size: cover;
@@ -530,7 +600,11 @@ TESTIMONIALS
     text-transform: capitalize;
     letter-spacing: 1px;
     font-size: 28px;
-    padding-bottom: 40px; }
+    padding-bottom: 50px;
+    padding-top: 40px; }
+    @media (min-width: 768px) {
+      .testimonials h2 {
+        padding-top: 0; } }
     @media (min-width: 992px) {
       .testimonials h2 {
         padding: 50px 0 60px 0; } }
@@ -540,24 +614,23 @@ TESTIMONIALS
       border-bottom: 1px solid #00a4d6;
       backface-visibility: hidden; }
   .testimonials .test-container-img {
-    background: url("../../public/img/doctorPatient19-sm.jpg");
+    background: url("../../public/img/doctorPatient19.jpg");
     background-size: cover;
     height: 375px;
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-    display: block;
-    background-attachment: fixed;
+    display: flex;
     background-position: center;
     z-index: 1;
     text-align: center;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
     justify-content: space-around; }
     @media (min-width: 768px) {
       .testimonials .test-container-img {
-        height: 550px; } }
+        height: 550px;
+        background-attachment: fixed; } }
     @media (min-width: 992px) {
       .testimonials .test-container-img {
         height: 700px; } }
@@ -613,7 +686,7 @@ TESTIMONIALS
           top: 37%;
           right: 13%; } }
 
-.overlay:after {
+.testimonial-overlay:after {
   content: "";
   position: absolute;
   left: 0px;
@@ -622,6 +695,9 @@ TESTIMONIALS
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1; }
+  @media (min-width: 768px) {
+    .testimonial-overlay:after {
+      display: block; } }
 
 /*******************************************
 APPOINTMENT
@@ -699,6 +775,9 @@ APPOINTMENT
           height: 309px;
           width: 516px;
           display: none; } }
+    @media (min-width: 992px) and (min-width: 768px) {
+      .appointment .side-img-container .side-img {
+        margin-left: 5%; } }
     @media (min-width: 992px) and (min-width: 992px) {
       .appointment .side-img-container .side-img {
         display: block; } }
