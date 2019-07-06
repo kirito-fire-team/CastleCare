@@ -738,6 +738,7 @@ TESTIMONIALS
         padding-bottom: 7px;
         @include tablet {
           font-size: 20px;
+          padding: 5px;
         }
       }
       p {
@@ -746,7 +747,7 @@ TESTIMONIALS
         font-size: 12px;
         @include tablet {
           font-size: 14px;
-          padding-bottom: 30px;
+          padding: 5px;
         }
       }
     }
