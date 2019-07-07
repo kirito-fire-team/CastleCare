@@ -1,5 +1,8 @@
 
-@import "styles";
+@import "global";
+@import "variables";
+@import "mixins";
+
 
 $cellWidth: 521px;
 $tabletWidth: 1100px;
@@ -11,7 +14,7 @@ html {
 header{
     background: #ccc;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-    url(/img/medicalServices.png) center center no-repeat;
+    url("img/medicalServices.png") center center no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;
