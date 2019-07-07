@@ -1,11 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Cardo:400,700&display=swap');
-@import "reset";
-@import "global";
-@import "variables";
-@import "mixins"; // Header Styles
-@import "mobile_menu";
-@import "about";
+@import "styles";
 
 $cellWidth: 521px;
 $tabletWidth: 1100px;
