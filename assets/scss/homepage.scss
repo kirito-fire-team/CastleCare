@@ -126,6 +126,11 @@ header {
       right: 15%;
     }
 
+    @include landscape {
+      margin-top: 7px;
+      height: 235px;
+    }
+
     h1 {
       font-size: 30px;
       font-weight: 300;
@@ -135,6 +140,10 @@ header {
       @include desktop {
         font-size: 30px;
       }
+
+      @include landscape {
+        font-size: 25px;
+      }
     }
 
     p {
@@ -142,6 +151,11 @@ header {
       font-weight: 300;
       line-height: 1.5;
       padding-bottom: 40px;
+
+      @include landscape {
+        font-size: 15px;
+        padding-bottom: 25px;
+      }
     }
 
     .we-help-btn {
@@ -681,8 +695,16 @@ TESTIMONIALS
     height: 700px;
   }
 
+  @include landscape {
+    height: 560px;
+  }
+
   .title {
     margin-bottom: 30px;
+
+    @include landscape {
+      margin-bottom: 0px;
+    }
 
     h3 {
       @include h3title;
@@ -708,6 +730,14 @@ TESTIMONIALS
       height: 500px;
     }
 
+    @include landscape {
+      display: grid;
+      height: 297px;
+      justify-items: center;
+      align-self: center;
+      grid-template-rows: auto;
+    }
+
     .slider {
       display: none;
       display: flex;
@@ -723,11 +753,24 @@ TESTIMONIALS
         height: 460px;
       }
 
+      @include landscape {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 332px;
+      }
+
       img {
         width: 110px;
         height: 110px;
         border-radius: 50%;
         margin-bottom: 30px;
+
+        @include landscape {
+          width: 90px;
+          height: 90px;
+          margin-bottom: 0px;
+        }
       }
 
       q {
@@ -739,6 +782,16 @@ TESTIMONIALS
           font-size: 20px;
           padding-bottom: 20px;
           line-height: 1.5;
+        }
+
+        @include landscape {
+          font-size: 14px;
+          line-height: 1.4;
+          padding-bottom: 0px;
+        }
+
+        @include large-desktop {
+          font-size: 25px;
         }
       }
 
@@ -753,6 +806,7 @@ TESTIMONIALS
 
         @include tablet {
           font-size: 20px;
+          padding: 5px;
         }
       }
 
@@ -763,7 +817,7 @@ TESTIMONIALS
 
         @include tablet {
           font-size: 14px;
-          padding-bottom: 30px;
+          padding: 5px;
         }
       }
     }
