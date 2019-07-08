@@ -3,6 +3,7 @@
 @import "variables";
 @import "mobile_menu";
 @import "homepage";
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap');
 
 
 $cellWidth: 521px;
@@ -23,14 +24,15 @@ $tabletWidth: 1100px;
     background: #f1f1f1;
     header{
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-        url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") 
+        url("http://www.sompaisoscatalans.cat/simage/176/1769507/medical-background-wallpaper.png?fbclid=IwAR2Vgrk1EZxisfMDeYgbzzcockz6G0cghLVK1AEmPyaUbDG2tsmWYJ-RyXQ") 
         center center no-repeat;
-        
-        @media(max-width: $cellWidth){
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-            url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") 
-            center center no-repeat;
-            background-size: 375px;
+        .info-box{
+            h1{
+                font-family: 'Black Ops One', cursive;
+                font-size: 70px;
+                text-transform: capitalize;
+                color: rgb(214, 214, 245);
+            }
         }
     }
     /* Header/Blog Title */
