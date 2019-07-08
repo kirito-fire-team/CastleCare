@@ -1,9 +1,8 @@
 @import "reset";
-@import "styles";
 @import "global";
 @import "variables";
-@import "mixins"; // Header Styles
-@import url('https://fonts.googleapis.com/css?family=Cardo:400,700&display=swap');
+@import "mobile_menu";
+@import "homepage";
 
 $cellWidth: 521px;
 $tabletWidth: 1100px;
@@ -15,7 +14,7 @@ html {
 header{
     background: #ccc;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-    url(/img/medicalServices.png) center center no-repeat;
+    url("https://www.clarendonmedicalcentre.com/wp-content/uploads/2016/09/medical-services.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -161,6 +160,7 @@ header{
                 height: 50px;
                 border: 1px solid gray;
                 border-radius: 5px;
+                margin: 3px 0;
                 background: rgb(206,219,233); /* Old browsers */
                 background: rgb(5,17,242); /* Old browsers */
                 background: -moz-linear-gradient(-45deg, rgba(5,17,242,1) 25%, rgba(6,219,212,1) 70%); /* FF3.6-15 */
