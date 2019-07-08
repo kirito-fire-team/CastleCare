@@ -1,8 +1,12 @@
-
+@import "reset";
 @import "global";
 @import "variables";
-@import "mixins";
+@import "mobile_menu";
+@import "homepage";
 
+
+$cellWidth: 521px;
+$tabletWidth: 1100px;
 
 * {
     box-sizing: border-box;
@@ -13,8 +17,11 @@
     font-family: Arial;
     padding: 20px;
     background: #f1f1f1;
+    header{
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
+        url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") center center no-repeat;
+    }
     /* Header/Blog Title */
-    
     .header {
         padding: 30px;
         font-size: 40px;
@@ -22,6 +29,9 @@
         background: white;
         margin: 30px 0 0 0;
         text-decoration: underline overline;
+        @media(max-width: $cellWidth){
+            font-size: 30px;
+        }
     }
     .row{
         /* Add a card effect for articles */
@@ -36,6 +46,9 @@
                 padding: 5px 0;
                 text-decoration: underline;
                 color: black;
+                @media(max-width: $cellWidth){
+                    font-size: 25px;
+                }
             }
             p{
                 font-size: 20px;
