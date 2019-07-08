@@ -23,7 +23,15 @@ $tabletWidth: 1100px;
     background: #f1f1f1;
     header{
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-        url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") center center no-repeat;
+        url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") 
+        center center no-repeat;
+        
+        @media(max-width: $cellWidth){
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
+            url("https://yt3.ggpht.com/a/AGF-l78dHP323cBUUZOowF-opd3YU9AaqVu49MyjIw=s900-mo-c-c0xffffffff-rj-k-no") 
+            center center no-repeat;
+            background-size: 375px;
+        }
     }
     /* Header/Blog Title */
     .header {
