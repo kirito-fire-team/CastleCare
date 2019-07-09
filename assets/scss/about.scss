@@ -18,6 +18,10 @@ header {
   height: 49vh;
   position: relative;
 
+  @include landscape {
+    height: 55vh;
+  }
+
 
   @include tablet {
     // height: 65vh;
@@ -1069,6 +1073,7 @@ footer {
       p {
         font-size: 14px;
         line-height: 1.5;
+        color: #fff;
 
         @include desktop {
           font-size: 20px;
@@ -1077,9 +1082,16 @@ footer {
     }
 
     .social-col {
+
       .icon {
         font-size: 20px;
+        transition: all .2s ease-in-out;
         padding: 0 20px;
+        color: #fff;
+
+        &:hover {
+          color: $blue;
+        }
 
         @include desktop {
           font-size: 30px;
