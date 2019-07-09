@@ -119,7 +119,7 @@ header {
             &:hover,
             &.selected {
               color: $blue;
-              font-weight: 600;
+              // font-weight: 600;
               padding: 8px 0;
               text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
             }
@@ -1098,6 +1098,15 @@ footer {
 
         a {
           color: $white;
+          transition: all .2s ease-in-out;
+
+          &:hover,
+          &.selected {
+            color: $blue;
+            // font-weight: 600;
+            padding: 8px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
         }
       }
     }
