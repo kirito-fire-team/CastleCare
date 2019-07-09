@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
-@import "global";
-@import "variables";
-@import "mixins";
-@import "mobile_menu";
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+// @import "global";
+// @import "variables";
+// @import "mixins";
+// @import "mobile_menu";
+@import "styles";
 
 
 /*******************************************
 HEADER
 ********************************************/
 
-
 header {
   background: #ccc;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("../../public/img/med_office.jpg") center center no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("https://i.postimg.cc/KzkfvCjg/med-office.jpg") center center no-repeat;
   background-size: cover;
   // height: 85vh;
   height: 49vh;
@@ -477,7 +477,7 @@ DOCTORS
     }
 
     .doc-img-1 {
-      background: url("../../public/img/doc-1-sm.jpg");
+      background: url("https://i.postimg.cc/brnmL4jj/doc-1-sm.jpg");
       margin: 0 auto;
       width: 100%;
       width: 340px;
@@ -515,7 +515,7 @@ DOCTORS
     }
 
     .doc-img-2 {
-      background: url("../../public/img/doc-2.jpg");
+      background: url("https://i.postimg.cc/HW8vp88P/doc-2.jpg");
       // width: 345px;
       // width: 100%;
       width: 340px;
@@ -634,7 +634,7 @@ DOCTORS
     }
 
     .doc-img-3 {
-      background: url("../../public/img/doc-3.jpg");
+      background: url("https://i.postimg.cc/4NCLn4z4/doc-3.jpg");
       margin: 0 auto;
       width: 100%;
       width: 340px;
@@ -669,7 +669,7 @@ DOCTORS
     }
 
     .doc-img-4 {
-      background: url("../../public/img/doc-4.jpg");
+      background: url("https://i.postimg.cc/pXD0jNZf/doc-4.jpg");
       // width: 380px;
       width: 100%;
       width: 340px;
@@ -792,14 +792,14 @@ TESTIMONIALS
 
   .test-container-img {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
-    background: url("../../public/img/doctorPatient19.jpg");
+    background: url("https://i.postimg.cc/fRCBHx1k/doctor-Patient19-sm.jpg");
     background-size: cover;
     height: 375px;
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
     display: flex;
-    background-position: left;
+    background-position: right;
 
     // z-index: -3;
 
@@ -813,24 +813,24 @@ TESTIMONIALS
 
     @include tablet {
       height: 460px;
-      background: url("../../public/img/doctorPatient19.jpg");
-      background-attachment: fixed;
+      // background: url("../../public/img/doctorPatient19.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: left;
-      background-position-x: -118px;
+      // background-position: left;
+      // background-position-x: -118px;
 
 
     }
 
     @include desktop {
+      background-attachment: fixed;
       height: 700px;
       // background-position: left;
 
     }
 
     .patient-rev-img {
-      background: url("../../public/img/patient-pic.jpg");
+      background: url("https://i.postimg.cc/Z54wFf71/patient-pic.jpg");
       width: 80px;
       height: 80px;
       top: -25%;
@@ -1003,7 +1003,7 @@ APPOINTMENT
 
 
       .side-img {
-        background: url("../../public/img/doctorPatient14.jpg");
+        background: url("https://i.postimg.cc/CK6J0whg/doctor-Patient14.jpg");
         background-size: cover;
         width: 100%;
         height: 100%;
