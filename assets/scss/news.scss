@@ -26,6 +26,7 @@ $tabletWidth: 1100px;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
         url("http://www.sompaisoscatalans.cat/simage/176/1769507/medical-background-wallpaper.png?fbclid=IwAR2Vgrk1EZxisfMDeYgbzzcockz6G0cghLVK1AEmPyaUbDG2tsmWYJ-RyXQ") 
         center center no-repeat;
+        background-size: cover;
         .info-box{
             h1{
                 font-family: 'Black Ops One', cursive;
@@ -84,6 +85,11 @@ $tabletWidth: 1100px;
                     width: 100%;
                 }
             }
+            #viewAllBtn{
+                text-align: center;
+                text-decoration: underline;
+                font-size: 28px;
+            }
         }
         /* Create two unequal columns that floats next to each other */
         /* Left column */
@@ -96,6 +102,22 @@ $tabletWidth: 1100px;
             float: left;
             width: 25%;
             padding-left: 20px;
+            .card{
+                /* Fake image */
+                .fakeimg {
+                    max-height: 300px;
+                    overflow: hidden;
+                    p{
+                        text-align: center;
+                        line-height: 1.5;
+                    }
+                }
+                #seeMoreBtn{
+                    text-align: center;
+                    text-decoration: underline;
+                    color: black;
+                }
+            }
         }
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 800px) {
