@@ -153,6 +153,9 @@ header {
   background-size: cover;
   height: 49vh;
   position: relative; }
+  @media only screen and (orientation: landscape) {
+    header {
+      height: 55vh; } }
   @media (min-width: 768px) {
     header {
       height: 60vh; } }
@@ -859,13 +862,18 @@ footer {
           font-size: 30px; } }
     footer .grid-container .address-col p {
       font-size: 14px;
-      line-height: 1.5; }
+      line-height: 1.5;
+      color: #fff; }
       @media (min-width: 992px) {
         footer .grid-container .address-col p {
           font-size: 20px; } }
     footer .grid-container .social-col .icon {
       font-size: 20px;
-      padding: 0 20px; }
+      transition: all .2s ease-in-out;
+      padding: 0 20px;
+      color: #fff; }
+      footer .grid-container .social-col .icon:hover {
+        color: #00a4d6; }
       @media (min-width: 992px) {
         footer .grid-container .social-col .icon {
           font-size: 30px; } }
