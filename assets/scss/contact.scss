@@ -5,7 +5,7 @@
 header {
   background: #ccc;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-  url("/Users/damiendavis/Desktop/Desktop_stuff/Projects/castle-care/public/img/doctorPatient6.jpg") center center no-repeat;
+  url("public/img/doctorPatient6.jpg") center center no-repeat;
   background-size: cover;
   height: 58vh;
   position: relative;
@@ -139,14 +139,7 @@ header {
        }
      }
    }
-   .vertical-line{
-     border-left: 2px solid lightgray;
-    height: 476px;
-    position: absolute;
-    left: 60%;
-    margin-left: 25px;
-    top: 539px;
-   }
+
    .right-side-40{
      width: 30%;
      height: 476px;
@@ -156,7 +149,17 @@ header {
      top: 540px;
      padding-left: 40px;
 
+     .vertical-line{
+       border-left: 2px solid lightgray;
+      height: 476px;
+      position: absolute;
+      left: -7%;
+      margin-left: 25px;
+      top: 100px;
+     }
+
      .content-40{
+       padding-top: 95px;
        h3{
          font-size: 33px;
          color: #1B75BC;

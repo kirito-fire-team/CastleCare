@@ -10,6 +10,7 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/contact.css">
+
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     <div class="container">
       <nav class="main-nav">
         <div class="logo-box">
-          <img src="/img/logo.png" alt="Castle Medical Logo">
+          <img src="public/img/logo.png" alt="Castle Medical Logo">
           <p>Castle Care</p>
         </div>
         <div class="mobile-menu">
@@ -61,8 +62,9 @@
 <!---right-side-------->
 
 
-<div class="vertical-line"></div>
+
 <div class="right-side-40">
+  <div class="vertical-line"></div>
   <div class="content-40">
     <h3>Corporate Office</h3>
     <p>4848 first line rd</p>
@@ -79,6 +81,40 @@
     <a href="#">locations@castlecare.com</a>
     </div>
   </div>
+</div>
+
+<div class="google-maps">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKVPRXV5PltV1hhOm_44y53CMcNWZRtLg&callback=initMap"
+  type="text/javascript"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</script>
+<script type="text/javascript">
+
+    function load()
+    {
+        var mapDiv = document.getElementById("map");
+        var latlng = new google.maps.LatLng(45.485168, -122.804489);
+        var mapOptions =
+        {
+            zoom: 15,
+            center:latlng,
+            backgroundColor: 'none',
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            imageDefaultUI: true
+        };
+        var map = new google.maps.Map(mapDiv, mapOptions);
+       map.addControl(new GSmallMapControl());
+       map.addControl(new GMapTypeControl());
+       map.addMapType(ROADMAP);
+       map.setCenter(
+       new GLatLng(45.485168, -122.804489), 13);
+    }
+
+</script>
+
+  </head>
+  <body onload="load()">
+    <div id="map" style="width: 100%; height: 400px;"></div>
 </div>
 
   </section>
