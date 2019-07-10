@@ -5,29 +5,23 @@
     @content;
   }
 }
-
 /* Large devices (laptops/desktops, 992px and up) */
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
   }
 }
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @mixin large-desktop {
   @media (min-width: #{$large-desktop-width}) {
     @content;
   }
 }
-
 @mixin landscape {
   @media only screen and (orientation: landscape) {
     @content;
   }
 }
-
-
-
 // MainPage Titles Mixins
 @mixin h3title {
   font-weight: 500;
@@ -41,7 +35,6 @@
     font-size: 18px;
   }
 }
-
 @mixin h2title {
   font-weight: 600;
   font-size: 18px;
@@ -54,4 +47,3 @@
     font-size: 32px;
   }
 }
-

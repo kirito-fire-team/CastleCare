@@ -3,249 +3,279 @@
 @import "variables";
 @import "mobile_menu";
 @import "homepage";
-
 $cellWidth: 521px;
 $tabletWidth: 1100px;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-header{
-    background: #ccc;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-    url("https://www.clarendonmedicalcentre.com/wp-content/uploads/2016/09/medical-services.jpg") center center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    .info-box{
-        p{
-            font-size: 23px;
-            font-weight: 500;
-        }
-        .we-help-btn{
-            font-weight: 500;
-        }
+header {
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%), url("https://www.clarendonmedicalcentre.com/wp-content/uploads/2016/09/medical-services.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  .info-box {
+    p {
+      font-size: 23px;
+      font-weight: 500;
     }
+
+    .we-help-btn {
+      font-weight: 500;
+    }
+  }
 }
 
-#chooseService{
-    margin-top: 100px;
-    display: inline-block;
-    #serviceWelcome{
-        width: 80%;
-        float: left;
-        padding: 15px;
-        text-align: center;
-        @media(max-width: $cellWidth){
-            width: 100%;
-            padding: 0;
-            margin-top: -60px;
-        }
-        @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-            width: 100%;
-            padding: 0;
-            margin-top: -60px;
-        }
-        h1{
-            line-height: 1.5;
-            font-size: 55px;
-            font-family: 'Cardo', serif;
-            font-weight: 700;
-            color: #00A4D6;
-            border-bottom: 1px solid #00A4D6;
-            margin: 35px;
-            @media(max-width: $cellWidth){
-                line-height: 1.2;
-                font-size: 35px;
-            }
-        }
-        p{
-            line-height: 1.5;
-            font-size: 18px;
-            font-weight: 400;
-            width: 90%;
-            display: inline-block;
-            @media(max-width: $cellWidth){
-                line-height: 1.2;
-                font-size: 17px;
-            }
-        }
-    }
-    #serviceCards{
-        width: 80%;
-        float: left;
-        padding: 15px;
-        text-align: center;
-        @media(max-width: $cellWidth){
-            width: 100%;
-            margin-top: 40px;
-        }
-        @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-            width: 100%;
-            margin: 40px 0;
-        }
-        #cards{
-            width: 69%;
-            margin: 0 auto;
-            font-size: 20px;
-            text-align: start;
-            @media(max-width: $cellWidth){
-                width: 100%;
-            }
-            .letterCard{
-                -webkit-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
-                -moz-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
-                box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
-                display: none;
-                font-size: 45px;
-                font-weight: bold;
-                border: 1px solid gray;
-                border-radius: 5px;
-                background: #00A4D6;
-                width: 100%;
-                color: white;
-                margin: 25px 0;
-                h1{
-                    margin-left: 20px;
-                }
-                ul{
-                    background: rgb(235, 233, 231);
-                    font-size: 30px;
-                    font-weight: 500;
-                    width: 100%;
-                    padding: 20px;
-                    line-height: 2;
-                    color: black;
-                    @media(max-width: $cellWidth){
-                        font-size: 18px;
-                    }
-                    li{
-                        border-bottom: 1px solid black;
-                    }
-                    li:last-child{
-                        border: none;
-                    }
-                }
-                &.default{
-                    display: inline-block;
-                }
-                li:hover{
-                    transform: scale(1.03);
-                }
-            }
-            .letterCard:target{
-                display: inline-block;
-            }
-        }
-    }
-    #charSelect{
-        width: 80%;
-        float: left;
-        padding: 15px;
-        text-align: center;
-        @media(max-width: $cellWidth){
-            width: 100%;
-        }
-        @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-            width: 90%;
-            margin: 0 5%;
-        }
-        #letters{
-            margin: 30px 0;
-            li{
-                display: inline-block;
-                list-style: none;
-                width: 50px;
-                height: 50px;
-                border: 1px solid gray;
-                border-radius: 5px;
-                margin: 3px 0;
-                background: rgb(206,219,233); /* Old browsers */
-                background: rgb(5,17,242); /* Old browsers */
-                background: -moz-linear-gradient(-45deg, rgba(5,17,242,1) 25%, rgba(6,219,212,1) 70%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(-45deg, rgba(5,17,242,1) 25%,rgba(6,219,212,1) 70%); /* Chrome10-25,Safari5.1-6 */
-                background: linear-gradient(135deg, rgba(5,17,242,1) 25%,rgba(6,219,212,1) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                
-                @media(max-width: $cellWidth){
-                    padding: 5px;
-                    margin: 2px 0;
-                }
-                a{
-                    color: white;
-                    font-weight: bold;
-                    font-size: 25px;
-                    position: relative;
-                    top: 25%;
-                }
-            }
-            li:hover{
-                transform: scale(1.5);
-            }
-        }
-    }
-    #helpColumn{
-        width: 20%;
-        display: inline-block;
-        position: relative;
-        // top: -175px;
-        @media(max-width: $cellWidth){
-            width: 100%;
-            margin-bottom: 30px;
-        }
-        @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-            width: 50%;
-            margin-bottom: 30px;
-            margin: 40px 24% 40px;
-        }
-        h1{
-            font-size: 30px;
-            padding: 15px 0;
-            line-height: 1.25;
-            color: $purple;
-            font-weight: 500;
-        }
-        ul{
-            background: rgb(223, 223, 223);
-            li{
-                font-size: 20px;
-                line-height: 1.25;
-                border-bottom: 1px solid rgb(255, 255, 255);
-                padding: 15px;
-            }
-            li:last-child{
-                border: none;
-            }
-            li:hover{
-                transform: scale(1.05);
-            }
-        }
-    }
-}
-#chooseService{
-    content: "";
-    display: table;
-    clear: both;
-}
-#awards{
-    min-height: 150px;
+#chooseService {
+  margin-top: 100px;
+  display: inline-block;
+
+  #serviceWelcome {
+    width: 80%;
+    float: left;
+    padding: 15px;
     text-align: center;
-    margin: 75px;
-    @media(max-width: $cellWidth){
-        min-height: 75px;
-        margin: 20px 5%;
+    @media(max-width: $cellWidth) {
+      width: 100%;
+      padding: 0;
+      margin-top: -60px;
     }
-    @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-        max-height: 75px;
-        margin: 50px 5%;
+    @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+      width: 100%;
+      padding: 0;
+      margin-top: -60px;
     }
-    img{
-        max-height: 255px;
-        @media(max-width: $cellWidth){
-            max-height: 75px;
+
+    h1 {
+      line-height: 1.5;
+      font-size: 55px;
+      font-family: 'Cardo', serif;
+      font-weight: 700;
+      color: #00A4D6;
+      border-bottom: 1px solid #00A4D6;
+      margin: 35px;
+      @media(max-width: $cellWidth) {
+        line-height: 1.2;
+        font-size: 35px;
+      }
+    }
+
+    p {
+      line-height: 1.5;
+      font-size: 18px;
+      font-weight: 400;
+      width: 90%;
+      display: inline-block;
+      @media(max-width: $cellWidth) {
+        line-height: 1.2;
+        font-size: 17px;
+      }
+    }
+  }
+
+  #serviceCards {
+    width: 80%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    @media(max-width: $cellWidth) {
+      width: 100%;
+      margin-top: 40px;
+    }
+    @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+      width: 100%;
+      margin: 40px 0;
+    }
+
+    #cards {
+      width: 69%;
+      margin: 0 auto;
+      font-size: 20px;
+      text-align: start;
+      @media(max-width: $cellWidth) {
+        width: 100%;
+      }
+
+      .letterCard {
+        -webkit-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+        box-shadow: 8px 8px 25px -8px rgba(0,0,0,0.75);
+        display: none;
+        font-size: 45px;
+        font-weight: bold;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background: #00A4D6;
+        width: 100%;
+        color: white;
+        margin: 25px 0;
+
+        h1 {
+          margin-left: 20px;
         }
-        @media (min-width: $cellWidth) and (max-width: $tabletWidth){
-            max-height: 155px;
+
+        ul {
+          background: rgb(235, 233, 231);
+          font-size: 30px;
+          font-weight: 500;
+          width: 100%;
+          padding: 20px;
+          line-height: 2;
+          color: black;
+          @media(max-width: $cellWidth) {
+            font-size: 18px;
+          }
+
+          li {
+            border-bottom: 1px solid black;
+          }
+
+          li:last-child {
+            border: none;
+          }
         }
+
+        &.default {
+          display: inline-block;
+        }
+
+        li:hover {
+          transform: scale(1.03);
+        }
+      }
+
+      .letterCard:target {
+        display: inline-block;
+      }
     }
+  }
+
+  #charSelect {
+    width: 80%;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    @media(max-width: $cellWidth) {
+      width: 100%;
+    }
+    @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+      width: 90%;
+      margin: 0 5%;
+    }
+
+    #letters {
+      margin: 30px 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        width: 50px;
+        height: 50px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin: 3px 0;
+        background: rgb(206,219,233);
+        /* Old browsers */
+        background: rgb(5,17,242);
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(5,17,242,1) 25%, rgba(6,219,212,1) 70%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(5,17,242,1) 25%,rgba(6,219,212,1) 70%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(5,17,242,1) 25%,rgba(6,219,212,1) 70%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        @media(max-width: $cellWidth) {
+          padding: 5px;
+          margin: 2px 0;
+        }
+
+        a {
+          color: white;
+          font-weight: bold;
+          font-size: 25px;
+          position: relative;
+          top: 25%;
+        }
+      }
+
+      li:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  #helpColumn {
+    width: 20%;
+    display: inline-block;
+    position: relative;
+    // top: -175px;
+    @media(max-width: $cellWidth) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+      width: 50%;
+      margin: 40px 24%;
+    }
+
+    h1 {
+      font-size: 30px;
+      padding: 15px 0;
+      line-height: 1.25;
+      color: $purple;
+      font-weight: 500;
+    }
+
+    ul {
+      background: rgb(223, 223, 223);
+
+      li {
+        font-size: 20px;
+        line-height: 1.25;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        padding: 15px;
+      }
+
+      li:last-child {
+        border: none;
+      }
+
+      li:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+#chooseService {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#awards {
+  min-height: 150px;
+  text-align: center;
+  margin: 75px;
+  @media(max-width: $cellWidth) {
+    min-height: 75px;
+    margin: 20px 5%;
+  }
+  @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+    max-height: 75px;
+    margin: 50px 5%;
+  }
+
+  img {
+    max-height: 255px;
+    @media(max-width: $cellWidth) {
+      max-height: 75px;
+    }
+    @media (min-width: $cellWidth) and (max-width: $tabletWidth) {
+      max-height: 155px;
+    }
+  }
 }
