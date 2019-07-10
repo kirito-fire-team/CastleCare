@@ -1,3 +1,7 @@
+@import "global";
+@import "variables";
+@import "mixins"; // Header Styles
+
 .physician-header {
   height: 70vh;
   position: static;
@@ -8,15 +12,77 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -150%);
 
     p {
-      color: #fff;
+      color: $white;
       font-size: 1.6rem;
       font-weight: 300;
       line-height: 2rem;
     }
   }
+}
+// Header Styles
+// Main Section Styles
 
-  nav {}
+main {
+  section {
+    margin-bottom: 200px;
+
+    h1 {
+      color: $dark-text;
+      font-size: 32px;
+      font-weight: 500;
+      text-align: center;
+      margin: 200px 0 100px;
+    }
+
+    .doctors-section {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+
+        .doctors {
+          width: 350px;
+          height: 450px;
+          // background: yellow;
+          box-shadow: 0 0 10px 3px rgba(0,0,0,0.12);
+
+          .image {
+            width: 90%;
+            height: 75%;
+            margin: 0 auto;
+
+            img {
+              width: 100%;
+              height: 100%;
+              background: $light-text;
+            }
+          }
+
+          .info-list {
+            display: block;
+            padding: 45px 20px;
+
+            h2 {
+              color: $dark-text;
+              font-size: 1.4rem;
+              font-weight: 500;
+              text-align: center;
+              margin-top: -10px;
+            }
+
+            p {
+              color: $light-text;
+              font-weight: 400;
+              text-align: center;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
