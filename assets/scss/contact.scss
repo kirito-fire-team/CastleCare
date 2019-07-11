@@ -1,4 +1,6 @@
+@import "reset";
 @import "global";
+@import "mobile_menu";
 @import "variables";
 @import "mixins";
 
@@ -91,11 +93,23 @@ header {
   padding-top:40px;
 
   h1 {
+    width: 100%;
     font-size: 45px;
     font-weight: 300;
     text-transform: uppercase;
     padding-bottom: 65px;
     text-align: center;
+    @include tablet{
+      width: 100%;
+      padding-bottom: 25px;
+      padding-right: 136px;
+    }
+    @include desktop{
+      width:112%;
+    }
+    @include large-desktop{
+      width: 100%;
+    }
 
   }
   h3 {
@@ -103,7 +117,20 @@ header {
     font-weight: 250;
     line-height: 1.8;
     text-align: center;
+
+    @include tablet {
+      width: 73%;
+      line-height: 2;
+      padding-right: 27px;
+    }
+    @include desktop{
+      width:112%;
+    }
+    @include large-desktop {
+      width: 96%;
+    }
   }
+
 }
  .content-section{
      display: block;
@@ -146,7 +173,7 @@ header {
      position: absolute;
      left: 60%;
      margin-left: 25px;
-     top: 540px;
+     top: 450px;
      padding-left: 40px;
 
      .vertical-line{

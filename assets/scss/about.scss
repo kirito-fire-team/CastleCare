@@ -1,20 +1,43 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
-@import "global";
-@import "variables";
-@import "mixins";
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap");
+// @import "global";
+// @import "variables";
+// @import "mixins";
+// @import "mobile_menu";
+@import "styles";
+
 
 /*******************************************
 HEADER
 ********************************************/
 
-
 header {
   background: #ccc;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
-    url(/img/doc.jpg) center center no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("https://i.postimg.cc/KzkfvCjg/med-office.jpg") center center no-repeat;
   background-size: cover;
-  height: 100vh;
+  // height: 85vh;
+  height: 49vh;
   position: relative;
+
+  @include landscape {
+    height: 55vh;
+  }
+
+
+  @include tablet {
+    // height: 65vh;
+    height: 60vh;
+    // height: 48vh;
+
+
+
+
+  }
+
+  @include desktop {
+    background-attachment: fixed;
+    height: 90vh;
+
+  }
 
   // Navigation
   .main-nav {
@@ -53,12 +76,14 @@ header {
         padding-left: 10px;
         letter-spacing: 4px;
 
+
         @include tablet {
           font-size: 40px;
         }
 
         @include desktop {
           font-size: 24px;
+
         }
       }
     }
@@ -98,7 +123,7 @@ header {
             &:hover,
             &.selected {
               color: $blue;
-              font-weight: 600;
+              // font-weight: 600;
               padding: 8px 0;
               text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
             }
@@ -140,10 +165,19 @@ header {
     }
 
     p {
-      font-size: 18px;
+      // font-size: 18px;
+      font-size: 22px;
+      letter-spacing: 1px;
       font-weight: 300;
       line-height: 1.5;
       padding-bottom: 40px;
+      display: none;
+      text-shadow: 1px 1px #111;
+
+      @include desktop {
+        display: block;
+      }
+
     }
 
     .we-help-btn {
@@ -197,17 +231,23 @@ BANNER
 }
 
 
-.banner-container {
+// .banner-container 
+
+.fade-text {
   width: 100%;
   transition: all 2s ease-in-out;
   margin: 0 auto;
   position: relative;
 
+  // @include desktop {
+  //   margin-top: 8%;
+  // }
+
   h1 {
     color: #fff;
     position: absolute;
     z-index: 1;
-    top: 27%;
+    top: 30px;
     left: -200px;
     font-size: 24px;
     font-weight: 300;
@@ -218,13 +258,18 @@ BANNER
     animation-duration: 2s;
     animation-fill-mode: forwards;
     backface-visibility: hidden;
+    text-shadow: 1px 1px #444;
 
     @include tablet {
       font-size: 32px;
+      top: 4vh;
     }
 
     @include desktop {
-      font-size: 40px;
+      font-size: 60px;
+      // top: 15px;
+      // top: 50px;
+      top: 10vh;
     }
 
     span {
@@ -236,10 +281,11 @@ BANNER
   }
 
   p {
-    margin-top: 8px;
+    // margin-top: 20px;
     display: inline-block;
     position: absolute;
-    top: 37%;
+    top: 73px;
+    // top: 10vh;
     left: -80px;
     text-transform: capitalize;
     animation-name: fade-in-left;
@@ -252,59 +298,75 @@ BANNER
     letter-spacing: 1px;
     backface-visibility: hidden;
 
+    text-shadow: 1px 1px #444;
+
+
+
     @include tablet {
-      font-size: 10px;
-      top: 40%;
+      font-size: 14px;
+      // top: 40%;
+      // top: 120px;
+      // top: 16vh;
+      // top: 10vh;
+      top: 80px;
     }
 
     @include desktop {
       font-size: 14px;
+      // margin-top: 8%;
+      width: 350px;
+      top: 25vh;
+      // font-size: px;
     }
   }
 
   a {
-    color: #111;
+    color: #fff;
     font-weight: 500;
+    text-shadow: 1px 1px #444;
+
   }
 }
 
 
-.office-img-container {
-  position: relative;
-  width: 100%;
+// .office-img-container {
+//   position: relative;
+//   width: 100%;
+//   // top: -110px;
 
-  .office-img {
-    background: url("../../public/img/med_office.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 350px;
+//   .office-img {
+//     background: url("../../public/img/med_office.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 350px;
+//     // height: 400px;
 
-    @include tablet {
-      height: 420px;
-    }
+//     @include tablet {
+//       height: 420px;
+//     }
 
-    @include desktop {
-      height: 700px // 
-    }
-  }
-}
-
-
-
-
+//     @include desktop {
+//       height: 700px // 
+//     }
+//   }
+// }
 
 
 
-.office-overlay:after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
+
+
+
+
+// .office-overlay:after {
+//   content: "";
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+// }
 
 
 /*******************************************
@@ -331,6 +393,7 @@ ABOUT
       @include tablet {
         font-size: 20px;
         padding-left: 4%;
+        margin-top: 57px;
       }
 
       span {
@@ -405,12 +468,12 @@ DOCTORS
     width: 92%;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 55px;
+    padding-bottom: 65px;
     position: relative;
 
     @include tablet {
       width: 50%;
-      padding-bottom: 65px;
+      padding-bottom: 55px;
     }
 
     @include desktop {
@@ -418,9 +481,10 @@ DOCTORS
     }
 
     .doc-img-1 {
-      background: url("../../public/img/doc-1-sm.jpg");
+      background: url("https://i.postimg.cc/brnmL4jj/doc-1-sm.jpg");
       margin: 0 auto;
       width: 100%;
+      width: 340px;
       display: block;
       background-size: cover;
       height: 300px;
@@ -455,9 +519,11 @@ DOCTORS
     }
 
     .doc-img-2 {
-      background: url("../../public/img/doc-2.jpg");
+      background: url("https://i.postimg.cc/HW8vp88P/doc-2.jpg");
       // width: 345px;
-      width: 100%;
+      // width: 100%;
+      width: 340px;
+      display: block;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -509,7 +575,7 @@ DOCTORS
       letter-spacing: 1px;
       font-weight: 500;
       color: #333;
-      padding-left: 5px;
+      // padding-left: 5px;
 
       @include tablet {
         padding: 5px 0 0 5%;
@@ -572,10 +638,12 @@ DOCTORS
     }
 
     .doc-img-3 {
-      background: url("../../public/img/doc-3.jpg");
+      background: url("https://i.postimg.cc/4NCLn4z4/doc-3.jpg");
       margin: 0 auto;
-      width: 345px;
-      // width: 100%;
+      width: 100%;
+      width: 340px;
+      // width: 380px;
+
       background-size: cover;
       height: 300px;
       background-repeat: no-repeat;
@@ -605,9 +673,10 @@ DOCTORS
     }
 
     .doc-img-4 {
-      background: url("../../public/img/doc-4.jpg");
-      // width: 100%;
-      width: 345px;
+      background: url("https://i.postimg.cc/pXD0jNZf/doc-4.jpg");
+      // width: 380px;
+      width: 100%;
+      width: 340px;
       margin: 0 auto;
       background-size: cover;
       height: 300px;
@@ -695,14 +764,23 @@ TESTIMONIALS
   align-items: center;
   position: relative;
 
+
+
   h2 {
+    // color: #fff;
     color: #444;
     text-align: center;
     font-weight: 500;
     text-transform: capitalize;
     letter-spacing: 1px;
     font-size: 28px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+
+    @include tablet {
+      padding-top: 0;
+      // padding-bottom: 30px;
+    }
 
     @include desktop {
       padding: 50px 0 60px 0;
@@ -717,35 +795,48 @@ TESTIMONIALS
   }
 
   .test-container-img {
-    background: url("../../public/img/doctorPatient19-sm.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%);
+    background: url("https://i.postimg.cc/fRCBHx1k/doctor-Patient19-sm.jpg");
     background-size: cover;
     height: 375px;
     width: 100%;
     background-repeat: no-repeat;
     position: relative;
-    display: block;
-    background-attachment: fixed;
-    background-position: center;
+    display: flex;
+    background-position: right;
+
+    // z-index: -3;
+
+
+    // background-attachment: fixed;
     z-index: 1;
     text-align: center;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
-
     justify-content: space-around;
 
     @include tablet {
-      height: 550px;
+      height: 460px;
+      // background: url("../../public/img/doctorPatient19.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      // background-position: left;
+      // background-position-x: -118px;
+
+
     }
 
     @include desktop {
+      background-attachment: fixed;
       height: 700px;
+      // background-position: left;
+
     }
 
     .patient-rev-img {
-      background: url("../../public/img/patient-pic.jpg");
-      width: 110px;
-      height: 110px;
+      background: url("https://i.postimg.cc/Z54wFf71/patient-pic.jpg");
+      width: 80px;
+      height: 80px;
       top: -25%;
       left: -2%;
       z-index: 1;
@@ -763,12 +854,14 @@ TESTIMONIALS
         width: 145px;
         height: 145px;
         top: -29%;
+        width: 100px;
+        height: 100px;
 
       }
 
       @include desktop {
-        width: 155px;
-        height: 155px;
+        width: 125px;
+        height: 125px;
         margin-top: 0;
         top: -29%;
 
@@ -812,7 +905,7 @@ TESTIMONIALS
   }
 }
 
-.overlay:after {
+.testimonial-overlay:after {
   content: "";
   position: absolute;
   left: 0px;
@@ -821,6 +914,10 @@ TESTIMONIALS
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 /*******************************************
@@ -910,7 +1007,7 @@ APPOINTMENT
 
 
       .side-img {
-        background: url("../../public/img/doctorPatient14.jpg");
+        background: url("https://i.postimg.cc/CK6J0whg/doctor-Patient14.jpg");
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -921,6 +1018,10 @@ APPOINTMENT
         height: 309px;
         width: 516px;
         display: none;
+
+        @include tablet {
+          margin-left: 5%;
+        }
 
         @include desktop {
           display: block;
@@ -972,6 +1073,7 @@ footer {
       p {
         font-size: 14px;
         line-height: 1.5;
+        color: #fff;
 
         @include desktop {
           font-size: 20px;
@@ -980,9 +1082,16 @@ footer {
     }
 
     .social-col {
+
       .icon {
         font-size: 20px;
+        transition: all .2s ease-in-out;
         padding: 0 20px;
+        color: #fff;
+
+        &:hover {
+          color: $blue;
+        }
 
         @include desktop {
           font-size: 30px;
@@ -1001,6 +1110,15 @@ footer {
 
         a {
           color: $white;
+          transition: all .2s ease-in-out;
+
+          &:hover,
+          &.selected {
+            color: $blue;
+            // font-weight: 600;
+            padding: 8px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
         }
       }
     }
