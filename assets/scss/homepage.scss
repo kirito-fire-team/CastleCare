@@ -1,17 +1,13 @@
 @import "styles";
-
-
 /*******************************************
 HEADER
 ********************************************/
 header {
   background: #ccc;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%),
-    url(/img/doc.jpg) center center no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("/img/doc.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
   position: relative;
-
   // Navigation
   .main-nav {
     display: flex;
@@ -23,7 +19,6 @@ header {
     a {
       color: #fff;
     }
-
     // Logo
     .logo-box {
       display: flex;
@@ -32,11 +27,9 @@ header {
 
       img {
         width: 45px;
-
         @include tablet {
           width: 90px;
         }
-
         @include desktop {
           width: 65px;
         }
@@ -48,39 +41,32 @@ header {
         font-weight: 400;
         padding-left: 10px;
         letter-spacing: 4px;
-
         @include tablet {
           font-size: 40px;
         }
-
         @include desktop {
           font-size: 24px;
         }
       }
     }
-
     // Mobile Menu
     .mobile-menu {
       display: inline-block;
       font-size: 23px;
-
       @include tablet {
         font-size: 40px;
       }
-
       @include desktop {
         display: none;
       }
     }
-
     // Menu Bar
     .menu-bar {
       display: none;
-
       @include desktop {
         display: inline-block;
 
-        ul>li {
+        ul > li {
           display: inline-flex;
           justify-content: flex-end;
           font-size: 17px;
@@ -89,10 +75,10 @@ header {
 
           a {
             color: $white;
-            transition: all .2s ease-in-out;
+            transition: all 0.2s ease-in-out;
 
-            &:hover,
-            &.selected {
+            &.selected,
+            &:hover {
               color: $blue;
               font-weight: 600;
               padding: 8px 0;
@@ -103,25 +89,26 @@ header {
       }
     }
   }
-
   // Info Box
   .info-box {
     width: 100%;
     color: $white;
     text-align: center;
     margin-top: 90px;
-
     @include tablet {
       position: absolute;
       width: 80%;
       top: 40%;
       right: 10%;
     }
-
     @include desktop {
       width: 33%;
       top: 35%;
       right: 15%;
+    }
+    @include landscape {
+      margin-top: 7px;
+      height: 235px;
     }
 
     @include landscape {
@@ -134,11 +121,9 @@ header {
       font-weight: 300;
       text-transform: uppercase;
       padding-bottom: 30px;
-
       @include desktop {
         font-size: 30px;
       }
-
       @include landscape {
         font-size: 25px;
       }
@@ -149,7 +134,6 @@ header {
       font-weight: 300;
       line-height: 1.5;
       padding-bottom: 40px;
-
       @include landscape {
         font-size: 15px;
         padding-bottom: 25px;
@@ -165,7 +149,7 @@ header {
       font-size: 16px;
       color: $white;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
         background: $purple;
@@ -177,8 +161,6 @@ header {
     }
   }
 }
-
-
 /*******************************************
 WELCOME SECTION
 ********************************************/
@@ -186,7 +168,6 @@ WELCOME SECTION
   padding: 30px 0 0;
   text-align: center;
   color: $dark-text;
-
   @include desktop {
     padding: 80px 0 0;
   }
@@ -203,13 +184,11 @@ WELCOME SECTION
     font-size: 13px;
     line-height: 1.7;
     padding-bottom: 20px;
-
     @include tablet {
       margin: 0 auto;
       width: 80%;
       font-size: 14px;
     }
-
     @include desktop {
       width: 50%;
     }
@@ -219,12 +198,11 @@ WELCOME SECTION
     color: $blue;
     font-weight: 600;
     font-size: 12px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: $purple;
     }
-
     @include desktop {
       font-size: 14px;
     }
@@ -236,7 +214,6 @@ WELCOME SECTION
 
   .doctors {
     margin-top: 30px;
-
     @include desktop {
       margin-top: 80px;
     }
@@ -246,14 +223,11 @@ WELCOME SECTION
     }
   }
 }
-
-
 /*******************************************
 SERVICES SECTION
 ********************************************/
-
 .services-section {
-  padding: 30px 0 30px;
+  padding: 30px 0;
   text-align: center;
   color: $dark-text;
   background: #fafafa;
@@ -274,7 +248,6 @@ SERVICES SECTION
       grid-template-columns: 100%;
       grid-template-rows: auto;
       grid-row-gap: 20px;
-
       @include desktop {
         grid-template-columns: 15% 50% 25%;
         grid-column-gap: 50px;
@@ -285,11 +258,9 @@ SERVICES SECTION
         grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         grid-gap: 1px;
-
         @include tablet {
           grid-template-columns: repeat(4, 25%);
         }
-
         @include desktop {
           grid-template-columns: 95%;
           grid-template-rows: repeat(4, 20%);
@@ -301,7 +272,6 @@ SERVICES SECTION
           background: $blue;
           display: grid;
           grid-template-rows: 45px 40px;
-
           @include desktop {
             padding: 15px;
           }
@@ -323,7 +293,6 @@ SERVICES SECTION
           background: $darkblue;
           padding: 20px;
           border-radius: 0 0 5px 5px;
-
           @include tablet {
             grid-column: 1 / span 4;
             padding: 10px;
@@ -332,7 +301,6 @@ SERVICES SECTION
               background-color: $purple;
             }
           }
-
           @include desktop {
             grid-column: 1 / 2;
             height: 40%;
@@ -350,7 +318,6 @@ SERVICES SECTION
           display: grid;
           grid-template-columns: 35% 65%;
         }
-
         @include desktop {
           text-align: left;
           grid-template-columns: 100%;
@@ -361,13 +328,11 @@ SERVICES SECTION
         h3 {
           font-size: 16px;
           padding-top: 20px;
-
           @include tablet {
             font-size: 22px;
             padding: 10px 0;
             grid-column: 1 / span 2;
           }
-
           @include desktop {
             font-size: 24px;
             grid-column: 1 / 2;
@@ -378,7 +343,6 @@ SERVICES SECTION
           display: grid;
           grid-template-columns: 100%;
           justify-items: start;
-
           @include desktop {
             grid-template-columns: 50% 50%;
           }
@@ -400,7 +364,6 @@ SERVICES SECTION
 
       .history {
         padding-top: 30px;
-
         @include tablet {
           padding-top: 4px;
         }
@@ -413,13 +376,11 @@ SERVICES SECTION
 
       .doc-patient-box {
         width: 100%;
-
         @include tablet {
           display: grid;
           grid-template-columns: 50% 50%;
           grid-column-gap: 10px;
         }
-
         @include desktop {
           grid-template-columns: 100%;
         }
@@ -432,15 +393,11 @@ SERVICES SECTION
     }
   }
 }
-
-
-
-
 /*******************************************
 SPECIALITIES SECTION
 ********************************************/
 .special-section {
-  padding: 30px 0 30px;
+  padding: 30px 0;
   text-align: center;
   color: $dark-text;
 
@@ -460,7 +417,6 @@ SPECIALITIES SECTION
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
-
     @include tablet {
       grid-template-columns: repeat(4, 25%);
       grid-template-rows: repeat(3, 33.33%);
@@ -477,8 +433,7 @@ SPECIALITIES SECTION
       display: grid;
       grid-template-columns: 100%;
       justify-items: center;
-      transition: all .5s ease-in-out;
-
+      transition: all 0.5s ease-in-out;
       @include tablet {
         background: #fff;
         padding: 30px;
@@ -487,7 +442,7 @@ SPECIALITIES SECTION
         display: grid;
         grid-template-columns: 100%;
         justify-items: center;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
 
       a {
@@ -497,7 +452,6 @@ SPECIALITIES SECTION
         &:visited {
           color: $dark-text;
         }
-
         @include tablet {
           grid-template-rows: 100px 50px;
         }
@@ -510,7 +464,6 @@ SPECIALITIES SECTION
       &:nth-last-child(-n+2) {
         border-bottom: none;
       }
-
       @include tablet {
         &:nth-child(2n+0) {
           border-right: 1px solid rgba(0, 0, 0, .1);
@@ -540,7 +493,6 @@ SPECIALITIES SECTION
         width: 35px;
         align-self: center;
         margin: 0 auto;
-
         @include tablet {
           width: 60px;
         }
@@ -550,7 +502,6 @@ SPECIALITIES SECTION
         align-self: center;
         padding: 5px;
         font-weight: 600;
-
         @include tablet {
           padding: 20px;
         }
@@ -558,35 +509,27 @@ SPECIALITIES SECTION
     }
   }
 }
-
-
-
 /*******************************************
 NEW APP SECTION
 ********************************************/
-
 .new-app-section {
-  padding: 30px 0 30px;
+  padding: 30px 0;
   text-align: center;
   color: $white;
   background: #ccc;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 0%, rgba(0, 32, 41, 0.61) 100%),
-    url(/img/phone3.png) right center no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.568) 0%, rgba(0, 32, 41, 0.61) 100%), url("/img/phone3.png") right center no-repeat;
   background-size: cover;
   height: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
   @include tablet {
     height: 350px;
   }
-
   @include desktop {
     height: 500px;
   }
-
   @include large-desktop {
     height: 640px;
   }
@@ -596,11 +539,9 @@ NEW APP SECTION
     grid-template-columns: 100%;
     width: 90%;
     margin: 0 auto;
-
     @include tablet {
       grid-template-columns: 65% 30%;
     }
-
     @include large-desktop {
       grid-template-columns: 55% 30%;
     }
@@ -613,7 +554,6 @@ NEW APP SECTION
         font-weight: 700;
         text-transform: uppercase;
         padding-bottom: 10px;
-
         @include large-desktop {
           font-size: 33px;
         }
@@ -622,7 +562,6 @@ NEW APP SECTION
       p {
         font-size: 14px;
         line-height: 1.4;
-
         @include large-desktop {
           font-size: 18px;
         }
@@ -633,7 +572,6 @@ NEW APP SECTION
         text-transform: uppercase;
         padding-top: 10px;
       }
-
       @include large-desktop {
         font-size: 20px;
       }
@@ -649,7 +587,6 @@ NEW APP SECTION
 
     .image-box {
       display: none;
-
       @include tablet {
         display: block;
       }
@@ -660,12 +597,10 @@ NEW APP SECTION
         right: 1px;
         width: 250px;
         z-index: 1;
-
         @include desktop {
           top: 38px;
           width: 389px;
         }
-
         @include large-desktop {
           width: 506px;
         }
@@ -673,35 +608,28 @@ NEW APP SECTION
     }
   }
 }
-
-
-
 /*******************************************
 TESTIMONIALS
 ********************************************/
-
 .testimonials {
-  padding: 30px 0 30px;
+  padding: 30px 0;
   text-align: center;
   color: $dark-text;
   height: 825px;
   position: relative;
   z-index: 300;
   background: #fcfcfc;
-
   @include tablet {
     height: 700px;
   }
-
   @include landscape {
     height: 560px;
   }
 
   .title {
     margin-bottom: 30px;
-
     @include landscape {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
 
     h3 {
@@ -719,7 +647,6 @@ TESTIMONIALS
     align-items: start;
     flex-wrap: wrap;
     height: 667px;
-
     @include tablet {
       display: flex;
       justify-content: center;
@@ -727,7 +654,6 @@ TESTIMONIALS
       align-items: center;
       height: 500px;
     }
-
     @include landscape {
       display: grid;
       height: 297px;
@@ -745,12 +671,10 @@ TESTIMONIALS
       width: 100%;
       margin: 0 auto;
       height: 511px;
-
       @include tablet {
         width: 80%;
         height: 460px;
       }
-
       @include landscape {
         display: grid;
         justify-items: center;
@@ -763,11 +687,10 @@ TESTIMONIALS
         height: 110px;
         border-radius: 50%;
         margin-bottom: 30px;
-
         @include landscape {
           width: 90px;
           height: 90px;
-          margin-bottom: 0px;
+          margin-bottom: 0;
         }
       }
 
@@ -775,19 +698,16 @@ TESTIMONIALS
         font-size: 16px;
         line-height: 1.4;
         padding-bottom: 18px;
-
         @include tablet {
           font-size: 20px;
           padding-bottom: 20px;
           line-height: 1.5;
         }
-
         @include landscape {
           font-size: 14px;
           line-height: 1.4;
-          padding-bottom: 0px;
+          padding-bottom: 0;
         }
-
         @include large-desktop {
           font-size: 25px;
         }
@@ -801,7 +721,6 @@ TESTIMONIALS
         font-weight: 600;
         text-transform: uppercase;
         padding-bottom: 7px;
-
         @include tablet {
           font-size: 20px;
           padding: 5px;
@@ -812,7 +731,6 @@ TESTIMONIALS
         display: block;
         font-weight: 600;
         font-size: 12px;
-
         @include tablet {
           font-size: 14px;
           padding: 5px;
@@ -825,7 +743,6 @@ TESTIMONIALS
       text-align: center;
       width: 100%;
       margin-bottom: 58px;
-
       @include tablet {
         padding: 20px;
         margin-bottom: 0;
@@ -839,13 +756,12 @@ TESTIMONIALS
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.37);
         border-radius: 2px;
-        transition: background-color .6s ease;
+        transition: background-color 0.6s ease;
 
         &.active,
         &:hover {
           background-color: $blue;
         }
-
         @include tablet {
           width: 50px;
           height: 15px;
@@ -854,13 +770,9 @@ TESTIMONIALS
     }
   }
 }
-
-
-
 /*******************************************
 FOOTER
 ********************************************/
-
 footer {
   background: $purple;
   padding: 20px 0;
@@ -868,7 +780,6 @@ footer {
   text-align: center;
   position: relative;
   z-index: 500;
-
   @include tablet {
     padding: 50px 0;
   }
@@ -879,7 +790,6 @@ footer {
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 15px;
     text-align: center;
-
     @include tablet {
       grid-template-columns: 25% 40% 30%;
       grid-template-rows: auto;
@@ -890,7 +800,6 @@ footer {
       h5 {
         font-size: 20px;
         font-weight: 500;
-
         @include desktop {
           font-size: 30px;
         }
@@ -899,7 +808,6 @@ footer {
       p {
         font-size: 14px;
         line-height: 1.5;
-
         @include desktop {
           font-size: 20px;
         }
@@ -911,10 +819,9 @@ footer {
         font-size: 20px;
         padding: 0 20px;
         color: #fff;
-
         @include desktop {
           font-size: 30px;
-          transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             color: $blue;
@@ -925,17 +832,16 @@ footer {
     }
 
     .menu-col {
-      ul>li {
+      ul > li {
         padding: 5px;
         display: inline-block;
-
         @include desktop {
           font-size: 20px;
         }
 
         a {
           color: $white;
-          transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             color: $blue;

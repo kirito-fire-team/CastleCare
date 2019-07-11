@@ -1,0 +1,718 @@
+@import "global";
+@import "variables";
+@import "mixins"; // Header Styles
+
+.about-elena-header {
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("/img/doctorGroup.png") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  // Navigation
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
+
+    a {
+      color: #fff;
+    }
+    // Logo
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 45px;
+        @include tablet {
+          width: 90px;
+        }
+        @include desktop {
+          width: 65px;
+        }
+      }
+
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 10px;
+        letter-spacing: 4px;
+        @include tablet {
+          font-size: 40px;
+        }
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+    }
+    // Mobile Menu
+    .mobile-menu {
+      display: inline-block;
+      font-size: 23px;
+      @include tablet {
+        font-size: 40px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    // Menu Bar
+    .menu-bar {
+      display: none;
+      @include desktop {
+        display: inline-block;
+
+        ul > li {
+          display: inline-flex;
+          justify-content: flex-end;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 5px 4px;
+
+          a {
+            color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &.selected,
+            &:hover {
+              color: $blue;
+              font-weight: 600;
+              padding: 8px 0;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+  // Info Box
+  .info-box {
+    width: 100%;
+    color: $white;
+    text-align: center;
+    margin-top: 90px;
+    @include tablet {
+      position: absolute;
+      width: 80%;
+      top: 40%;
+      right: 10%;
+    }
+    @include desktop {
+      width: 33%;
+      top: 35%;
+      right: 15%;
+    }
+    @include landscape {
+      margin-top: 7px;
+      height: 235px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 2rem;
+      padding-bottom: 30px;
+      @include desktop {
+        font-size: 30px;
+      }
+      @include landscape {
+        font-size: 32px;
+      }
+    }
+  }
+}
+// Header Styles
+// Main Section Style
+
+section {
+  .about-section {
+    margin: 100px 0;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-gap: 30px;
+      border-radius: 5px;
+
+      .image {
+        box-shadow: -1px 4px 25px -10px rgba(0,0,0,0.3);
+
+        .image-container {
+          width: 85%;
+          height: 75%;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 200, 255, 0.7);
+          }
+        }
+
+        .info-list {
+          display: block;
+          padding: 45px 20px;
+
+          h2 {
+            color: $dark-text;
+            font-size: 1.7rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: -10px;
+
+            a {
+              color: $dark-text;
+            }
+          }
+
+          p {
+            color: $light-text;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .bio {
+        h2 {
+          color: $dark-text;
+          font-size: 1.7rem;
+          font-weight: 500;
+          margin-bottom: 40px;
+
+          &:first-child {
+            margin-top: 30px;
+          }
+        }
+
+        p {
+          color: $light-text;
+          margin-bottom: 40px;
+          font-size: 1.2rem;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.contact-section {
+  #contact-box {
+    width: 100%;
+    height: 100%;
+    box-shadow: -1px 4px 25px -10px rgba(0,0,0,0.3);
+
+    .top-text {
+      background: rgba(0, 200, 255, 0.7);
+      text-align: center;
+      padding: 30px 0;
+
+      h3 {
+        color: $white;
+        font-size: 1.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      margin-top: -40px;
+      margin-bottom: 30px;
+
+      .col-1 {
+        display: block;
+
+        form {
+          margin-left: 150px;
+
+          .input-container {
+            display: block;
+            background: #f2f2f2;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+
+            input {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 15px;
+              width: 95%;
+              height: 100%;
+              outline: none;
+              border: none;
+            }
+
+            textarea {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 15px;
+              width: 95%;
+              padding: 15px 0;
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .col-2 {
+        form {
+          margin-right: 150px;
+
+          .input-container {
+            display: block;
+            background: #f2f2f2;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+
+            input {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              width: 95%;
+              height: inherit;
+              margin-left: 15px;
+              outline: none;
+              border: none;
+            }
+
+            select {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 8px;
+              width: 95%;
+              height: inherit;
+              outline: none;
+              border: none;
+            }
+
+            .date {
+              margin-left: 15px;
+              width: 90%;
+              height: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      width: 70%;
+      margin: 0 auto 40px;
+
+      .button {
+        color: $white;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        background: rgba(0, 200, 255, 0.7);
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: $dark-text;
+        }
+      }
+    }
+  }
+}
+// Media Queries//
+// Laptop
+@media only screen and (max-width: $large-desktop-width) {}
+// Tablet/iPad
+// Sideways
+@media only screen and (min-height: $tablet-width) {
+  main {
+    section {
+      .body-container {
+        max-width: 90%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-row-gap: 10px;
+
+          .bio {
+            p {
+              font-size: 1.1rem;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Straight
+@media only screen and (min-width: $tablet-width) {
+  .about-elena-header {
+    .container {
+      .info-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        text-align: center;
+
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .body-container {
+        max-width: 90%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-row-gap: 10px;
+
+          .bio {
+            p {
+              font-size: 1.1rem;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-section {
+      margin-top: -100px;
+
+      .body-container {
+        max-width: 90%;
+
+        #contact-box {
+          width: 100%;
+          height: 100%;
+
+          .top-text {
+            h3 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 0;
+
+            .col-1 {
+              margin-bottom: 10px;
+
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  textarea {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+
+            .col-2 {
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  select {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          a {
+            .button {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Mobile //
+// Sideways //
+@media only screen and (max-height: 767px) {
+  .about-elena-header {
+    .container {
+      .info-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        text-align: center;
+
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .body-container {
+        max-width: 90%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: 100%;
+          grid-row-gap: 10px;
+
+          .bio {
+            p {
+              font-size: 1.1rem;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    #contact-section {
+      margin-top: -100px;
+
+      .body-container {
+        max-width: 90%;
+
+        .contact-box {
+          width: 100%;
+          height: 100%;
+
+          .top-text {
+            h3 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 100%;
+            grid-gap: 0;
+
+            .col-1 {
+              margin-bottom: 20px;
+
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  textarea {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+
+            .col-2 {
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  select {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          a {
+            .button {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Straight
+@media only screen and (max-width: 767px) {
+  .about-elena-header {
+    .container {
+      .info-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        text-align: center;
+
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  main {
+    section {
+      .body-container {
+        max-width: 90%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: 100%;
+          grid-row-gap: 10px;
+
+          .bio {
+            p {
+              font-size: 1.1rem;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-section {
+      margin-top: -100px;
+
+      .body-container {
+        max-width: 90%;
+
+        #contact-box {
+          width: 100%;
+          height: 100%;
+
+          .top-text {
+            h3 {
+              font-size: 1.5rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 100%;
+            grid-gap: 0;
+
+            .col-1 {
+              margin-bottom: 10px;
+
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  textarea {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+
+            .col-2 {
+              form {
+                margin: 0;
+
+                .input-container {
+                  width: 90%;
+                  margin: 0 auto 20px;
+
+                  input {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+
+                  select {
+                    width: 80%;
+                    margin-left: 15px;
+                  }
+                }
+              }
+            }
+          }
+
+          a {
+            .button {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,7 +11,27 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- *******COPY BELOW THIS LINE*********  -->
+
+  <!-- SLIDER MENU FOR MOBILE -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the nav overlay -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Nav overlay content -->
+    <div class="overlay-content">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="physician.html">Physicians</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
   <header class="physician-header">
     <div class="container">
       <nav class="main-nav">
@@ -22,32 +42,37 @@
           </div>
         </a>
         <div class="mobile-menu">
-          <i class="fas fa-bars"></i>
+          <!-- Opens the Slider Menu -->
+          <span onclick="openNav()"><i class="bars fas fa-bars"></i></span>
         </div>
         <div class="menu-bar">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="selected">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="physician.html">Physicians</a></li>
-            <li><a href="#">Contact</a></li>
             <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <div class="hero-box">
-        <p>At Castle Care, we treat our customers with caution and care.<br>
-          Your safety is our priority, just give us a call and we'll be respond to you as soon as possible.</p>
+      <div class="info-box">
+        <h1>At Castle Care, we treat our customers with caution and care.
+          Your safety is our priority, just give us a call and we'll be respond to you as soon as possible.</h1>
       </div>
     </div>
   </header>
-  <!-- Header -->
+  <!-- **********COPY ABOVE THIS LINE********** -->
 
   <!-- Main Section -->
   <main>
     <section>
       <div class="body-container">
-        <h1>Want to talk to our doctors?</h1>
+        <div class="h1-p-container">
+          <h1>Want to talk to our doctors?</h1>
+          <p>Smile!</p>
+        </div>
+
         <div class="doctors-section">
           <div class="wrapper">
             <!-- List of Doctors -->
@@ -56,52 +81,81 @@
                 <img src="img/doctor1.png" alt="Elena">
               </div>
               <div class="info-list">
-                <h2>Dr. Elena</h2>
+                <h2>
+                  <a href="about-elena.html">
+                    Dr. Elena
+                  </a>
+                </h2>
                 <p>Medicine Specialist</p>
               </div>
             </div>
+
             <div class="doctors">
               <div class="image">
                 <img src="img/doctor2.png" alt="Riley-James">
               </div>
               <div class="info-list">
-                <h2>Dr. Riley-James</h2>
+                <h2>
+                  <a href="about-riley-james.html">
+                    Dr. Riley-James
+                  </a>
+                </h2>
                 <p>Anesthesiology Specialist</p>
               </div>
             </div>
+
             <div class="doctors">
               <div class="image">
                 <img src="img/doctor3.png" alt="Kaiden">
               </div>
               <div class="info-list">
-                <h2>Dr. Kaiden</h2>
+                <h2>
+                  <a href="about-kaiden.html">
+                    Dr. Kaiden
+                  </a>
+                </h2>
                 <p>Heart Specialist</p>
               </div>
             </div>
+
             <div class="doctors">
               <div class="image">
                 <img src="img/doctor4.png" alt="Sara">
               </div>
               <div class="info-list">
-                <h2>Dr. Sara</h2>
+                <h2>
+                  <a href="about-sara.html">
+                    Dr. Sara
+                  </a>
+                </h2>
                 <p>Precnancy Specialist</p>
               </div>
             </div>
+
             <div class="doctors">
               <div class="image">
                 <img src="img/doctor5.png" alt="Lea">
               </div>
               <div class="info-list">
-                <h2>Dr. Lea</h2>
+                <h2>
+                  <a href="about-lea.html">
+                    Dr. Lea
+                  </a>
+                </h2>
                 <p>Neuro Specialists</p>
               </div>
             </div>
+
             <div class="doctors">
               <div class="image">
                 <img src="img/doctor6.png" alt="Anand">
               </div>
               <div class="info-list">
-                <h2>Dr. Anand</h2>
+                <h2>
+                  <a href="about-anand.html">
+                    Dr. Anand
+                  </a>
+                </h2>
                 <p>Neuro Specialist</p>
               </div>
             </div>
@@ -130,19 +184,19 @@
         </div>
         <div class="menu-col">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="physician.html">Physicians</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+  <script src="/js/app.js"></script>
   <!-- Footer -->
-
 </body>
 
 </html>
