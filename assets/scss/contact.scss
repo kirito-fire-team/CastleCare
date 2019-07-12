@@ -74,6 +74,7 @@ header {
           a {
             color: $white;
             transition: all .2s ease-in-out;
+            &.selected,
             &:hover {
               color: $blue;
               font-weight: 600;
