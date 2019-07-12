@@ -140,16 +140,16 @@ header {
 ///////////start of right side content styling///////////
  .content-section{
      display: grid;
-     grid-template-columns: 60% 40%;
+     grid-template-columns: 100%;
      width: 100%;
      @include tablet{
-
+       grid-template-columns: 60% 40%;
      }
      @include desktop{
-
+       grid-template-columns: 60% 40%;
      }
      @include large-desktop{
-
+       grid-template-columns: 60% 40%;
      }
 
 
