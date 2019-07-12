@@ -140,7 +140,7 @@ header {
 ///////////start of right side content styling///////////
  .content-section{
      display: grid;
-     grid-template-columns: 100%;
+     grid-template-columns: 60% 40%;
      width: 100%;
      @include tablet{
 
