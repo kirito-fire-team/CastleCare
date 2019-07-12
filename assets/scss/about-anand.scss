@@ -1,0 +1,634 @@
+@import "styles"; // Header Styles
+
+.about-anand-header {
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%, rgba(0, 200, 255, 0.4) 100%), url("/img/doctors8.jpg") top center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  // Navigation
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
+
+    a {
+      color: #fff;
+    }
+    // Logo
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 45px;
+        @include tablet {
+          width: 90px;
+        }
+        @include desktop {
+          width: 65px;
+        }
+      }
+
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 10px;
+        letter-spacing: 4px;
+        @include tablet {
+          font-size: 40px;
+        }
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+    }
+    // Mobile Menu
+    .mobile-menu {
+      display: inline-block;
+      font-size: 23px;
+      @include tablet {
+        font-size: 40px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    // Menu Bar
+    .menu-bar {
+      display: none;
+      @include desktop {
+        display: inline-block;
+
+        ul > li {
+          display: inline-flex;
+          justify-content: flex-end;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 5px 4px;
+
+          a {
+            color: $white;
+            transition: all 0.2s ease-in-out;
+
+            &.selected,
+            &:hover {
+              color: $blue;
+              font-weight: 600;
+              padding: 8px 0;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+  // Info Box
+  .info-box {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 32px;
+    }
+  }
+}
+// Header Styles
+// Main Section Style
+// About Section Styles
+
+section {
+  .about-section {
+    margin: 100px 0;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      grid-gap: 30px;
+      border-radius: 5px;
+      margin-top: 150px;
+
+      .image {
+        box-shadow: 0 4px 11px -6px rgba(0,0,0,0.3);
+
+        .image-container {
+          width: 85%;
+          height: 75%;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+            height: 100%;
+            background: $blue;
+          }
+        }
+
+        .info-list {
+          display: block;
+          padding: 45px 20px;
+
+          h2 {
+            color: $darkblue;
+            font-size: 1.7rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: -10px;
+
+            a {
+              color: $darkblue;
+            }
+          }
+
+          p {
+            color: $blue;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .bio {
+        h2 {
+          color: $darkblue;
+          font-size: 1.7rem;
+          font-weight: 500;
+          margin-bottom: 40px;
+
+          &:first-child {
+            margin-top: 30px;
+          }
+        }
+
+        p {
+          color: $blue;
+          margin-bottom: 40px;
+          font-size: 1.2rem;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+// Contact Section Styles
+
+.contact-section {
+  #contact-box {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 11px -6px rgba(0,0,0,0.3);
+    margin-bottom: 150px;
+
+    .top-text {
+      background: $blue;
+      text-align: center;
+      padding: 30px 0;
+
+      h3 {
+        color: $white;
+        font-size: 1.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      margin: 30px 0;
+
+      .col-1 {
+        display: block;
+
+        form {
+          margin-left: 150px;
+
+          .input-container {
+            display: block;
+            background: #f2f2f2;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+
+            input {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 15px;
+              width: 95%;
+              height: 100%;
+              outline: none;
+              border: none;
+            }
+
+            textarea {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 15px;
+              width: 95%;
+              padding: 15px 0;
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+
+      .col-2 {
+        form {
+          margin-right: 150px;
+
+          .input-container {
+            display: block;
+            background: #f2f2f2;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+
+            input {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              width: 95%;
+              height: inherit;
+              margin-left: 15px;
+              outline: none;
+              border: none;
+            }
+
+            select {
+              color: #777777;
+              font-size: 1.1rem;
+              border: none;
+              background: #f2f2f2;
+              margin-left: 8px;
+              width: 95%;
+              height: inherit;
+              outline: none;
+              border: none;
+            }
+
+            .date {
+              margin-left: 15px;
+              width: 90%;
+              height: inherit;
+            }
+          }
+        }
+      }
+    }
+    // Button Styles
+    a {
+      display: block;
+      width: 70%;
+      margin: 0 auto 40px;
+
+      .button {
+        color: $white;
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        background: $blue;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: $darkblue;
+        }
+      }
+    }
+  }
+}
+// Footer Styles
+
+footer {
+  background: $purple;
+  padding: 20px 0;
+  color: $white;
+  text-align: center;
+  position: relative;
+  z-index: 500;
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 15px;
+    text-align: center;
+    @include tablet {
+      grid-template-columns: 25% 40% 30%;
+      grid-template-rows: auto;
+      grid-column-gap: 15px;
+    }
+
+    .address-col {
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .social-col {
+      .icon {
+        font-size: 20px;
+        padding: 0 20px;
+        color: #fff;
+        @include desktop {
+          font-size: 30px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $blue;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+
+    .menu-col {
+      ul > li {
+        padding: 5px;
+        display: inline-block;
+        @include desktop {
+          font-size: 20px;
+        }
+
+        a {
+          color: $white;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $blue;
+            font-weight: 600;
+            padding: 8px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
+// Media Queries
+// Laptop
+@media only screen and (max-width: 1400px) {
+  // Main Section
+  main {
+    // About Section Styles
+    section {
+      .body-container {
+        min-width: 80%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: 35% 65%;
+
+          .bio {
+            h2 {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+    // Contact Section Styles
+    .contact-section {
+      .body-container {
+        min-width: 80%;
+
+        #contact-box {
+          .top-text {
+            h3 {
+              font-size: 1.7rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 0;
+
+            .col-1 {
+              form {
+                width: 95%;
+                margin: 0 auto;
+
+                .input-container {
+                  width: inherit;
+                  margin: 30px auto 10px;
+                }
+              }
+            }
+
+            .col-2 {
+              form {
+                width: 95%;
+                margin: 0 auto;
+
+                .input-container {
+                  width: inherit;
+                  margin: 30px auto 10px;
+                }
+              }
+            }
+          }
+          // Button Styles
+          a {
+            .button {
+              p {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Tablet
+@media only screen and (max-width: 960px) {
+  // Main Section
+  main {
+    // About Section Styles
+    section {
+      .body-container {
+        min-width: 80%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: 100%;
+        }
+      }
+    }
+    // Contact Section Styles
+    .contact-section {
+      .body-container {
+        min-width: 80%;
+
+        #contact-box {
+          .top-text {
+            h3 {
+              font-size: 1.7rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 0;
+
+            .col-1 {
+              form {
+                width: 95%;
+                margin: 0 auto;
+
+                .input-container {
+                  width: inherit;
+                  margin: 30px auto 10px;
+                }
+              }
+            }
+
+            .col-2 {
+              form {
+                width: 95%;
+                margin: 0 auto;
+
+                .input-container {
+                  width: inherit;
+                  margin: 30px auto 10px;
+                }
+              }
+            }
+          }
+          // Button Styles
+          a {
+            .button {
+              p {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Mobile
+@media only screen and (max-width: 767px) {
+  // Header Styles
+  .about-anand-header {
+    .info-box {
+      text-align: center;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+  // Main Section
+  main {
+    // About Section Styles
+    section {
+      .body-container {
+        min-width: 80%;
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: 100%;
+        }
+      }
+    }
+    // Contact Section Styles
+    .contact-section {
+      .body-container {
+        min-width: 80%;
+
+        #contact-box {
+          .top-text {
+            h3 {
+              font-size: 1.7rem;
+            }
+          }
+
+          .wrapper {
+            display: grid;
+            grid-template-columns: 100%;
+
+            .col-1 {
+              display: block;
+
+              form {
+                width: 90%;
+                margin: 20px auto 0;
+
+                .input-container {
+                  width: inherit;
+                  margin: 20px auto 0;
+                }
+              }
+            }
+
+            .col-2 {
+              display: block;
+
+              form {
+                width: 90%;
+                margin: 20px auto 0;
+
+                .input-container {
+                  width: inherit;
+                  margin: 20px auto 0;
+                }
+              }
+            }
+          }
+          // Button Styles
+          a {
+            .button {
+              p {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

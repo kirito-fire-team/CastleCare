@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Castle Care | Main</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+
+  <!-- SLIDER MENU FOR MOBILE -->
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the nav overlay -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Nav overlay content -->
+    <div class="overlay-content">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="physician.html">Physicians</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html">
+          <div class="logo-box">
+            <img src="/img/logo.png" alt="Castle Medical Logo">
+            <p>Castle Care</p>
+          </div>
+        </a>
+        <div class="mobile-menu">
+          <!-- Opens the Slider Menu -->
+          <span onclick="openNav()"><i class="bars fas fa-bars"></i></span>
+        </div>
+        <div class="menu-bar">
+          <ul>
+            <li><a href="index.html" class="selected">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="physician.html">Physicians</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="talk-box">
+        <h1>Talk to a Human</h1>
+
+        <h3>You're not going to hit a ridiculously long phone menu when you call us.  Your email isn't</h3> <h3>going to the inbox abyss, never to be seen or heard from again.  At Castle Care, we</h3> <h3>provide the exceptional service we'd want to experience ourselves!</h3>
+
+      </div>
+    </header>
+<!--- Contact us Banner----------->
+  <div class="content-section">
+    <div class="container">
+    <div class="left-side-60">
+      <div class="content-60">
+        <h2>Castle Care strives to provide the best service possible with every contact!</h2>
+        <p>LoLrem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+
+        <h4>The standard Lorem Ipsum passage, used since.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        </div>
+        </div>
+      </div>
+
+
+<!--insert=border=break(vertical)-------->
+<!---right-side-------->
+
+
+
+<div class="right-side-40">
+  <div class="vertical-line"></div>
+  <div class="content-40">
+    <h3>Castle Care</h3>
+    <p>4848 first line rd</p>
+    <p>Beaverton, OR, 97005</p>
+
+    <h3>Direct Contact</h3>
+    <p>Phone: 503-574-4713</p>
+    <p>Toll Free: 1.999.998.8887</p>
+    <p>Email:<a href="#" class="anchor"> info@castlecare.com</p>
+
+    <h3>Departments</h3>
+    <a href="#">services@castlecare.com</a>
+    <a href="#">physicians@castlecare.com</a>
+    <a href="#">locations@castlecare.com</a>
+    </div>
+  </div>
+</div>
+
+<div class="google-maps">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKVPRXV5PltV1hhOm_44y53CMcNWZRtLg&callback=initMap"
+  type="text/javascript"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</script>
+<script type="text/javascript">
+
+    function load()
+    {
+        var mapDiv = document.getElementById("map");
+        var latlng = new google.maps.LatLng(45.485168, -122.804489);
+        var mapOptions =
+        {
+            zoom: 15,
+            center:latlng,
+            backgroundColor: 'none',
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            imageDefaultUI: true
+        };
+        var map = new google.maps.Map(mapDiv, mapOptions);
+       map.addControl(new GSmallMapControl());
+       map.addControl(new GMapTypeControl());
+       map.addMapType(ROADMAP);
+       map.setCenter(
+       new GLatLng(45.485168, -122.804489), 13);
+    }
+
+</script>
+
+  </head>
+  <body onload="load()">
+    <div id="map" style="width: 100%; height: 400px;"></div>
+</div>
+
+  </section>
+
+
+
+  <footer>
+    <div class="container">
+      <div class="grid-container">
+        <div class="address-col">
+          <h5>Castle Care</h5>
+          <p>Beaverton, OR, 97005</p>
+          <p>503-574-4713</p>
+        </div>
+        <div class="social-col">
+          <a href="#"><i class="fab icon fa-facebook-f"></i></a>
+          <a href="#"><i class="fab icon fa-twitter"></i></a>
+          <a href="#"><i class="fab icon fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab icon fa-google-plus-g"></i></a>
+        </div>
+        <div class="menu-col">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="physician.html">Physicians</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/app.js"></script>
+
+</body>
+
+</html>

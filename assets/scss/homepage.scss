@@ -111,6 +111,11 @@ header {
       height: 235px;
     }
 
+    @include landscape {
+      margin-top: 7px;
+      height: 235px;
+    }
+
     h1 {
       font-size: 30px;
       font-weight: 300;
