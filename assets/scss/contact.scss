@@ -140,7 +140,7 @@ header {
 ///////////start of right side content styling///////////
  .content-section{
      display: grid;
-     grid-template-columns: 60% 40%;
+     grid-template-columns: 100%;
      width: 100%;
      @include tablet{
 
@@ -156,7 +156,6 @@ header {
    .left-side-60{
      width: 100%;
      background: white;
-     height: 600px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -202,7 +201,6 @@ header {
        }
        h4{
          font-size: 25px;
-         padding-left: 100px;
          padding-top: 15px;
          @include tablet{
            font-size: 19px;
@@ -216,7 +214,6 @@ header {
        }
        p{
          font-size: 17px;
-         padding-left: 100px;
          padding-top: 20px;
          line-height: 1.7;
          @include tablet{
@@ -236,9 +233,9 @@ header {
      // width: 100%;
      // height: 476px;
      // position: absolute;
-     left: 60%;
-     // margin-left: 25px;
-     top: 450px;
+     // left: 60%;
+     // // margin-left: 25px;
+     // top: 450px;
      // padding-left: 40px;
      // text-align: center;
      @include tablet{
@@ -273,12 +270,11 @@ header {
      }
 
      .content-40{
-       padding-top: 95px;
+       padding-top: 50px;
        @include tablet{
 
        }
        @include desktop{
-         padding-top: 120px;
        }
        @include large-desktop{
 
