@@ -1,0 +1,210 @@
+@import "reset";
+@import "global";
+@import "mobile_menu";
+@import "variables";
+@import "mixins";
+
+header {
+  background: #ccc;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
+  url("public/img/doctorPatient6.jpg") center center no-repeat;
+  background-size: cover;
+  height: 58vh;
+  position: relative;
+  // Navigation
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 20px 0;
+    a {
+      color: #fff;
+    }
+    // Logo
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 45px;
+        @include tablet {
+          width: 90px;
+        }
+        @include desktop {
+          width: 65px;
+        }
+      }
+      p {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 10px;
+        letter-spacing: 4px;
+        @include tablet {
+          font-size: 40px;
+        }
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+    }
+    // Mobile Menu
+    .mobile-menu {
+      display: inline-block;
+      font-size: 23px;
+      @include tablet {
+        font-size: 40px;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+    // Menu Bar
+    .menu-bar {
+      display: none;
+      @include desktop {
+        display: inline-block;
+        ul > li {
+          display: inline-flex;
+          justify-content: flex-end;
+          font-size: 17px;
+          font-weight: 400;
+          padding: 5px 4px;
+          a {
+            color: $white;
+            transition: all .2s ease-in-out;
+            &:hover {
+              color: $blue;
+              font-weight: 600;
+              padding: 8px 0;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Info Box
+.talk-box {
+  width: 100%;
+  color: $white;
+  padding-top:40px;
+
+  h1 {
+    width: 100%;
+    font-size: 45px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 65px;
+    text-align: center;
+    @include tablet{
+      width: 100%;
+      padding-bottom: 25px;
+      padding-right: 136px;
+    }
+    @include desktop{
+      width:112%;
+    }
+    @include large-desktop{
+      width: 100%;
+    }
+
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 250;
+    line-height: 1.8;
+    text-align: center;
+
+    @include tablet {
+      width: 73%;
+      line-height: 2;
+      padding-right: 27px;
+    }
+    @include desktop{
+      width:112%;
+    }
+    @include large-desktop {
+      width: 96%;
+    }
+  }
+
+}
+ .content-section{
+     display: block;
+     padding-top: 35px;
+     width: 100%;
+
+
+   .left-side-60{
+     width: 60%;
+     padding: 2.5%;
+     background: white;
+     height: 600px;
+
+
+     .content-60{
+       h2{
+         font-size: 34px;
+         width: 90%;
+         padding-left: 100px;
+         line-height: 1.3;
+         color: #1B75BC;
+       }
+       h4{
+         font-size: 25px;
+         padding-left: 100px;
+         padding-top: 15px;
+       }
+       p{
+         font-size: 17px;
+         padding-left: 100px;
+         padding-top: 20px;
+         line-height: 1.7;
+       }
+     }
+   }
+
+   .right-side-40{
+     width: 30%;
+     height: 476px;
+     position: absolute;
+     left: 60%;
+     margin-left: 25px;
+     top: 450px;
+     padding-left: 40px;
+
+     .vertical-line{
+       border-left: 2px solid lightgray;
+      height: 476px;
+      position: absolute;
+      left: -7%;
+      margin-left: 25px;
+      top: 100px;
+     }
+
+     .content-40{
+       padding-top: 95px;
+       h3{
+         font-size: 33px;
+         color: #1B75BC;
+         padding-bottom: 30px;
+       }
+       p{
+         font-size: 18px;
+         line-height: .5;
+         padding-bottom: 20px;
+       }
+       a{
+         display: inline-block;
+         padding-bottom: 20px;
+         font-size: 18px;
+
+
+     }
+   }
+
+ }
+}
