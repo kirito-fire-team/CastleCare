@@ -7,7 +7,7 @@
 header {
   background: #ccc;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.37) 0%,rgba(0, 200, 255, 0.4) 100%),
-  url("public/img/doctorPatient6.jpg") center center no-repeat;
+  url("/img/doctorPatient6.jpg") center center no-repeat;
   background-size: cover;
   height: 58vh;
   position: relative;
@@ -90,19 +90,19 @@ header {
 .talk-box {
   width: 100%;
   color: $white;
-  padding-top:40px;
+  padding-top:11px;
 
   h1 {
     width: 100%;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 300;
     text-transform: uppercase;
-    padding-bottom: 65px;
+    padding-bottom: 23px;
     text-align: center;
     @include tablet{
       width: 100%;
-      padding-bottom: 25px;
-      padding-right: 136px;
+      padding-bottom: 20px;
+      padding-right: 79px;
     }
     @include desktop{
       width:112%;
@@ -113,18 +113,21 @@ header {
 
   }
   h3 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 250;
-    line-height: 1.8;
+    line-height: 1.3;
     text-align: center;
 
     @include tablet {
       width: 73%;
-      line-height: 2;
-      padding-right: 27px;
+      line-height: 1;
+      padding-left: 118px;
     }
     @include desktop{
       width:112%;
+      line-height: 2;
+      padding-right: 170px;
+      font-size: 18px;
     }
     @include large-desktop {
       width: 96%;
@@ -132,49 +135,121 @@ header {
   }
 
 }
+///////////////end of top sizing and stying///////////
+
+///////////start of right side content styling///////////
  .content-section{
-     display: block;
-     padding-top: 35px;
+     display: grid;
+     grid-template-columns: 100%;
      width: 100%;
+     @include tablet{
+
+     }
+     @include desktop{
+
+     }
+     @include large-desktop{
+
+     }
 
 
    .left-side-60{
-     width: 60%;
-     padding: 2.5%;
+     width: 100%;
      background: white;
-     height: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     @include tablet{
+     }
+     @include desktop{
+
+     }
+     @include large-desktop{
+
+     }
 
 
      .content-60{
+       text-align: center;
+       @include tablet{
+
+       }
+       @include desktop{
+
+       }
+       @include large-desktop{
+
+       }
        h2{
-         font-size: 34px;
-         width: 90%;
-         padding-left: 100px;
+         font-size: 22px;
+         width: 100%;
+         padding-top: 32px;
          line-height: 1.3;
          color: #1B75BC;
+         @include tablet{
+           font-size: 25px;
+           line-height: 1;
+
+
+         }
+         @include desktop{
+
+         }
+         @include large-desktop{
+
+         }
        }
        h4{
          font-size: 25px;
-         padding-left: 100px;
          padding-top: 15px;
+         @include tablet{
+           font-size: 19px;
+         }
+         @include desktop{
+
+         }
+         @include large-desktop{
+           font-size: 25px;
+         }
        }
        p{
          font-size: 17px;
-         padding-left: 100px;
          padding-top: 20px;
          line-height: 1.7;
+         @include tablet{
+           font-size: 12px;
+         }
+         @include desktop{
+           font-size: 16px;
+         }
+         @include large-desktop{
+           font-size: 17px;
+         }
        }
      }
    }
-
+/////////////////left side content end//////////////
    .right-side-40{
-     width: 30%;
-     height: 476px;
-     position: absolute;
-     left: 60%;
-     margin-left: 25px;
-     top: 450px;
-     padding-left: 40px;
+     // width: 100%;
+     // height: 476px;
+     // position: absolute;
+     // left: 60%;
+     // // margin-left: 25px;
+     // top: 450px;
+     // padding-left: 40px;
+     // text-align: center;
+     @include tablet{
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+     @include desktop{
+
+     }
+     @include large-desktop{
+
+     }
 
      .vertical-line{
        border-left: 2px solid lightgray;
@@ -183,28 +258,158 @@ header {
       left: -7%;
       margin-left: 25px;
       top: 100px;
+      @include tablet{
+
+      }
+      @include desktop{
+
+      }
+      @include large-desktop{
+
+      }
      }
 
      .content-40{
-       padding-top: 95px;
+       padding-top: 50px;
+       @include tablet{
+
+       }
+       @include desktop{
+       }
+       @include large-desktop{
+
+       }
        h3{
          font-size: 33px;
          color: #1B75BC;
          padding-bottom: 30px;
+         @include tablet{
+           font-size: 25px;
+         }
+         @include desktop{
+           font-size: 26px;
+         }
+         @include large-desktop{
+
+         }
        }
        p{
          font-size: 18px;
          line-height: .5;
          padding-bottom: 20px;
+         @include tablet{
+           font-size: 15px;
+         }
+         @include desktop{
+           font-size: 17px;
+         }
+         @include large-desktop{
+
+         }
+       }
+       .anchor{
+         display: inline-block;
        }
        a{
          display: inline-block;
          padding-bottom: 20px;
          font-size: 18px;
+         @include tablet{
+           font-size: 14px;
+         }
+         @include desktop{
+           font-size: 19px;
+         }
+         @include large-desktop{
+           display: block;
+         }
+
 
 
      }
    }
 
  }
+}
+//////////////////footer///////////
+footer {
+  background: $purple;
+  padding: 20px 0;
+  color: $white;
+  text-align: center;
+  position: relative;
+  z-index: 500;
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 15px;
+    text-align: center;
+    @include tablet {
+      grid-template-columns: 25% 40% 30%;
+      grid-template-rows: auto;
+      grid-column-gap: 15px;
+    }
+
+    .address-col {
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .social-col {
+      .icon {
+        font-size: 20px;
+        padding: 0 20px;
+        color: #fff;
+        @include desktop {
+          font-size: 30px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $blue;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+
+    .menu-col {
+      ul > li {
+        padding: 5px;
+        display: inline-block;
+        @include desktop {
+          font-size: 20px;
+        }
+
+        a {
+          color: $white;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $blue;
+            font-weight: 600;
+            padding: 8px 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+  }
 }
