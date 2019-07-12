@@ -143,13 +143,13 @@ header {
      grid-template-columns: 100%;
      width: 100%;
      @include tablet{
-
+       grid-template-columns: 60% 40%;
      }
      @include desktop{
-
+       grid-template-columns: 60% 40%;
      }
      @include large-desktop{
-
+       grid-template-columns: 60% 40%;
      }
 
 
@@ -283,6 +283,7 @@ header {
          font-size: 33px;
          color: #1B75BC;
          padding-bottom: 30px;
+         display: block;
          @include tablet{
            font-size: 25px;
          }
