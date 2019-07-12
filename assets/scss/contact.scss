@@ -283,6 +283,7 @@ header {
          font-size: 33px;
          color: #1B75BC;
          padding-bottom: 30px;
+         display: block;
          @include tablet{
            font-size: 25px;
          }
