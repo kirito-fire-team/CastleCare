@@ -74,6 +74,7 @@ header {
           a {
             color: $white;
             transition: all .2s ease-in-out;
+            &.selected,
             &:hover {
               color: $blue;
               font-weight: 600;
@@ -332,7 +333,7 @@ header {
 
  }
 }
-//////////////////footer///////////
+//////////////////footer///////////////hopefully this helps me push///
 footer {
   background: $purple;
   padding: 20px 0;
